@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.container {
+  height: 8vh;
+  display: flex;
+  gap: 5%;
+  background-color: #f3f2eb;
+  padding: 0 5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10vw;
+
+  img {
+    height: 60%;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 40vw;
+}
+
+.buttons {
+  flex-grow: 1;
+  display: flex;
+  gap: 5%;
+  justify-content: flex-end;
+  align-items: center;
+
+  .offers {
+    height: 3vh;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffbc00;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10%;
+  }
+
+  .account {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
