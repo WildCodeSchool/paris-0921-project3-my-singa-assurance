@@ -1,28 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
 
-.container {
-  height: 8vh;
+.mainContainer {
   display: flex;
-  gap: 5%;
-  background-color: #f3f2eb;
-  padding: 0 5%;
+  flex-direction: row;
+  align-items: center;
   font-family: 'Open Sans', sans-serif;
 }
 
-.brand {
+.text {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 10vw;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 5%;
+}
 
-  img {
-    height: 60%;
-  }
+.mainImg {
+  width: max-content;
+  height: max-content;
+}
 
-  p {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .menu {
