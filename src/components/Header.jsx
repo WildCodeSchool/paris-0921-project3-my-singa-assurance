@@ -5,7 +5,7 @@ import Logo from '../assets/logo.png';
 
 function Header() {
   return (
-    <header>
+    <header className={style.header}>
       <navbar className={style.container}>
         <div className={style.brand}>
           <img src={Logo} alt="Singa Logo" />
