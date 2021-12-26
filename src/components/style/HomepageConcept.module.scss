@@ -4,18 +4,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
   height: 100vh;
   justify-content: space-evenly;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
+  margin: 2%;
 
   h2 {
-    font-size: 200%;
+    font-size: 300%;
   }
 }
 
 .resume {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
+  
+  p {
+    font-size: 130%;
+    padding-right: 20%;
+    padding-left: 20%;
+  }
 }
 
 .resumeTitle {
