@@ -6,12 +6,13 @@
   align-items: center;
   font-family: 'Work Sans', sans-serif;
   height: 100vh;
+  justify-content: space-around;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 5%;
   height: 60vh;
 }
