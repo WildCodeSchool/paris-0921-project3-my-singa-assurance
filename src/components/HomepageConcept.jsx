@@ -1,23 +1,26 @@
 import React from 'react';
 import ConceptCard from './ConceptCard';
 
+import MyImgConcept from '../assets/MyImgConcept.png';
+import MyImgConcept2 from '../assets/MyImgConcept2.png';
+import MyImgConcept3 from '../assets/MyImgConcept3.png';
 import style from './style/HomepageConcept.module.scss';
 
 function HomepageConcept() {
   const Concepts = [
     {
       title: '1',
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4Dkyxp2155Ccuo8hyY8v_IVOk_2ctoMffA&usqp=CAU',
+      src: MyImgConcept,
       description: 'Versez une cotisation mensuelle basée sur le nombre de proches à assurer et leur tranche d’âge.',
     },
     {
       title: '2',
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4Dkyxp2155Ccuo8hyY8v_IVOk_2ctoMffA&usqp=CAU',
+      src: MyImgConcept2,
       description: 'Vos proches se rendent chez les partenaires santé en présentant leur carte Singa.',
     },
     {
       title: '3',
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4Dkyxp2155Ccuo8hyY8v_IVOk_2ctoMffA&usqp=CAU',
+      src: MyImgConcept3,
       description: 'Ils n’auront pas à avancer les frais couverts par Singa.',
     },
   ];
