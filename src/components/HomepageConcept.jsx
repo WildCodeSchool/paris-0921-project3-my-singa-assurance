@@ -23,8 +23,25 @@ function HomepageConcept() {
   ];
 
   return (
-    <div>
-      <h2>Notre Concept</h2>
+    <div className={style.mainConceptCard}>
+      <h2>Découvrez notre Concept</h2>
+      <div className={style.resume}>
+        <div className={style.resumeTitle}> Une formule à la carte </div>
+        <p>
+          Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
+          professionnels et pharmacies agréées Singa.
+        </p>
+        <div className={style.resumeTitle}> Une formule à la carte </div>
+        <p>
+          Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
+          professionnels et pharmacies agréées Singa.
+        </p>
+        <div className={style.resumeTitle}> Une formule à la carte </div>
+        <p>
+          Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
+          professionnels et pharmacies agréées Singa.
+        </p>
+      </div>
       <div className={style.cardContainer}>
         {Concepts.map((card) => {
           return <ConceptCard key="0" title={card.title} src={card.src} desc={card.description} />;

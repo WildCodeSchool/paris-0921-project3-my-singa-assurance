@@ -1,9 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
 
+.mainConceptCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  height: 100vh;
+  justify-content: space-evenly;
+  font-family: 'Work Sans', sans-serif;
+
+  h2 {
+    font-size: 200%;
+  }
+}
+
+.resume {
+  text-align: center;
+}
+
+.resumeTitle {
+  font-size: 170%;
+}
+
 .cardContainer {
   display: flex;
   justify-content: space-evenly;
 }
+
 // .mainContainer {
 //   display: flex;
 //   flex-direction: row;
