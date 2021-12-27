@@ -5,6 +5,7 @@ import './App.css';
 import HomepagePresentation from './components/HomepagePresentation';
 import HomepageTarif from './components/HomepageTarif';
 import HomepageConcept from './components/HomepageConcept';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <HomepagePresentation />
       <HomepageTarif />
       <HomepageConcept />
+      <Footer />
     </>
   );
 }
