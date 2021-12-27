@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.mainTarifCard {
+  text-align: center;
+  height: 100vh;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: 'Work Sans', sans-serif;
+  h2 {
+    font-size: 300%;
+  }
+}
+
+.tarifResume {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.tarifContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Work Sans', sans-serif;
+  margin: 2%;
+}
+
+.tarifCardContainer {
+  height: 200%;
+}
