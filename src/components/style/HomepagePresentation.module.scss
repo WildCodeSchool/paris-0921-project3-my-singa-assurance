@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5%;
+  height: 60vh;
+}
+
+.titre {
+  background-color: forestgreen;
+}
+
+.mainImg {
+  height: fit-content;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+// .menu {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   list-style: none;
+//   width: 40vw;
+// }
+
+// .buttons {
+//   flex-grow: 1;
+//   display: flex;
+//   gap: 5%;
+//   justify-content: flex-end;
+//   align-items: center;
+
+//   .offers {
+//     height: 3vh;
+//     width: 200px;
+//     border-radius: 30px;
+//     border: none;
+//     background-color: #ffbc00;
+//     font-size: 1rem;
+//     font-weight: bold;
+//     margin-right: 10%;
+//   }
+
+//   .account {
+//     border: none;
+//     font-size: 1rem;
+//     font-weight: bold;
+//   }}}}
