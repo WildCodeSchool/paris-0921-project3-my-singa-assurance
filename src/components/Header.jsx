@@ -9,7 +9,7 @@ function Header() {
       <navbar className={style.container}>
         <div className={style.brand}>
           <img src={Logo} alt="Singa Logo" />
-          <p>singa</p>
+          <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
           <li>Accueil</li>
