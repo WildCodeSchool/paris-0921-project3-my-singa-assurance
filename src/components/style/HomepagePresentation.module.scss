@@ -28,8 +28,10 @@
 }
 
 .hightlight {
-  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-5&color=2AD63E);
-  // Documentation for the svg highlight https://svgbox.net/p/docs
+  background: url(src/assets/brush-stroke-banner-6.svg?color=2AD63E);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 2px 10px;
 }
 
 .mainImg {

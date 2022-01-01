@@ -8,10 +8,10 @@ function HomepagePresentation() {
     <div className={style.mainContainer}>
       <div className={style.text}>
         <h2 className={style.title}>
-          <mark className={style.hightlight}>{''} Singa, l&apos;assurance </mark>
+          <mark className={style.hightlight}>&nbsp;Singa, l&apos;assurance&nbsp;</mark>
         </h2>
         <h2 className={style.title}>
-          <mark className={style.hightlight}> santé pour vos proches </mark>
+          <mark className={style.hightlight}>&nbsp;santé pour vos proches&nbsp;</mark>
         </h2>
         <h2 className={style.titleEnd}>
           <mark className={style.hightlight}> en RDC </mark>
