@@ -1,9 +1,8 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import Homepage from './components/Homepage';
-
-import HomepageTarif from './components/HomepageTarif';
-import HomepageConcept from './components/HomepageConcept';
 
 import './App.css';
 
@@ -11,9 +10,9 @@ function App() {
   return (
     <>
       <Header />
-      <Homepage />
-      <HomepageTarif />
-      <HomepageConcept />
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+      </Routes>
     </>
   );
 }
