@@ -1,10 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import style from './style/Header.module.scss';
 import Logo from '../assets/logo.png';
-import LoginPage from './LoginPage';
 
 function Header() {
+  let navigate = useNavigate();
+
+  function goLoginPage() {
+    navigate('/0');
+  }
+
   return (
     <header className={style.header}>
       <navbar className={style.container}>
@@ -20,7 +26,7 @@ function Header() {
         </ul>
         <div className={style.buttons}>
           <button className={style.offers}>Consulter les offres</button>
-          <button onClick={LoginPage} className={style.account}>
+          <button onClick={goLoginPage} className={style.account}>
             Se connecter
           </button>
         </div>
