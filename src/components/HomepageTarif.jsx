@@ -10,18 +10,21 @@ function HomepageTarif() {
       couverture: '60',
       description: 'Ipsum Lorem',
       prix: '50',
+      color: '#C49C48',
     },
     {
       title: 'Argent',
       couverture: '70',
       description: 'Ipsum Lorem',
       prix: '100',
+      color: '#868992',
     },
     {
       title: 'Platine',
       couverture: '80',
       description: 'Ipsum Lorem',
       prix: '150',
+      color: '#ffd700',
     },
   ];
   return (
@@ -32,7 +35,16 @@ function HomepageTarif() {
       </div>
       <div className={style.tarifContainer}>
         {Formules.map((card) => {
-          return <TarifCard key="0" title={card.title} couverture={card.couverture} desc={card.description} prix={card.prix} />;
+          return (
+            <TarifCard
+              key={card.indexOf}
+              title={card.title}
+              couverture={card.couverture}
+              desc={card.description}
+              prix={card.prix}
+              color={card.color}
+            />
+          );
         })}
       </div>
       <div className={style.buttons}>
