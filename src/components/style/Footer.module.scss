@@ -1,3 +1,15 @@
 .mainFooter {
   height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.logo {
+  width: 5vh;
+}
+.logoFooter {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
 }
