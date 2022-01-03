@@ -35,7 +35,9 @@ function HomepageTarif() {
           return <TarifCard key="0" title={card.title} couverture={card.couverture} desc={card.description} prix={card.prix} />;
         })}
       </div>
-      <button>comparer les offres</button>
+      <div className={style.buttons}>
+        <button className={style.offers}>Comparer les offres</button>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,9 @@ const TarifCard = ({ title, couverture, prix, desc }) => {
       <div> à partir de </div>
       <div>{prix}€</div>
       <div>{desc}</div>
-      <button>Souscrire</button>
+      <div className={style.buttons}>
+        <button className={style.offers}>Souscrire</button>
+      </div>
     </div>
   );
 };
