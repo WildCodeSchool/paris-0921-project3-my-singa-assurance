@@ -2,6 +2,7 @@ import React from 'react';
 
 import style from './style/Header.module.scss';
 import Logo from '../assets/logo.png';
+import InfoButton from './InfoButton';
 
 function Header() {
   return (
@@ -18,7 +19,8 @@ function Header() {
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
-          <button className={style.offers}>Consulter les offres</button>
+          {/* <button className={style.offers}>Consulter les offres</button> */}
+          <InfoButton>Consulter les offres</InfoButton>
           <button className={style.account}>Se connecter</button>
         </div>
       </navbar>

@@ -1,16 +1,17 @@
 import React from 'react';
 import Header from './components/Header';
+import Homepage from './components/Homepage';
 
-import './App.css';
-import HomepagePresentation from './components/HomepagePresentation';
 import HomepageTarif from './components/HomepageTarif';
 import HomepageConcept from './components/HomepageConcept';
+
+import './App.css';
 
 function App() {
   return (
     <>
       <Header />
-      <HomepagePresentation />
+      <Homepage />
       <HomepageTarif />
       <HomepageConcept />
     </>
