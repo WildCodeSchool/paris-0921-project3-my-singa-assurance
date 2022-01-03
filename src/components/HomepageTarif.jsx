@@ -29,7 +29,7 @@ function HomepageTarif() {
   ];
   return (
     <div className={style.mainTarifCard}>
-      <h2>Nos Tarifs</h2>
+      <h2>Nos Formules</h2>
       <div className={style.tarifResume}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </div>
