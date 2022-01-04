@@ -1,11 +1,15 @@
 import React from 'react';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import Logo from '../assets/logo.png';
 import style from './style/Footer.module.scss';
 
 function Footer() {
   return (
     <div className={style.mainFooter}>
-      <div>
+      <div className={style.bloc}>
         <div className={style.logoFooter}>
           <img className={style.logo} src={Logo} alt="Singa Logo" />
           <p className={style.singa}>singa </p>
@@ -39,7 +43,12 @@ function Footer() {
 
       <div className={style.infos}>
         <div className={style.suivezsinga}>Suivez Singa</div>
-        <div>Button</div>
+        <div className={style.iconContainer}>
+          <FacebookIcon />
+          <TwitterIcon />
+          <YouTubeIcon />
+          <WhatsAppIcon />
+        </div>
       </div>
     </div>
   );

@@ -29,9 +29,17 @@
 .infos {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 9vw;
 }
 
 .suivezsinga {
-  margin-bottom: 100%;
+  margin-bottom: 20%;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
 }
