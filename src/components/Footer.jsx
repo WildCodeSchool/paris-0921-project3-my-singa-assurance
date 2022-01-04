@@ -34,8 +34,8 @@ function Footer() {
       <div className={style.bloc}>
         <div className={style.ressources}>Ressources</div>
         <div className={style.menu}>
-          <p>leBlog</p>
-          <p>FAQ</p>
+          <p>On recrute</p>
+          <p>Mentions légales</p>
           <p>Présence internationale</p>
           <p>Dictionnnaire assurance</p>
         </div>
