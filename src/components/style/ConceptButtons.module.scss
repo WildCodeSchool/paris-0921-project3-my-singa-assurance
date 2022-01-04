@@ -2,10 +2,15 @@
   .apparentButton {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     border: solid 5px;
+    background-color: white;
     img {
-      width: 4vw;
+      width: 2.7vw;
+      background-color: inherit;
+    }
+    div{
+      background-color: inherit;
     }
   }
   .arg {
@@ -17,7 +22,12 @@
   transform: scale(1.4);
   transition: 200ms;
   cursor: default;
+  border: solid 5px;
+  .apparentButton {
+    border:none;
+  }
   .arg {
     display: flex;
+    background-color: white
   }
 }
