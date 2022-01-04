@@ -7,18 +7,18 @@ import Logo from '../assets/logo.png';
 function Header() {
   let navigate = useNavigate();
 
-  function goLoginPage() {
+  function GoLoginPage() {
     navigate('/LoginPage');
   }
 
-  function goHome() {
+  function GoHome() {
     navigate('/');
   }
 
   return (
     <header className={style.header}>
       <navbar className={style.container}>
-        <div className={style.brand} onClick={goHome}>
+        <div className={style.brand} onClick={GoHome}>
           <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
           <p className={style.logo}>singa</p>
         </div>
@@ -30,7 +30,7 @@ function Header() {
         </ul>
         <div className={style.buttons}>
           <button className={style.offers}>Consulter les offres</button>
-          <button onClick={goLoginPage} className={style.account}>
+          <button onClick={GoLoginPage} className={style.account}>
             Se connecter
           </button>
         </div>
