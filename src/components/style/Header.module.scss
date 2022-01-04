@@ -19,6 +19,7 @@
   justify-content: space-around;
   align-items: center;
   width: 10vw;
+  cursor: pointer;
 
   .ImgLogo {
     height: 60%;
@@ -55,10 +56,12 @@
     font-size: 0.8rem;
     font-weight: bold;
     margin-right: 10%;
+    cursor: pointer;
   }
 
   .account {
     border: none;
     font-size: 0.8rem;
+    cursor: pointer;
   }
 }

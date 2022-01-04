@@ -11,10 +11,14 @@ function Header() {
     navigate('/LoginPage');
   }
 
+  function goHome() {
+    navigate('/');
+  }
+
   return (
     <header className={style.header}>
       <navbar className={style.container}>
-        <div className={style.brand}>
+        <div className={style.brand} onClick={goHome}>
           <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
           <p className={style.logo}>singa</p>
         </div>
