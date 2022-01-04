@@ -31,7 +31,7 @@ function HomepageTarif() {
     <div className={style.mainTarifCard}>
       <h2>Nos Formules</h2>
       <div className={style.tarifResume}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. TEST TEST
       </div>
       <div className={style.tarifContainer}>
         {Formules.map((card) => {
