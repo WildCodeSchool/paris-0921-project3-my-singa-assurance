@@ -6,8 +6,8 @@
   align-items: center;
   height: 100vh;
   justify-content: space-evenly;
-  font-family: "Work Sans", sans-serif;
-  margin: 2%;
+  font-family: 'Work Sans', sans-serif;
+  margin: 10%;
 
   h2 {
     font-size: 300%;
@@ -19,7 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  
+  margin-top: 1%;
+
   p {
     font-size: 130%;
     padding-right: 20%;
@@ -29,73 +30,18 @@
 
 .resumeTitle {
   font-size: 170%;
+  margin-top: 3%;
 }
 
 .cardContainer {
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
+  margin: 10% 0 10% 0;
 }
 
-// .mainContainer {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   font-family: 'Work Sans', sans-serif;
-//   padding-top: 5%;
-// }
-
-// .text {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-evenly;
-//   margin: 5%;
-//   height: 60vh;
-// }
-
-// .titre {
-//   background-color: forestgreen;
-// }
-
-// .mainImg {
-//   width: max-content;
-//   height: max-content;
-// }
-
-// p {
-//   font-size: 1.5rem;
-//   font-weight: bold;
-// }
-
-// .menu {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   list-style: none;
-//   width: 40vw;
-// }
-
-// .buttons {
-//   flex-grow: 1;
-//   display: flex;
-//   gap: 5%;
-//   justify-content: flex-end;
-//   align-items: center;
-
-//   .offers {
-//     height: 3vh;
-//     width: 200px;
-//     border-radius: 30px;
-//     border: none;
-//     background-color: #ffbc00;
-//     font-size: 1rem;
-//     font-weight: bold;
-//     margin-right: 10%;
-//   }
-
-//   .account {
-//     border: none;
-//     font-size: 1rem;
-//     font-weight: bold;
-//   }
-// }
+.conceptTitle2 {
+  margin-top: 5%;
+  font-size: 40px;
+  font-weight: bold;
+}

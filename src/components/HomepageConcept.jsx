@@ -1,9 +1,13 @@
 import React from 'react';
 import ConceptCard from './ConceptCard';
+import ConceptButtons from './ConceptButtons';
 
 import MyImgConcept from '../assets/MyImgConcept.png';
 import MyImgConcept2 from '../assets/MyImgConcept2.png';
 import MyImgConcept3 from '../assets/MyImgConcept3.png';
+import Hospitalisation from '../assets/hospitalisation.png';
+import Maternité from '../assets/maternité.png';
+
 import style from './style/HomepageConcept.module.scss';
 
 function HomepageConcept() {
@@ -25,6 +29,35 @@ function HomepageConcept() {
     },
   ];
 
+  const BtnConcepts = [
+    {
+      icone: Hospitalisation,
+      title: 'Hospitalisation',
+      arg: ['chambre', 'frais traitements médicaux', 'visite généraliste', 'visite spécialiste petite chirurgie'],
+    },
+    {
+      icone: Maternité,
+      title: 'Maternité',
+      arg: ['frais pré et post-natal', 'accouchement simple', 'accouchement multiple', 'accouchement chirurgical'],
+    },
+    {
+      icone: 'none',
+      title: 'Optique',
+    },
+    {
+      icone: 'none',
+      title: 'Frais médicaux',
+    },
+    {
+      icone: 'none',
+      title: 'Dentaire',
+    },
+    {
+      icone: 'none',
+      title: 'Téléconsultation',
+    },
+  ];
+
   return (
     <div className={style.mainConceptCard}>
       <h2>Découvrez notre Concept</h2>
@@ -34,20 +67,20 @@ function HomepageConcept() {
           Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
           professionnels et pharmacies agréées Singa.
         </p>
-        <div className={style.resumeTitle}> Une formule à la carte </div>
-        <p>
-          Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
-          professionnels et pharmacies agréées Singa.
-        </p>
-        <div className={style.resumeTitle}> Une formule à la carte </div>
-        <p>
-          Choisissez la couverture adaptée à votre situation (besoins de santé, l&apos;age des bénéficaires, leur nombre) afin d&apos;accéder aux
-          professionnels et pharmacies agréées Singa.
-        </p>
+        <div className={style.resumeTitle}> Une assurance flexible </div>
+        <p>Rajoutez n’importe quel membre de votre entourage à une formule à n’importe quel moment sur votre espace.</p>
+        <div className={style.resumeTitle}> Un suivi des prestations facile </div>
+        <p>Suivez les prélèvements ainsi que le plafond et les prestations de vos proches sur votre espace dédié.</p>
       </div>
+      <div className={style.conceptTitle2}>Comment ça fonctionne ?</div>
       <div className={style.cardContainer}>
         {Concepts.map((card) => {
           return <ConceptCard key="0" title={card.title} src={card.src} desc={card.description} />;
+        })}
+      </div>
+      <div className={style.BtnContainer}>
+        {BtnConcepts.map((button) => {
+          return <ConceptButtons key="0" icone={button.icone} title={button.title} arg={button.arg} />;
         })}
       </div>
     </div>
