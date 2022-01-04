@@ -1,11 +1,25 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 import axios from 'axios';
 
 import style from './style/FormSignup.module.scss';
 
 function FormSignUp() {
-  const { register, handleSubmit } = useForm();
+  const validationSchema = Yup.object().shape({
+    first_name: Yup.string().required('Prénom requis'),
+    last_name: Yup.string().required('Nom requis'),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: 'onTouched',
+    resolver: yupResolver(validationSchema),
+  });
 
   const onSubmit = async (data) => {
     const creationDate = new Date().toISOString().split('.')[0] + 'Z';
@@ -25,6 +39,7 @@ function FormSignUp() {
           <div>
             <label htmlFor="first_name">Prénom</label>
             <input type="text" name="first_name" id="first_name" {...register('first_name')} />
+            <p>{errors.first_name?.message}</p>
           </div>
           <div>
             <label htmlFor="last_name">Nom</label>
