@@ -2,7 +2,6 @@
   height: 20vh;
   display: flex;
   justify-content: space-evenly;
-  align-items: baseline;
 }
 .logo {
   width: 5vh;
@@ -12,4 +11,27 @@
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
+}
+.singa {
+  font-size: xx-large;
+}
+
+.ressources {
+  margin-top: 16px;
+}
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.suivezsinga {
+  margin-bottom: 100%;
 }

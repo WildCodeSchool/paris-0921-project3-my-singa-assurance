@@ -8,35 +8,37 @@ function Footer() {
       <div>
         <div className={style.logoFooter}>
           <img className={style.logo} src={Logo} alt="Singa Logo" />
-          <p>singa</p>
+          <p className={style.singa}>singa </p>
         </div>
-        <p> Bonjour@Singa.com</p>
-        <p>75 rue Saint-Martin</p>
-        <p>75008 PARIS</p>
+        <div>
+          <p> Bonjour@Singa.com</p>
+          <p>75 rue Saint-Martin</p>
+          <p>75008 PARIS</p>
+        </div>
       </div>
 
-      <div>
-        <div>Ressources</div>
-        <ul className={style.menu}>
-          <li>Blog</li>
-          <li>FAQ</li>
-          <li>Présence internationale</li>
-          <li>Dictionnnaire assurance</li>
-        </ul>
+      <div className={style.bloc}>
+        <div className={style.ressources}>Ressources</div>
+        <div className={style.menu}>
+          <p>leBlog</p>
+          <p>FAQ</p>
+          <p>Présence internationale</p>
+          <p>Dictionnnaire assurance</p>
+        </div>
       </div>
 
-      <div>
-        <div>Ressources</div>
-        <ul className={style.menu}>
-          <li>Blog</li>
-          <li>FAQ</li>
-          <li>Présence internationale</li>
-          <li>Dictionnnaire assurance</li>
-        </ul>
+      <div className={style.bloc}>
+        <div className={style.ressources}>Ressources</div>
+        <div className={style.menu}>
+          <p>leBlog</p>
+          <p>FAQ</p>
+          <p>Présence internationale</p>
+          <p>Dictionnnaire assurance</p>
+        </div>
       </div>
 
-      <div>
-        <div>Suivez Singa</div>
+      <div className={style.infos}>
+        <div className={style.suivezsinga}>Suivez Singa</div>
         <div>Button</div>
       </div>
     </div>
