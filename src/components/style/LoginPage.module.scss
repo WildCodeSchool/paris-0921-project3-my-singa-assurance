@@ -5,12 +5,13 @@
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
-  margin-left: 10vw;
+  margin-left: 11vw;
 }
 
 .mainText {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40vh;
 }
 
 .logintitle {
@@ -18,19 +19,29 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   z-index: 1;
+  width: 250%;
+  background: none;
+  margin-top: 1vh;
 }
 
 .loginText {
   display: flex;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
   color: black;
   opacity: 0.5;
   z-index: 1;
+  margin-top: 5vh;
+  width: 130%;
+  background: none;
+  margin-bottom: 1vh;
 }
 
 .backgroundImageLogin {
   display: flex;
-  width: 150%;
+  width: 130%;
   z-index: 0;
   position: relative;
+  margin-bottom: 6vh;
+  margin-left: 5vh;
 }
