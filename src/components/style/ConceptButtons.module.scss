@@ -1,0 +1,23 @@
+.allConceptButton {
+  .apparentButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 5px;
+    img {
+      width: 4vw;
+    }
+  }
+  .arg {
+    display: none;
+  }
+}
+
+.allConceptButton:hover {
+  transform: scale(1.4);
+  transition: 200ms;
+  cursor: default;
+  .arg {
+    display: flex;
+  }
+}

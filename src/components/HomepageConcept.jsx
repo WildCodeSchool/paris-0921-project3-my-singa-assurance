@@ -41,19 +41,19 @@ function HomepageConcept() {
       arg: ['frais pré et post-natal', 'accouchement simple', 'accouchement multiple', 'accouchement chirurgical'],
     },
     {
-      icone: 'none',
+      icone: Hospitalisation,
       title: 'Optique',
     },
     {
-      icone: 'none',
+      icone: Hospitalisation,
       title: 'Frais médicaux',
     },
     {
-      icone: 'none',
+      icone: Hospitalisation,
       title: 'Dentaire',
     },
     {
-      icone: 'none',
+      icone: Hospitalisation,
       title: 'Téléconsultation',
     },
   ];
