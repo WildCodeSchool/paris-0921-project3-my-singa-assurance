@@ -7,13 +7,22 @@ function HomepagePresentation() {
   return (
     <div className={style.mainContainer}>
       <div className={style.text}>
-        <h1 className={style.titre}>Singa, l&apos;assurance santé pour vos proches en RDC</h1>
+        <h2 className={style.title}>
+          <mark className={style.hightlight}>&nbsp;Singa, l&apos;assurance&nbsp;</mark>
+        </h2>
+        <h2 className={style.title}>
+          <mark className={style.hightlight}>&nbsp;santé pour vos proches&nbsp;</mark>
+        </h2>
+        <h2 className={style.titleEnd}>
+          <mark className={style.hightlight}> en RDC </mark>
+        </h2>
 
-        <p> Nous croyons que l&apos;Afrique mérite d&apos;avoir accès à des soins de qualité.</p>
-        <p> Singa permet à la diaspora d&apos;offrir à leurs proches une mutuelle santé simple, solidaire et utile</p>
-        <p> Et tout ça en soutenant des causes qui ont un impact positif sur l&apos;économie locale</p>
-
-        <button>Consulter les offres</button>
+        <p className={style.description}> Nous croyons que l&apos;Afrique mérite d&apos;avoir accès à des soins de qualité.</p>
+        <p className={style.description}> Singa permet à la diaspora d&apos;offrir à leurs proches une mutuelle santé simple, solidaire et utile</p>
+        <p className={style.description}> Et tout ça en soutenant des causes qui ont un impact positif sur l&apos;économie locale</p>
+        <div className={style.buttons}>
+          <button className={style.offers}>Consulter les offres</button>
+        </div>
       </div>
       <img alt="HomepagePresentationImg" src={HomepagePresentationImg} className={style.mainImg}></img>
     </div>

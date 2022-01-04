@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 .header {
   position: fixed;
@@ -11,7 +11,7 @@
   gap: 5%;
   background-color: #f3f2eb;
   padding: 0 5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .brand {
@@ -24,9 +24,9 @@
     height: 60%;
   }
 
-  p {
+  .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -36,6 +36,7 @@
   align-items: center;
   list-style: none;
   width: 40vw;
+  font-size: 0.9rem;
 }
 
 .buttons {
@@ -46,19 +47,18 @@
   align-items: center;
 
   .offers {
-    height: 3vh;
+    height: 4vh;
     width: 200px;
     border-radius: 30px;
     border: none;
     background-color: #ffbc00;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     margin-right: 10%;
   }
 
   .account {
     border: none;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.8rem;
   }
 }

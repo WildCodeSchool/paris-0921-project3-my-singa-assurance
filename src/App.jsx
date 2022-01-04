@@ -1,20 +1,18 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
+import Homepage from './components/Homepage';
 
 import './App.css';
-import HomepagePresentation from './components/HomepagePresentation';
-import HomepageTarif from './components/HomepageTarif';
-import HomepageConcept from './components/HomepageConcept';
-import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Header />
-      <HomepagePresentation />
-      <HomepageTarif />
-      <HomepageConcept />
-      <Footer />
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+      </Routes>
     </>
   );
 }
