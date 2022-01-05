@@ -11,7 +11,8 @@ function LoginPage() {
 
   const handleCreateAccount = () => {
     navigate('/createaccount');
- 
+  };
+
   const onSubmit = (data) => {
     // eslint-disable-next-line no-console
     console.log(data);
@@ -46,7 +47,9 @@ function LoginPage() {
           </div>
           <div className={style.loginAccountButton}>
             <button className={style.loginConnexionButton}>Connexion</button>
-            <button className={style.loginRegisterButton}>S&apos;inscrire</button>
+            <button className={style.loginRegisterButton} onClick={handleCreateAccount}>
+              S&apos;inscrire
+            </button>
           </div>
         </form>
       </div>
