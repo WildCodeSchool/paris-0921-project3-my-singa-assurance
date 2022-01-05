@@ -1,15 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import style from './style/Header.module.scss';
 import Logo from '../assets/logo.png';
-import LoginPage from './LoginPage';
 
 function Header() {
+  let navigate = useNavigate();
+
+  function GoLoginPage() {
+    navigate('/LoginPage');
+  }
+
+  function GoHome() {
+    navigate('/');
+  }
+
   return (
     <header className={style.header}>
       <navbar className={style.container}>
-        <div className={style.brand}>
-          <img src={Logo} alt="Singa Logo" />
+        <div className={style.brand} onClick={GoHome}>
+          <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
@@ -20,7 +30,7 @@ function Header() {
         </ul>
         <div className={style.buttons}>
           <button className={style.offers}>Consulter les offres</button>
-          <button onClick={LoginPage} className={style.account}>
+          <button onClick={GoLoginPage} className={style.account}>
             Se connecter
           </button>
         </div>
