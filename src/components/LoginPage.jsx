@@ -1,13 +1,9 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { useForm } from 'react-hook-form';
 
 import style from './style/LoginPage.module.scss';
 import Background from '../assets/LoginBackground.png';
 
 function LoginPage() {
-  const { register, handleSubmit } = useForm();
-
   return (
     <div className={style.mainLoginPageContainer}>
       <div className={style.mainText}>
@@ -15,18 +11,18 @@ function LoginPage() {
         <h2 className={style.logintitle}> à la santé de vos proches</h2>
         <p className={style.loginText1}>Bon retour parmi nous ! Connectez vous pour accèder </p>
         <p className={style.loginText2}>à votre espace personnel</p>
-        <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
+        <form className={style.loginForm}>
           <div className={style.loginEmail}>
             <label htmlFor="email" className={style.loginEmailLabel}>
               Adresse mail
             </label>
-            <input type="text" id="email" className={style.loginEmailInput} placeholder="a.bukasa@gmail.com" name="email" {...register('email')} />
+            <input type="text" id="email" className={style.loginEmailInput} placeholder="a.bukasa@gmail.com" name="email" />
           </div>
           <div className={style.loginPassword}>
             <label htmlFor="password" className={style.loginPasswordLabel}>
               Mot de passe
             </label>
-            <input type="password" id="password" className={style.loginPasswordInput} name="password" {...register('password')} />
+            <input type="password" id="password" className={style.loginPasswordInput} name="password" />
           </div>
           <div className={style.loginOptionButton}>
             <input type="checkbox" id="rememberMe" />
