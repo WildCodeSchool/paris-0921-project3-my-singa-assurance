@@ -5,13 +5,13 @@ import style from './style/Header.module.scss';
 import Logo from '../assets/logo.png';
 
 function Header() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  function GoLoginPage() {
-    navigate('/LoginPage');
-  }
-
-  function GoHome() {
+  const handleLogIn = () => {
+    navigate('/login');
+  };
+  
+   function GoHome() {
     navigate('/');
   }
 
@@ -30,11 +30,11 @@ function Header() {
         </ul>
         <div className={style.buttons}>
           <button className={style.offers}>Consulter les offres</button>
-          <button onClick={GoLoginPage} className={style.account}>
+          <button onClick={handleLogIn} className={style.account}>
             Se connecter
           </button>
         </div>
-      </navbar>
+      </nav>
     </header>
   );
 }

@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import LoginPage from './components/LoginPage';
 
 import './App.css';
+import FormSignUp from './components/FormSignUp';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/createaccount" element={<FormSignUp />} />
       </Routes>
     </>
   );

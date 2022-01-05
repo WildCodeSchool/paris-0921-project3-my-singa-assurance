@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 import style from './style/LoginPage.module.scss';
@@ -6,7 +7,11 @@ import Background from '../assets/LoginBackground.png';
 
 function LoginPage() {
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
+  const handleCreateAccount = () => {
+    navigate('/createaccount');
+ 
   const onSubmit = (data) => {
     // eslint-disable-next-line no-console
     console.log(data);
