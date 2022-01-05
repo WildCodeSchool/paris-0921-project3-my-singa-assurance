@@ -10,12 +10,16 @@ function Header() {
   const handleLogIn = () => {
     navigate('/login');
   };
+  
+   function GoHome() {
+    navigate('/');
+  }
 
   return (
     <header className={style.header}>
-      <nav className={style.container}>
-        <div className={style.brand}>
-          <img src={Logo} alt="Singa Logo" />
+      <navbar className={style.container}>
+        <div className={style.brand} onClick={GoHome}>
+          <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>

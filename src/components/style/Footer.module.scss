@@ -1,0 +1,46 @@
+.mainFooter {
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo {
+  width: 5vh;
+}
+.logoFooter {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.singa {
+  font-size: xx-large;
+}
+
+.ressources {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 9vw;
+}
+
+.suivezsinga {
+  margin-bottom: 20%;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+}
