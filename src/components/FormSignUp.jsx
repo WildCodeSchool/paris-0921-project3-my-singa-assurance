@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-import style from './style/FormSignup.module.scss';
+import style from './style/FormSignUp.module.scss';
 
 function FormSignUp() {
   const validationSchema = Yup.object().shape({
