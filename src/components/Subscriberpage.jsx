@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Header from './Header';
+import SubscriberHeader from './SubscriberHeader';
 import SubscriberWelcomePage from './SubscriberWelcomePage';
 
 function SubscriberPage() {
   return (
     <>
-      <Header />
+      <SubscriberHeader />
       <SubscriberWelcomePage />
     </>
   );
