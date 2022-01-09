@@ -13,27 +13,27 @@ function SubscriberLeftNavBar() {
     <div className={style.subscriberTitleContainer}>
       <div className={style.subscribernavBarBlock}>
         <HomeIcon />
-        <p className={style.suscriberText}>Bienvenue</p>
+        <p className={style.subscriberText}>Bienvenue</p>
       </div>
       <div className={style.subscribernavBarBlock}>
         <PeopleAltIcon />
-        <p className={style.suscriberText}>Mes bénéficiaires</p>
+        <p className={style.subscriberText}>Mes bénéficiaires</p>
       </div>
       <div className={style.subscribernavBarBlock}>
         <CreditCardIcon />
-        <p className={style.suscriberText}>Factures & Paiements</p>
+        <p className={style.subscriberText}>Factures & Paiements</p>
       </div>
       <div className={style.subscribernavBarBlock}>
         <DescriptionIcon />
-        <p className={style.suscriberText}>Contrats & Documents</p>
+        <p className={style.subscriberText}>Contrats & Documents</p>
       </div>
       <div className={style.subscribernavBarBlock}>
         <EcoIcon />
-        <p className={style.suscriberText}>Actions Solidaires</p>
+        <p className={style.subscriberText}>Actions Solidaires</p>
       </div>
       <div className={style.subscribernavBarBlock}>
         <QuestionAnswerIcon />
-        <p className={style.suscriberText}>Nous contacter</p>
+        <p className={style.subscriberText}>Nous contacter</p>
       </div>
     </div>
   );
