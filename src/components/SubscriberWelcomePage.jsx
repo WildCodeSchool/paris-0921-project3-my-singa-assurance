@@ -1,9 +1,13 @@
 import React from 'react';
 
+import style from './style/SubscriberWelcomePage.module.scss';
+
 function SubscriberWelcomePage() {
   return (
-    <div>
-      <h1>CONTENU ADHERENT</h1>
+    <div className={style.mainContainerSubscriberWelcomePage}>
+      <div className={style.titleContainer}>
+        <h1>BONJOUR ALEX !</h1>
+      </div>
     </div>
   );
 }
