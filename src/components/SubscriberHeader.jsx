@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import style from './style/Header.module.scss';
+import style from './style/SubscriberHeader.module.scss';
 import Logo from '../assets/logo.png';
 
 function SubscriberHeader() {
@@ -23,17 +23,11 @@ function SubscriberHeader() {
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
-          <li>Accueil</li>
-          <li>Mode d&apos;emploi</li>
-          <li>Actus</li>
-          <li>Qui sommes-nous ?</li>
+          <li className={style.headerMenuMySpace}>Mon espace</li>
+          <li>Aide</li>
+          <li>Mon profil</li>
+          <li onClick={handleLogIn}>Se déconnecter</li>
         </ul>
-        <div className={style.buttons}>
-          <button className={style.offers}>VERSION SUBSCRIBER</button>
-          <button onClick={handleLogIn} className={style.account}>
-            SE DECONNECTER
-          </button>
-        </div>
       </nav>
     </header>
   );
