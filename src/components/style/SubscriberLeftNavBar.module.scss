@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
 .subscriberTitleContainer {
   width: 30%;
   height: 300vh;
-  background-color: blue;
+  margin-top: 6vh;
+  font-family: 'Work Sans', sans-serif;
+  .subscriberStickyNavBar {
+    position: sticky;
+    top: 8vh;
+  }
+}
+
+.subscribernavBarBlock {
+  display: flex;
+  margin-left: 4vh;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.subscriberText {
+  margin-left: 1vh;
+}
+
+.subscriberSelected:focus {
+  color: 2ad63e;
+}
+
+.suscriberText:hover {
+  border-bottom: solid 1px black;
+  padding-top: 1px;
 }
