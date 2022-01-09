@@ -3,7 +3,7 @@ import React from 'react';
 function SubscriberWelcomePage() {
   return (
     <div>
-      <h1>BLABLABLA</h1>
+      <h1>CONTENU ADHERENT</h1>
     </div>
   );
 }

@@ -1,15 +1,13 @@
 import React from 'react';
 
 import SubscriberHeader from './SubscriberHeader';
-import SubscriberWelcomePage from './SubscriberWelcomePage';
-import SubscriberLeftNavBar from './SubscriberLeftNavBar';
+import SubscriberContainer from './SubscriberContainer';
 
 function SubscriberPage() {
   return (
     <>
       <SubscriberHeader />
-      <SubscriberLeftNavBar />
-      <SubscriberWelcomePage />
+      <SubscriberContainer />
     </>
   );
 }
