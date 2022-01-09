@@ -1,3 +1,8 @@
 .recipientsMainContainer {
-  display: flex;
+  background-color: hotpink;
+  height: 100vh;
+  .recipientTitle {
+    background-color: inherit;
+    font-size: large;
+  }
 }
