@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import LoginPage from './components/LoginPage';
 import SubscriberPage from './components/SubscriberPage';
 import FormSignUp from './components/FormSignUp';
+import SubscriberWelcomePage from './components/SubscriberWelcomePage';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/subscribers" element={<SubscriberPage />} />
+        <Route path="/welcome" element={<SubscriberWelcomePage />} />
       </Routes>
     </>
   );

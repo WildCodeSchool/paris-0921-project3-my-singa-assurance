@@ -11,19 +11,25 @@
   }
 }
 
-.subscribernavBarBlock {
+.subscribernavBarButton {
   display: flex;
   margin-left: 4vh;
   align-items: center;
   margin-bottom: 3vh;
   font-family: 'Work Sans', sans-serif;
   font-size: 1em;
-  .subscriberIcon:hover {
-    color: #37c948;
+  color: black;
+  border: none;
+  :hover {
+    border-bottom: solid 1px #000000;
+    padding-top: 1px;
     cursor: pointer;
   }
-  p:hover {
-    color: #37c948;
+}
+
+.subscribernavBarButton:hover {
+  color: #37c948;
+  .subscriberText:hover {
     border-bottom: solid 1px #37c948;
     padding-top: 1px;
     cursor: pointer;
