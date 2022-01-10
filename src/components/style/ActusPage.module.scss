@@ -45,7 +45,7 @@
   text-align: initial;
 }
 
-.camember {
+.camembert {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,10 +67,11 @@
   margin-top: -30%;
   margin-left: 5%;
   margin-right: 5%;
-  .img {
-    zoom: 60%;
-    margin: 1% 8% 1% 8%;
-  }
+}
+
+.camembertImg {
+  zoom: 65%;
+  margin: 1% 8% 1% 8%;
 }
 
 .rightDescription {
