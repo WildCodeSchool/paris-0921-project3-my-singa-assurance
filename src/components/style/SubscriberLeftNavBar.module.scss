@@ -5,7 +5,10 @@
   height: 300vh;
   margin-top: 6vh;
   font-family: 'Work Sans', sans-serif;
-  position: fixed;
+  .subscriberStickyNavBar {
+    position: sticky;
+    top: 8vh;
+  }
 }
 
 .subscribernavBarBlock {
