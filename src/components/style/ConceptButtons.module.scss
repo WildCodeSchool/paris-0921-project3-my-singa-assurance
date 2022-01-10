@@ -9,7 +9,7 @@
       width: 2.7vw;
       background-color: inherit;
     }
-    div{
+    div {
       background-color: inherit;
     }
   }
@@ -24,10 +24,14 @@
   cursor: default;
   border: solid 5px;
   .apparentButton {
-    border:none;
+    border: none;
   }
   .arg {
     display: flex;
-    background-color: white
+    background-color: white;
+
+    .ulConceptBtn {
+      list-style: none;
+    }
   }
 }
