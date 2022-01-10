@@ -18,16 +18,16 @@ function ActusPage() {
           <h3 className={style.engagement}>Notre engagement social</h3>
           <p className={style.engagementdescription}>
             Singa prélève des frais fixe, et considère que le reste de votre cotisation est le vôtre, et non le nôtre. Nous utilisons vos cotisations
-            pour remboursere vos frais de santé, et redistribuons l&aposargent qui reste à des causes qui vous tiennent à coeur.
+            pour remboursere vos frais de santé, et redistribuons l&apos;argent qui reste à des causes qui vous tiennent à coeur.
           </p>
         </div>
         <div className={style.explications}>
           <h2 className={style.explicationstitle}>Explications:</h2>
           <ul className={style.explicationsTable}>
             <li>Vous obtenez une assurance de qualité, tout en soutenant une cause qui vous tient à cœur.</li>
-            <li>Il n&aposy a pas de conflits d&aposintérêts entre vous et nous, car notre rémunération est toujours la même.</li>
+            <li>Il n&apos;y a pas de conflits d&apos;intérêts entre vous et nous, car notre rémunération est toujours la même.</li>
             <li>
-              L&aposengagement social est au cœur de notre business model. C&aposest pourquoi Lemonade Inc. est une société d&aposintérêt public et
+              L&apos;engagement social est au cœur de notre business model. C&apos;est pourquoi Lemonade Inc. est une société d&apos;intérêt public et
               certifiée B-Corp.
             </li>
           </ul>
@@ -48,8 +48,8 @@ function ActusPage() {
                 <p>est dédié aux frais de gestion de Singa : service client, gestion de frais de santé, innovation, etc.</p>
               </div>
               <div className={style.downDescription}>
-                <h3>S&aposil reste de l&aposargent en fin d&aposannée,</h3>
-                <p>il est reversé à l&aposassociation de votre choix. Il ne vient pas accroitre nos profits.</p>
+                <h3>S&apos;il reste de l&apos;argent en fin d&apos;année,</h3>
+                <p>il est reversé à l&apos;association de votre choix. Il ne vient pas accroitre nos profits.</p>
               </div>
             </div>
           </div>
