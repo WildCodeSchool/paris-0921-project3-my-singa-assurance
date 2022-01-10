@@ -25,12 +25,20 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.actionImg {
+  width: 55vw;
+}
+
 .engagementContainer {
   height: 12vh;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+  width: 66%;
+  text-align: center;
+  margin-bottom: 8vh;
+  margin-top: 3vh;
 }
 
 .engagement {
@@ -45,49 +53,46 @@
   text-align: initial;
 }
 
-.camembert {
+.explicationstitle {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #37c948;
+}
+
+.explicationsTable {
+  justify-content: space-evenly;
+  height: 14vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 90vh;
+}
+
+.camembertTitle {
+  margin-top: 8%;
+}
+
+.camembertDescription {
+  display: flex;
+  margin-top: 5%;
 }
 
 .leftDescription {
+  text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  margin-right: 85%;
-  margin-left: -35%;
-  justify-content: space-evenly;
-  height: 10vh;
-}
-
-.imageCamembert {
-  display: flex;
   justify-content: center;
-  margin-top: -30%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-bottom: 5%;
 }
 
 .camembertImg {
-  zoom: 65%;
-  margin: 1% 8% 1% 8%;
+  width: 35vw;
 }
 
 .rightDescription {
+  text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.upDescription {
-  margin-left: 86%;
-  margin-top: -80%;
-  width: 25vw;
-}
-
-.downDescription {
-  margin-left: 86%;
-  width: 25vw;
-  margin-bottom: -28%;
+  justify-content: space-between;
+  margin-top: 10%;
 }

@@ -15,7 +15,7 @@ function ActusPage() {
           <img alt="ActionSolideimg" src={ActionSolide} className={style.actionImg} />
         </div>
         <div className={style.engagementContainer}>
-          <h3 className={style.engagement}>Notre engagement social</h3>
+          <h2 className={style.engagement}>Notre engagement social</h2>
           <p className={style.engagementdescription}>
             Singa prélève des frais fixe, et considère que le reste de votre cotisation est le vôtre, et non le nôtre. Nous utilisons vos cotisations
             pour remboursere vos frais de santé, et redistribuons l&apos;argent qui reste à des causes qui vous tiennent à coeur.
@@ -32,8 +32,8 @@ function ActusPage() {
             </li>
           </ul>
         </div>
+        <h2 className={style.camembertTitle}>Voici votre cotisation. Vous la payez mensuellement.</h2>
         <div className={style.camembert}>
-          <h2 className={style.camembertTitle}>Voici votre cotisation. Vous la payez mensuellement.</h2>
           <div className={style.camembertDescription}>
             <div className={style.leftDescription}>
               <h3>70% de votre cotisation</h3>
