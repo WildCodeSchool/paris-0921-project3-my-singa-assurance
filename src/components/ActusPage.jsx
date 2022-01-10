@@ -14,7 +14,7 @@ function ActusPage() {
         <div className={style.imageActionMain}>
           <img alt="ActionSolideimg" src={ActionSolide} className={style.actionImg} />
         </div>
-        <div>
+        <div className={style.engagementContainer}>
           <h3 className={style.engagement}>Notre engagement social</h3>
           <p className={style.engagementdescription}>
             Singa prélève des frais fixe, et considère que le reste de votre cotisation est le vôtre, et non le nôtre. Nous utilisons vos cotisations

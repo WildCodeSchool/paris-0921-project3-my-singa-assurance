@@ -15,9 +15,78 @@
 .actusdescription {
   display: flex;
   font-family: 'Roboto', sans-serif;
-  padding: 10%;
+  padding: 4%;
+  margin-left: 20%;
+  margin-right: 20%;
   text-align: center;
+  font-weight: bold;
 }
 .actustitle {
   font-family: 'Open Sans', sans-serif;
+}
+
+.engagementContainer {
+  height: 12vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.engagement {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.explications {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20vh;
+  text-align: initial;
+}
+
+.camember {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.leftDescription {
+  display: flex;
+  flex-direction: column;
+  margin-right: 85%;
+  margin-left: -35%;
+  justify-content: space-evenly;
+  height: 10vh;
+}
+
+.imageCamembert {
+  display: flex;
+  justify-content: center;
+  margin-top: -30%;
+  margin-left: 5%;
+  margin-right: 5%;
+  .img {
+    zoom: 60%;
+    margin: 1% 8% 1% 8%;
+  }
+}
+
+.rightDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.upDescription {
+  margin-left: 86%;
+  margin-top: -80%;
+  width: 25vw;
+}
+
+.downDescription {
+  margin-left: 86%;
+  width: 25vw;
+  margin-bottom: -28%;
 }
