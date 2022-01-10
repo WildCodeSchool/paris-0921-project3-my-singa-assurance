@@ -18,15 +18,17 @@
   margin-bottom: 3vh;
   font-family: 'Work Sans', sans-serif;
   font-size: 1em;
-
-  :hover {
+  p:hover {
     color: #37c948;
     border-bottom: solid 1px #37c948;
     padding-top: 1px;
     cursor: pointer;
   }
+  
 }
 
 .subscriberText {
   margin-left: 1vh;
 }
+
+
