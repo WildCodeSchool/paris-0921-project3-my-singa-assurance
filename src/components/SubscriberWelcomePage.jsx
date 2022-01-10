@@ -4,7 +4,7 @@ import style from './style/SubscriberWelcomePage.module.scss';
 
 function SubscriberWelcomePage() {
   return (
-    <div>
+    <div className={style.SubscriberWelcomePageContainer}>
       <h1 className={style.SubscriberWelcomePageTitle}>CONTENU ADHERENT</h1>
     </div>
   );
