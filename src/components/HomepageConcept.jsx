@@ -82,6 +82,7 @@ function HomepageConcept() {
           return <ConceptCard key="0" title={card.title} src={card.src} desc={card.description} />;
         })}
       </div>
+      <h3>Qu&apos;est-ce que Singa Couvre ?</h3>
       <div className={style.BtnContainer}>
         {BtnConcepts.map((button) => {
           return <ConceptButtons key="0" icone={button.icone} title={button.title} arg={button.arg} />;
