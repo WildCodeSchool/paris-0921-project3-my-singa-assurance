@@ -8,7 +8,7 @@ const ConceptButtons = ({ icone, title, arg }) => {
         <img src={icone} alt="icone" />
         <div>{title}</div>
       </div>
-      <div className={style.arg}>{arg}</div>
+      <ul className={style.ulConceptBtn}>{arg && arg.map((element) => <li key={element}>{element}</li>)}</ul>
     </div>
   );
 };
