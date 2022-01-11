@@ -15,6 +15,10 @@ function Header() {
     navigate('/');
   }
 
+  function GoActus() {
+    navigate('/actus');
+  }
+
   return (
     <header className={style.header}>
       <nav className={style.container}>
@@ -25,7 +29,7 @@ function Header() {
         <ul className={style.menu}>
           <li>Accueil</li>
           <li>Mode d&apos;emploi</li>
-          <li>Actus</li>
+          <li onClick={GoActus}>Actus</li>
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
