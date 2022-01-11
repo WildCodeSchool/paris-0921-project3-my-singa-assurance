@@ -15,6 +15,10 @@ function Header() {
     navigate('/');
   }
 
+  function GoOffer() {
+    navigate('/offer');
+  }
+
   return (
     <header className={style.header}>
       <nav className={style.container}>
@@ -29,7 +33,9 @@ function Header() {
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
-          <button className={style.offers}>Consulter les offres</button>
+          <button className={style.offers} onClick={GoOffer}>
+            Consulter les offres
+          </button>
           <button onClick={handleLogIn} className={style.account}>
             Se connecter
           </button>
