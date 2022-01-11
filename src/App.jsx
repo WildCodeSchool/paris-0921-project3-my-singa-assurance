@@ -6,6 +6,7 @@ import LoginPage from './components/LoginPage';
 import SubscriberPage from './components/SubscriberPage';
 import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
+import SubscriberHasRecipients from './components/SubscriberHasRecipients';
 
 import './App.css';
 
@@ -16,8 +17,10 @@ function App() {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
-        <Route path="/subscribers" element={<SubscriberPage />} />
-        <Route path="/welcome" element={<SubscriberWelcomePage />} />
+        <Route path="/subscribers" element={<SubscriberPage />}>
+          <Route path="welcome" element={<SubscriberWelcomePage />} />
+          <Route path="recipients" element={<SubscriberHasRecipients />} />
+        </Route>
       </Routes>
     </>
   );
