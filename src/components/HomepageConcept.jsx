@@ -79,12 +79,12 @@ function HomepageConcept() {
       <div className={style.conceptTitle2}>Comment ça fonctionne ?</div>
       <div className={style.cardContainer}>
         {Concepts.map((card) => {
-          return <ConceptCard key="0" title={card.title} src={card.src} desc={card.description} />;
+          return <ConceptCard key={card.title} title={card.title} src={card.src} desc={card.description} />;
         })}
       </div>
       <div className={style.BtnContainer}>
         {BtnConcepts.map((button) => {
-          return <ConceptButtons key="0" icone={button.icone} title={button.title} arg={button.arg} />;
+          return <ConceptButtons key={button.icone} icone={button.icone} title={button.title} arg={button.arg} />;
         })}
       </div>
     </div>

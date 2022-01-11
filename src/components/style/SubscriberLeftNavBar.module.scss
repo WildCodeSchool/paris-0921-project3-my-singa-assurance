@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.subscriberTitleContainer {
+  width: 30%;
+  height: 300vh;
+  margin-top: 6vh;
+  font-family: 'Work Sans', sans-serif;
+  .subscriberStickyNavBar {
+    position: sticky;
+    top: 8vh;
+  }
+}
+
+.subscribernavBarButton {
+  display: flex;
+  margin-left: 4vh;
+  align-items: center;
+  margin-bottom: 3vh;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  color: black;
+  border: none;
+  :hover {
+    border-bottom: solid 1px #000000;
+    padding-top: 1px;
+    cursor: pointer;
+  }
+}
+
+.subscribernavBarButton:hover {
+  color: #37c948;
+  .subscriberText:hover {
+    border-bottom: solid 1px #37c948;
+    padding-top: 1px;
+    cursor: pointer;
+  }
+}
+
+.subscriberText {
+  margin-left: 1vh;
+}
