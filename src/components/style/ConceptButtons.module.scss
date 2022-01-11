@@ -29,6 +29,10 @@
   transition: 400ms;
   cursor: default;
   border: solid 5px;
+  background-color: white;
+  img {
+    width:3vw;
+  }
   .apparentButton {
     border: none;
     font-weight: bold;
