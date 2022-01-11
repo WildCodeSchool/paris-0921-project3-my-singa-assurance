@@ -6,9 +6,16 @@ const ConceptButtons = ({ icone, title, arg }) => {
     <ul className={style.allConceptButton}>
       <li className={style.apparentButton}>
         <img src={icone} alt="icone" />
-        <div>{title}</div>
+        <div className={style.title}>{title}</div>
       </li>
-      <ul className={style.ulConceptBtn}>{arg && arg.map((element) => <li key={element}>{element}</li>)}</ul>
+      <ul className={style.ulConceptBtn}>
+        {arg &&
+          arg.map((element) => (
+            <li key={element} className={style.btnConceptLi}>
+              {element}
+            </li>
+          ))}
+      </ul>
     </ul>
   );
 };
