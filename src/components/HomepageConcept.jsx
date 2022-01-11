@@ -7,6 +7,10 @@ import MyImgConcept2 from '../assets/MyImgConcept2.png';
 import MyImgConcept3 from '../assets/MyImgConcept3.png';
 import Hospitalisation from '../assets/hospitalisation.png';
 import Maternité from '../assets/maternité.png';
+import Optique from '../assets/optique.png';
+import FraisMedicaux from '../assets/fraisMedicaux.png';
+import Dentaire from '../assets/dentaire.png';
+import Teleconsultation from '../assets/teleconsultation.png';
 
 import style from './style/HomepageConcept.module.scss';
 
@@ -41,19 +45,19 @@ function HomepageConcept() {
       arg: ['frais pré et post-natal', 'accouchement simple', 'accouchement multiple', 'accouchement chirurgical'],
     },
     {
-      icone: Hospitalisation,
+      icone: Optique,
       title: 'Optique',
     },
     {
-      icone: Hospitalisation,
+      icone: FraisMedicaux,
       title: 'Frais médicaux',
     },
     {
-      icone: Hospitalisation,
+      icone: Dentaire,
       title: 'Dentaire',
     },
     {
-      icone: Hospitalisation,
+      icone: Teleconsultation,
       title: 'Téléconsultation',
     },
   ];
