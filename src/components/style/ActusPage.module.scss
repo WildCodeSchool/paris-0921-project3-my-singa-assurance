@@ -3,6 +3,7 @@
 
 .mainActusPageContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .textActus {
@@ -12,17 +13,21 @@
   margin: 10%;
 }
 
+.actustitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+
 .actusdescription {
   display: flex;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: black;
   padding: 4%;
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
   font-weight: bold;
-}
-.actustitle {
-  font-family: 'Open Sans', sans-serif;
 }
 
 .actionImg {
@@ -30,7 +35,7 @@
 }
 
 .engagementContainer {
-  height: 12vh;
+  height: 15vh;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -38,14 +43,24 @@
   width: 66%;
   text-align: center;
   margin-bottom: 8vh;
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
 
 .engagement {
   font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+
+.engagementdescription {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: black;
 }
 
 .explications {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -55,6 +70,7 @@
 
 .explicationstitle {
   font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
   text-align: center;
   color: #37c948;
 }
@@ -64,15 +80,23 @@
   height: 14vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: black;
 }
 
 .camembertTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8em;
   margin-top: 8%;
 }
 
 .camembertDescription {
   display: flex;
   margin-top: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: black;
 }
 
 .leftDescription {
@@ -82,10 +106,13 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  color: black;
 }
 
 .camembertImg {
-  width: 35vw;
+  width: 26vw;
 }
 
 .rightDescription {
@@ -95,4 +122,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 10%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  color: black;
 }

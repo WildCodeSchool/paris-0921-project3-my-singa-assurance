@@ -1,7 +1,11 @@
 import React from 'react';
+
 import ActionSolide from '../assets/ActionSolide.png';
 import Camembert from '../assets/Camembert.png';
+
 import style from './style/ActusPage.module.scss';
+
+import Footer from './Footer';
 
 function ActusPage() {
   return (
@@ -54,6 +58,9 @@ function ActusPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className={style.actusFooter}>
+        <Footer />
       </div>
     </div>
   );
