@@ -43,7 +43,7 @@ function LoginPage() {
         authorization: 'Bearer ' + localStorage.getItem('dataConnection'),
       },
     });
-    navigate('/subscribers');
+    navigate('/subscribers/welcome');
   };
 
   return (
