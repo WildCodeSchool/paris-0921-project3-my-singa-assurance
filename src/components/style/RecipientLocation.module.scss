@@ -64,6 +64,7 @@
 .RecipientLocationTextMain {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .RecipientLocationIconLightBulb {
@@ -102,5 +103,8 @@
     font-family: 'work sans', sans-serif;
     font-weight: 600;
     font-size: 1.3em;
+  }
+  .RecipientLocationIconArrow {
+    background: none;
   }
 }
