@@ -1,15 +1,18 @@
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import axios from 'axios';
+
+import { logIn } from '../services/axios.service';
+import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/LoginPage.module.scss';
 import Background from '../assets/LoginBackground.png';
 
 function LoginPage() {
+  const { setDecodedToken } = useContext(SubscriberInfoContext);
   const navigate = useNavigate();
 
   const handleCreateAccount = () => {
@@ -33,17 +36,8 @@ function LoginPage() {
   });
 
   const onSubmit = async (data) => {
-    localStorage.removeItem('dataConnection');
-    const token = await axios.post('http://localhost:8080/auth/login', data);
-    localStorage.setItem('dataConnection', token.data);
-    // eslint-disable-next-line no-unused-vars
-    const result = await axios.get('http://localhost:8080/subscribers', {
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: 'Bearer ' + localStorage.getItem('dataConnection'),
-      },
-    });
-    navigate('/subscribers');
+    const decoded = await logIn(data);
+    setDecodedToken(decoded);
   };
 
   return (
