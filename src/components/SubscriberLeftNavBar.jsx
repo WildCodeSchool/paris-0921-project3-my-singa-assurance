@@ -41,18 +41,18 @@ function SubscriberLeftNavBar() {
           </div>
           <p className={style.subscriberText}>Contrats & Documents</p>
         </button>
-        <button className={style.subscribernavBarButton}>
+        <Link to="/subscribers/actionsolidaire" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <EcoIcon />
           </div>
           <p className={style.subscriberText}>Actions Solidaires</p>
-        </button>
-        <button className={style.subscribernavBarButton}>
+        </Link>
+        <Link to="/subscribers/nouscontacter" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <QuestionAnswerIcon />
           </div>
           <p className={style.subscriberText}>Nous contacter</p>
-        </button>
+        </Link>
       </div>
     </div>
   );
