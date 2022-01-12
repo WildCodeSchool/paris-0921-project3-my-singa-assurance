@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import portrait from '../assets/portraitRecipient.png';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
@@ -64,6 +65,15 @@ function Offer() {
 
   return (
     <div className={style.mainOfferContainer}>
+      <div className={style.RecipientLocationTitle}>
+        <div className={style.RecipientLocationMainPortrait}>
+          <img src={portrait} alt="user" className={style.RecipientLocationPortrait} />
+        </div>
+        <div className={style.RecipientLocationTextTitle}>
+          <h3 className={style.RecipientLocationPresentation}>On vérifie les centres de soins couverts par Singa ? </h3>
+          <h3 className={style.RecipientLocationPresentation}>Sinon, passons directement à notre formule !</h3>
+        </div>
+      </div>
       <h1>Combien de proches souhaitez-vous assurer ?</h1>
       <div className={style.countersMainContainer}>
         <div className={style.ageCounterMainContainer}>

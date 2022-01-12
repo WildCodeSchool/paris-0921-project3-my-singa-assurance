@@ -10,6 +10,7 @@ import SubscriberWelcomePage from './components/SubscriberWelcomePage';
 import SubscriberHasRecipients from './components/SubscriberHasRecipients';
 
 import './App.css';
+import RecipientLocation from './components/RecipientLocation';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipients" element={<SubscriberHasRecipients />} />
         </Route>
+        <Route path="/recipientLocation" element={<RecipientLocation />} />
       </Routes>
     </>
   );
