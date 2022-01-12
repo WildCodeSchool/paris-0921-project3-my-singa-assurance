@@ -15,12 +15,12 @@ function Header() {
     navigate('/');
   }
 
-  function GoActus() {
-    navigate('/actus');
+  function GoOffer() {
+    navigate('/offer');
   }
 
-  function GoOffer() {
-    navigate('/offres');
+  function GoActus() {
+    navigate('/actus');
   }
 
   return (
