@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import LoginPage from './components/LoginPage';
 import Offer from './components/Offer';
 import OfferRate from './components/OfferRate';
+import ActusPage from './components/ActusPage';
 import SubscriberPage from './components/SubscriberPage';
 import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
@@ -18,6 +19,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Homepage />} />
+        <Route path="/actus" element={<ActusPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/offer" element={<Offer />} />
