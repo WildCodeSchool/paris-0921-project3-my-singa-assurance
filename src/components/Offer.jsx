@@ -70,42 +70,48 @@ function Offer() {
           <img src={portrait} alt="user" className={style.RecipientLocationPortrait} />
         </div>
         <div className={style.RecipientLocationTextTitle}>
-          <h3 className={style.RecipientLocationPresentation}>On vérifie les centres de soins couverts par Singa ? </h3>
-          <h3 className={style.RecipientLocationPresentation}>Sinon, passons directement à notre formule !</h3>
+          <h3 className={style.RecipientLocationPresentation}>Bonjour, ici Paul ! J&apos;ai quelques questions pour trouver votre formule adaptée</h3>
         </div>
       </div>
       <h1>Combien de proches souhaitez-vous assurer ?</h1>
       <div className={style.countersMainContainer}>
-        <div className={style.ageCounterMainContainer}>
-          <div className={style.ageCounter}>
-            <div>{juniorCount}</div>
-            <div className={style.arrowBtn}>
-              <ArrowDropUpIcon onClick={handleIncrementJuniorCount} />
-              <ArrowDropDownIcon onClick={handleDecrementJuniorCount} />
+        <div className={style.countersContainer}>
+          <div className={style.ageCounterMainContainer}>
+            <div className={style.ageCounter}>
+              <div>{juniorCount}</div>
+              <div className={style.arrowBtn}>
+                <ArrowDropUpIcon onClick={handleIncrementJuniorCount} />
+                <ArrowDropDownIcon onClick={handleDecrementJuniorCount} />
+              </div>
             </div>
+            <div className={style.ageCounterTitle}>Juniors</div>
           </div>
-          <div className={style.ageCounterTitle}>Juniors</div>
-        </div>
-        <div className={style.ageCounterMainContainer}>
-          <div className={style.ageCounter}>
-            <div>{adultCount}</div>
-            <div className={style.arrowBtn}>
-              <ArrowDropUpIcon onClick={handleIncrementAdultCount} />
-              <ArrowDropDownIcon onClick={handleDecrementAdultCount} />
+          <div className={style.ageCounterMainContainer}>
+            <div className={style.ageCounter}>
+              <div>{adultCount}</div>
+              <div className={style.arrowBtn}>
+                <ArrowDropUpIcon onClick={handleIncrementAdultCount} />
+                <ArrowDropDownIcon onClick={handleDecrementAdultCount} />
+              </div>
             </div>
+            <div className={style.ageCounterTitle}>Adultes</div>
           </div>
-          <div className={style.ageCounterTitle}>Adultes</div>
-        </div>
-        <div className={style.ageCounterMainContainer}>
-          <div className={style.ageCounter}>
-            <div>{seniorCount}</div>
-            <div className={style.arrowBtn}>
-              <ArrowDropUpIcon onClick={handleIncrementSeniorCount} />
-              <ArrowDropDownIcon onClick={handleDecrementSeniorCount} />
+          <div className={style.ageCounterMainContainer}>
+            <div className={style.ageCounter}>
+              <div>{seniorCount}</div>
+              <div className={style.arrowBtn}>
+                <ArrowDropUpIcon onClick={handleIncrementSeniorCount} />
+                <ArrowDropDownIcon onClick={handleDecrementSeniorCount} />
+              </div>
             </div>
+            <div className={style.ageCounterTitle}>Seniors</div>
           </div>
-          <div className={style.ageCounterTitle}>Seniors</div>
         </div>
+        <div>Dites-nous le nombre de proches à assurer pour vous proposer une offre personnalisée</div>
+      </div>
+      <div className={style.offerBtn}>
+        <button>Retour</button>
+        <button>C&apos;est parti</button>
       </div>
     </div>
   );
