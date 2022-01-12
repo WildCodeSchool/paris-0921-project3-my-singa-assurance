@@ -17,6 +17,14 @@ function SubscriberLeftNavBar() {
     navigate('/welcome');
   };
 
+  const ActionSolidaire = () => {
+    navigate('/actionsolidaire');
+  };
+
+  const ContactUs = () => {
+    navigate('/nouscontacter');
+  };
+
   return (
     <div className={style.subscriberTitleContainer}>
       <div className={style.subscriberStickyNavBar}>
@@ -47,13 +55,13 @@ function SubscriberLeftNavBar() {
           </div>
           <p className={style.subscriberText}>Contrats & Documents</p>
         </button>
-        <button className={style.subscribernavBarButton}>
+        <button className={style.subscribernavBarButton} onClick={ActionSolidaire}>
           <div className={style.subscriberIcon}>
             <EcoIcon />
           </div>
           <p className={style.subscriberText}>Actions Solidaires</p>
         </button>
-        <button className={style.subscribernavBarButton}>
+        <button className={style.subscribernavBarButton} onClick={ContactUs}>
           <div className={style.subscriberIcon}>
             <QuestionAnswerIcon />
           </div>

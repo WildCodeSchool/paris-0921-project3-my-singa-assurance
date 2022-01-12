@@ -8,9 +8,7 @@ import SubscriberPage from './components/SubscriberPage';
 import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
 
-
 import './App.css';
-import RecipientLocation from './components/RecipientLocation';
 
 function App() {
   return (
@@ -22,7 +20,6 @@ function App() {
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/subscribers" element={<SubscriberPage />} />
         <Route path="/welcome" element={<SubscriberWelcomePage />} />
-        <Route path="/recipientLocation" element={<RecipientLocation />} />
       </Routes>
     </>
   );
