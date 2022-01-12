@@ -38,6 +38,7 @@ function LoginPage() {
   const onSubmit = async (data) => {
     const decoded = await logIn(data);
     setDecodedToken(decoded);
+    navigate('/subscribers');
   };
 
   return (
