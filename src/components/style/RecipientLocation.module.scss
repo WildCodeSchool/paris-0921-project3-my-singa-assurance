@@ -8,9 +8,8 @@
 }
 
 .RecipientLocationTitle {
-  flex-direction: column;
-  flex-direction: row;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .RecipientLocationPortrait {
@@ -68,14 +67,28 @@
   width: 100%;
 
   .RecipientLocationButton {
+    align-items: center;
     background-color: #e0e0e0;
-    color: #525252;
-    font-family: 'work sans', sans-serif;
-    font-weight: 600;
-    font-size: 1em;
+    
+    display: flex;
+    
     border: none;
     border-radius: 84px;
     margin: 2vh;
     padding: 2vh;
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+  .RecipientLocationIcon{
+      margin-right: 2vw;
+      background: none;
+  }
+
+  .RecipientLocationButtonText{
+    color: #525252;  
+    background: none;
+    font-family: 'work sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
   }
 }
