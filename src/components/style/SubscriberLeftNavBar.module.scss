@@ -7,7 +7,7 @@
   font-family: 'Work Sans', sans-serif;
   .subscriberStickyNavBar {
     position: sticky;
-    top: 8vh;
+    top: 20vh;
   }
 }
 
@@ -15,11 +15,12 @@
   display: flex;
   margin-left: 4vh;
   align-items: center;
-  margin-bottom: 3vh;
+  margin-bottom: 4vh;
   font-family: 'Work Sans', sans-serif;
   font-size: 1em;
   color: black;
   border: none;
+  text-decoration: none;
   :hover {
     border-bottom: solid 1px #000000;
     padding-top: 1px;
