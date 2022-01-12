@@ -50,7 +50,7 @@
   font-size: 1.2em;
   font-weight: 500;
   padding: 1vh;
-  width: 50vw;
+  width: 40vw;
 }
 
 .RecipientLocationText {
@@ -59,6 +59,18 @@
   font-weight: 500;
   margin-top: 3vh;
   margin-bottom: 3vh;
+}
+
+.RecipientLocationTextMain {
+  display: flex;
+  justify-content: space-around;
+}
+
+.RecipientLocationIconLightBulb {
+  width: 36px;
+  margin-right: 2vw;
+  align-items: center;
+  display: flex;
 }
 
 .RecipientLocationButtonMain {

@@ -3,6 +3,7 @@ import React from 'react';
 import style from './style/RecipientLocation.module.scss';
 import portrait from '../assets/portraitRecipient.png';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
+import lightbulb from '../assets/lightBulb.png';
 
 function RecipientLocation() {
   const Emoji = (props) => (
@@ -31,6 +32,9 @@ function RecipientLocation() {
         <input type="text" id="text" name="test" placeholder="Ville ou région" className={style.RecipientLocationChooseRegionInput} />
       </div>
       <div className={style.RecipientLocationTextMain}>
+        <div className={style.RecipientLocationIconLightBulbMain}>
+          <img src={lightbulb} alt="idea" className={style.RecipientLocationIconLightBulb} />
+        </div>
         <p className={style.RecipientLocationText}>Vérifions où se trouvent les partenaires santé de Singa</p>
       </div>
       <div className={style.RecipientLocationButtonMain}>
