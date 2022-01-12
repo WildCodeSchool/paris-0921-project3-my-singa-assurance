@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import style from './style/RecipientLocation.module.scss';
 import portrait from '../assets/portraitRecipient.png';
@@ -11,6 +11,12 @@ function RecipientLocation() {
       {props.symbol}
     </span>
   );
+
+  const [place, setPlace] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('place', JSON.stringify(place));
+  }, [place]);
 
   return (
     <div className={style.RecipientLocationContainer}>
@@ -29,7 +35,18 @@ function RecipientLocation() {
         <h2 className={style.RecipientLocationWhereTitle}>Où habitent-ils ?</h2>
       </div>
       <div className={style.RecipientLocationChooseRegion}>
-        <input type="text" id="text" name="test" placeholder="Ville ou région" className={style.RecipientLocationChooseRegionInput} />
+        <form>
+          <input
+            type="text"
+            id="text"
+            name="place"
+            value={place}
+            onChange={(e) => setPlace(e.target.value)}
+            aria-label="place"
+            placeholder="Ville ou région"
+            className={style.RecipientLocationChooseRegionInput}
+          />
+        </form>
       </div>
       <div className={style.RecipientLocationTextMain}>
         <div className={style.RecipientLocationIconLightBulbMain}>
@@ -40,7 +57,7 @@ function RecipientLocation() {
       <div className={style.RecipientLocationButtonMain}>
         <button className={style.RecipientLocationButton}>
           <div className={style.RecipientLocationIcon}>
-            <ArrowBackOutlinedIcon />
+            <ArrowBackOutlinedIcon className={style.RecipientLocationIconArrow} />
           </div>
           <p className={style.RecipientLocationButtonText}>Retour</p>
         </button>
