@@ -7,7 +7,6 @@ import ActusPage from './components/ActusPage';
 import SubscriberPage from './components/SubscriberPage';
 import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
-import ContactPage from './components/ContactPage';
 
 import './App.css';
 
@@ -21,7 +20,6 @@ function App() {
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/subscribers" element={<SubscriberPage />} />
         <Route path="/welcome" element={<SubscriberWelcomePage />} />
-        <Route path="/nouscontacter" element={<ContactPage />} />
       </Routes>
     </>
   );
