@@ -20,9 +20,8 @@ function App() {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
-        <Route path="/offer" element={<Offer />}>
-          <Route path="rate" element={<OfferRate />} />
-        </Route>
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/rates" element={<OfferRate />} />
         <Route path="/subscribers" element={<SubscriberPage />}>
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipients" element={<SubscriberHasRecipients />} />
