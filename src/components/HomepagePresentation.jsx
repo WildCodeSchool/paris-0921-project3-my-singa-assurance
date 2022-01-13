@@ -8,7 +8,7 @@ function HomepagePresentation() {
   const navigate = useNavigate();
 
   function GoOffer() {
-    navigate('/offer');
+    navigate('/offer/offer');
   }
 
   return (

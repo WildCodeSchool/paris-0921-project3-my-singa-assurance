@@ -16,7 +16,7 @@ function Header() {
   }
 
   function GoOffer() {
-    navigate('/offer');
+    navigate('/offer/offer');
   }
 
   function GoActus() {
