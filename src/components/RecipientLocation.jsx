@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import style from './style/RecipientLocation.module.scss';
 import portrait from '../assets/portraitRecipient.png';
@@ -6,6 +7,16 @@ import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import lightbulb from '../assets/lightBulb.png';
 
 function RecipientLocation() {
+  const navigate = useNavigate();
+
+  function GoRates() {
+    navigate('/offer/rates');
+  }
+
+  function GoOfferPage() {
+    navigate('/offer/offer');
+  }
+
   const Emoji = (props) => (
     <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
       {props.symbol}
@@ -59,10 +70,14 @@ function RecipientLocation() {
           <div className={style.RecipientLocationIcon}>
             <ArrowBackOutlinedIcon className={style.RecipientLocationIconArrow} />
           </div>
-          <p className={style.RecipientLocationButtonText}>Retour</p>
+          <p className={style.RecipientLocationButtonText} onClick={GoOfferPage}>
+            Retour
+          </p>
         </button>
         <button className={style.RecipientLocationButton}>
-          <p className={style.RecipientLocationButtonText}>Passer</p>
+          <p className={style.RecipientLocationButtonText} onClick={GoRates}>
+            Passer
+          </p>
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import portrait from '../assets/portraitRecipient.png';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
@@ -10,6 +11,12 @@ import ArrowEastIcon from '@mui/icons-material/East';
 import style from './style/Offer.module.scss';
 
 function Offer() {
+  const navigate = useNavigate();
+
+  function GoRecipientLocation() {
+    navigate('/offer/recipientLocation');
+  }
+
   const Emoji = (props) => (
     <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
       {props.symbol}
@@ -136,7 +143,9 @@ function Offer() {
           <p className={style.AgeCounterDirectionButtonText}>Retour</p>
         </button>
         <button className={style.AgeCounterDirectionButton}>
-          <p className={style.AgeCounterDirectionButtonText}>C&apos;est parti</p>
+          <p className={style.AgeCounterDirectionButtonText} onClick={GoRecipientLocation}>
+            C&apos;est parti
+          </p>
           <div className={style.AgeCounterDirectionIconArrow}>
             <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
           </div>
