@@ -22,7 +22,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusPage />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/offer" element={<OfferPage />}>
@@ -33,6 +32,8 @@ function App() {
         <Route path="/subscribers" element={<SubscriberPage />}>
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipients" element={<SubscriberHasRecipients />} />
+          <Route path="actionsSolidaires" element={<ActusPage />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </>

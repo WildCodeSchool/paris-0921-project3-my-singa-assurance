@@ -41,13 +41,13 @@ function SubscriberLeftNavBar() {
           </div>
           <p className={style.subscriberText}>Contrats & Documents</p>
         </Link>
-        <Link to="/subscribers/actus" className={style.subscribernavBarButton}>
+        <Link to="/subscribers/actionsSolidaires" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <EcoIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Actions Solidaires</p>
         </Link>
-        <Link to="/subscribers/nouscontacter" className={style.subscribernavBarButton}>
+        <Link to="/subscribers/contact" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <QuestionAnswerIcon className={style.subscriberNavaBarIcon} />
           </div>
