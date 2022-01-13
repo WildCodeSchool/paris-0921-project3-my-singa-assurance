@@ -16,40 +16,40 @@ function SubscriberLeftNavBar() {
       <div className={style.subscriberStickyNavBar}>
         <Link to="/subscribers/welcome" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <HomeIcon />
+            <HomeIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Bienvenue</p>
         </Link>
 
         <Link to="/subscribers/recipients" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <PeopleAltIcon />
+            <PeopleAltIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Mes bénéficiaires</p>
         </Link>
 
-        <button className={style.subscribernavBarButton}>
+        <Link to="/" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <CreditCardIcon />
+            <CreditCardIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Factures & Paiements</p>
-        </button>
+        </Link>
 
-        <button className={style.subscribernavBarButton}>
+        <Link to="/" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <DescriptionIcon />
+            <DescriptionIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Contrats & Documents</p>
-        </button>
-        <Link to="/subscribers/actionsolidaire" className={style.subscribernavBarButton}>
+        </Link>
+        <Link to="/subscribers/actus" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <EcoIcon />
+            <EcoIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Actions Solidaires</p>
         </Link>
         <Link to="/subscribers/nouscontacter" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
-            <QuestionAnswerIcon />
+            <QuestionAnswerIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Nous contacter</p>
         </Link>

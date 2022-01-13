@@ -12,6 +12,7 @@ import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
 import SubscriberHasRecipients from './components/SubscriberHasRecipients';
 import RecipientLocation from './components/RecipientLocation';
+import Contact from './components/ContactPage';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusPage />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/offer" element={<OfferPage />}>

@@ -3,10 +3,19 @@ import React, { useState } from 'react';
 import portrait from '../assets/portraitRecipient.png';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import lightbulb from '../assets/lightBulb.png';
+import ArrowBackOutlinedIconLeft from '@material-ui/icons/ArrowBackOutlined';
+import ArrowEastIcon from '@mui/icons-material/East';
 
 import style from './style/Offer.module.scss';
 
 function Offer() {
+  const Emoji = (props) => (
+    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+      {props.symbol}
+    </span>
+  );
+
   const [juniorCount, setJuniorCount] = useState(0);
   const [adultCount, setAdultCount] = useState(0);
   const [seniorCount, setSeniorCount] = useState(0);
@@ -70,7 +79,9 @@ function Offer() {
           <img src={portrait} alt="user" className={style.RecipientLocationPortrait} />
         </div>
         <div className={style.RecipientLocationTextTitle}>
-          <h3 className={style.RecipientLocationPresentation}>Bonjour, ici Paul ! J&apos;ai quelques questions pour trouver votre formule adaptée</h3>
+          <h3 className={style.RecipientLocationPresentation}>
+            Bonjour, ici Paul !<Emoji label="smiling face" symbol="😃" /> J&apos;ai quelques questions pour trouver votre formule adaptée
+          </h3>
         </div>
       </div>
       <h1>Combien de proches souhaitez-vous assurer ?</h1>
@@ -85,6 +96,7 @@ function Offer() {
               </div>
             </div>
             <div className={style.ageCounterTitle}>Juniors</div>
+            <p className={style.ageCounterText}>(-21 ans)</p>
           </div>
           <div className={style.ageCounterMainContainer}>
             <div className={style.ageCounter}>
@@ -95,6 +107,7 @@ function Offer() {
               </div>
             </div>
             <div className={style.ageCounterTitle}>Adultes</div>
+            <p className={style.ageCounterText}>(21 à 56 ans)</p>
           </div>
           <div className={style.ageCounterMainContainer}>
             <div className={style.ageCounter}>
@@ -105,13 +118,29 @@ function Offer() {
               </div>
             </div>
             <div className={style.ageCounterTitle}>Seniors</div>
+            <p className={style.ageCounterText}>(56 à 64 ans)</p>
           </div>
         </div>
-        <div>Dites-nous le nombre de proches à assurer pour vous proposer une offre personnalisée</div>
+        <div className={style.CountertextBulb}>
+          <div className={style.RecipientLocationIconLightBulbMain}>
+            <img src={lightbulb} alt="idea" className={style.CounterIconLightBulb} />
+          </div>
+          <div className={style.ageCounterTextbulb}>Dites-nous le nombre de proches à assurer pour vous proposer une offre personnalisée</div>
+        </div>
       </div>
-      <div className={style.offerBtn}>
-        <button>Retour</button>
-        <button>C&apos;est parti</button>
+      <div className={style.CounterOfferBtn}>
+        <button className={style.AgeCounterDirectionButton}>
+          <div className={style.AgeCounterDirectionIconArrow}>
+            <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
+          </div>
+          <p className={style.AgeCounterDirectionButtonText}>Retour</p>
+        </button>
+        <button className={style.AgeCounterDirectionButton}>
+          <p className={style.AgeCounterDirectionButtonText}>C&apos;est parti</p>
+          <div className={style.AgeCounterDirectionIconArrow}>
+            <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
+          </div>
+        </button>
       </div>
     </div>
   );
