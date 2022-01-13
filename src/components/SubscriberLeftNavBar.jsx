@@ -28,19 +28,19 @@ function SubscriberLeftNavBar() {
           <p className={style.subscriberText}>Mes bénéficiaires</p>
         </Link>
 
-        <button className={style.subscribernavBarButton}>
+        <Link to="/" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <CreditCardIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Factures & Paiements</p>
-        </button>
+        </Link>
 
-        <button className={style.subscribernavBarButton}>
+        <Link to="/" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <DescriptionIcon className={style.subscriberNavaBarIcon} />
           </div>
           <p className={style.subscriberText}>Contrats & Documents</p>
-        </button>
+        </Link>
         <Link to="/subscribers/actus" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <EcoIcon className={style.subscriberNavaBarIcon} />
