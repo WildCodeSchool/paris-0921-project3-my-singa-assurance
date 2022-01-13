@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
+import { getOptionsInfo } from '../services/axios.service';
 import OfferRateCard from './OfferRateCard';
 import portrait from '../assets/portraitRecipient.png';
 
 import style from './style/OfferRate.module.scss';
 
 function OfferRate() {
-  const [formule, setFormule] = useState('');
+  const [formule, setFormule] = useState([]);
 
   useEffect(async () => {
-    const res = await axios.get('http://localhost:8081/options');
-    const result = res.data;
+    const getData = async () => {
+      const res = await getOptionsInfo();
+      return res.data;
+    };
+    const result = await getData();
     setFormule(result);
   }, []);
 
@@ -26,9 +29,9 @@ function OfferRate() {
         </div>
       </div>
       <div className={style.ratesMainContainer}>
-        {formule &&
+        {formule.length &&
           formule.map((element) => {
-            return <OfferRateCard key={element} formule={element.formule_name} price={element.formule_details} />;
+            return <OfferRateCard key={element.formule_id} formule={element.formule_name} price={element.formule_details} />;
           })}
       </div>
     </div>
