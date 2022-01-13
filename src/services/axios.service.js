@@ -9,7 +9,7 @@ const options = {
 const URL = 'http://localhost:8080';
 
 export const createSubscriberAccount = async (data) => {
-  const subscriberCreated = await axios.post(`${URL}`, data);
+  const subscriberCreated = await axios.post(`${URL}/auth/register`, data);
   return subscriberCreated;
 };
 
