@@ -34,3 +34,9 @@ export const getRecipients = async (id) => {
   const [recipients] = await axios.get(`${URL}/recipients/${id}`, options);
   return recipients;
 };
+
+export const getOptionsInfo = async () => {
+  const optionsInfo = await axios.get(`${URL}/options`);
+
+  return optionsInfo;
+};
