@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import { createSubscriberAccount, logIn } from '../services/axios.service';
 
 import AuthenticationContext from '../context/AuthenticationContext';
+import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import style from './FormSignUpStep2.module.scss';
 
 const validationSchema = Yup.object().shape({
@@ -20,9 +21,11 @@ const validationSchema = Yup.object().shape({
 
 function FormSignUpStep2() {
   const { registerationData, setIsLogIn } = useContext(AuthenticationContext);
-  const navigate = useNavigate();
+  const { setDecodedToken } = useContext(SubscriberInfoContext);
 
-  let isCreated = false;
+  const [isCreated, setIsCreated] = useState(false);
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -41,14 +44,17 @@ function FormSignUpStep2() {
       create_date: new Date().toISOString().split('.')[0] + 'Z',
     });
 
-    if (created.status === 201) isCreated = true;
+    if (created.status === 201) setIsCreated(true);
 
     const loggedin = await logIn({
       email: registerationData.email,
       password: data.password,
     });
 
-    if (loggedin) setIsLogIn(true);
+    if (loggedin) {
+      setIsLogIn(true);
+      setDecodedToken(loggedin);
+    }
 
     setTimeout(() => {
       navigate('/subscribers/welcome');
