@@ -5,6 +5,7 @@ import HomepagePresentation from './HomepagePresentation';
 import HomepageTarif from './HomepageTarif';
 import HomepageConcept from './HomepageConcept';
 import Footer from './Footer';
+import ContactPage from './ContactPage';
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
       <HomepagePresentation />
       <HomepageTarif />
       <HomepageConcept />
+      <ContactPage />
       <Footer />
     </>
   );

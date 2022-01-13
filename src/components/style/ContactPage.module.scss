@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.mainContactPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+.textContact {
+  height: 15vh;
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.titleContact {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+
+.span1 {
+  color: #37c948;
+}
+
+.contactDescricption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: black;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 10%;
+}
+
+.imageRight,
+.imageLeft {
+  height: 60vh;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleImage1,
+.titleImage2 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+.descriptionImage1,
+.descriptionImage2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin-top: 5%;
+}
+
+.btnImage1,
+.btnImage2 {
+  margin-top: 5%;
+  height: 6vh;
+  border: top;
+  border-radius: 20px;
+  width: 20vw;
+  background-color: #ffbc00;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
