@@ -55,6 +55,10 @@ function FormSignUpStep2() {
     }, 2000);
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className={style.mainContainer}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -80,7 +84,9 @@ function FormSignUpStep2() {
           </div>
         </div>
         <div className={style.formBtn}>
-          <button className={style.btnBack}>Retour</button>
+          <button className={style.btnBack} onClick={handleGoBack}>
+            Retour
+          </button>
           <button disabled={!isValid} className={style.btnNext} type="submit">
             Créer
           </button>
