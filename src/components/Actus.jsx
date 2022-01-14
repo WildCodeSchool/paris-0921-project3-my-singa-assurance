@@ -3,11 +3,11 @@ import React from 'react';
 import ActionSolide from '../assets/ActionSolide.png';
 import Camembert from '../assets/Camembert.png';
 
-import style from './style/ActusPage.module.scss';
+import style from './style/Actus.module.scss';
 
 import Footer from './Footer';
 
-function ActusPage() {
+function Actus() {
   return (
     <div className={style.mainActusPageContainer}>
       <div className={style.textActus}>
@@ -65,4 +65,4 @@ function ActusPage() {
     </div>
   );
 }
-export default ActusPage;
+export default Actus;

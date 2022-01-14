@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import portrait from '../assets/portraitRecipient.png';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import lightbulb from '../assets/lightBulb.png';
 import ArrowBackOutlinedIconLeft from '@material-ui/icons/ArrowBackOutlined';
 import ArrowEastIcon from '@mui/icons-material/East';
+
+import portrait from '../assets/portraitRecipient.png';
+import lightbulb from '../assets/lightBulb.png';
 
 import style from './style/Offer.module.scss';
 

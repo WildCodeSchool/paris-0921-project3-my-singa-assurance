@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 
 import style from './style/RecipientLocation.module.scss';
 import portrait from '../assets/portraitRecipient.png';
-import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import lightbulb from '../assets/lightBulb.png';
 
 function RecipientLocation() {

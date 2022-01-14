@@ -8,7 +8,7 @@ import { createSubscriberAccount, logIn } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
-import style from './FormSignUpStep2.module.scss';
+import style from './style/FormSignUpStep2.module.scss';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
