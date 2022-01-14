@@ -3,8 +3,6 @@ import { Outlet } from 'react-router-dom';
 
 import SubscriberHeader from './SubscriberHeader';
 import SubscriberLeftNavBar from './SubscriberLeftNavBar';
-// import SubscriberWelcomePage from './SubscriberWelcomePage';
-// import SubscriberHasRecipients from './SubscriberHasRecipients';
 
 import style from './style/Subscriberpage.module.scss';
 
