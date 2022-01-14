@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 
 import AuthenticationContext from '../context/AuthenticationContext';
 
-import style from './FormSignUpStep1.module.scss';
+import style from './style/FormSignUpStep1.module.scss';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),

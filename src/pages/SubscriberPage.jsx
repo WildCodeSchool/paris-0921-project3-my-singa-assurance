@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import SubscriberHeader from './SubscriberHeader';
-import SubscriberLeftNavBar from './SubscriberLeftNavBar';
+import SubscriberHeader from '../subscriber/SubscriberHeader';
+import SubscriberLeftNavBar from '../subscriber/SubscriberLeftNavBar';
 
-import style from './style/Subscriberpage.module.scss';
+import style from './style/SubscriberPage.module.scss';
 
 function SubscriberPage() {
   return (
