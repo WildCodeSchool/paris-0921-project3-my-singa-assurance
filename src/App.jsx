@@ -1,27 +1,48 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import logo from './logo.png';
+import Homepage from './components/Homepage';
+import LoginPage from './components/LoginPage';
+import ActusMainPage from './components/ActusMainPage';
+import OfferPage from './components/OfferPage';
+import Offer from './components/Offer';
+import OfferRate from './components/OfferRate';
+import ActusPage from './components/ActusPage';
+import SubscriberPage from './components/SubscriberPage';
+import SubscriberWelcomePage from './components/SubscriberWelcomePage';
+import FormPage from './pages/FormPage';
+import FormSignUpStep1 from './formSignUp/FormSignUpStep1';
+import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
+import SubscriberHasRecipients from './components/SubscriberHasRecipients';
+import RecipientLocation from './components/RecipientLocation';
+import Contact from './components/ContactPage';
+
 import './App.css';
 
 function App() {
   return (
-    <main className="rsw-container">
-      <div
-        className="rsw-item"
-        style={{
-          paddingBottom: '2rem',
-        }}>
-        <img src={logo} width="20%" alt="WCS logo" />
-      </div>
-      <div className="rsw-item">
-        <p>Welcome to your fresh, lightweight, React App ! &#127752;</p>
-      </div>
-      <div className="rsw-item">
-        <p>
-          Start in the <code>App.jsx</code> component !
-        </p>
-      </div>
-    </main>
+    <>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/actus" element={<ActusMainPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/createaccount" element={<FormPage />}>
+          <Route path="step1" element={<FormSignUpStep1 />} />
+          <Route path="step2" element={<FormSignUpStep2 />} />
+        </Route>
+        <Route path="/offer" element={<OfferPage />}>
+          <Route path="offer" element={<Offer />} />
+          <Route path="recipientLocation" element={<RecipientLocation />} />
+          <Route path="rates" element={<OfferRate />} />
+        </Route>
+        <Route path="/subscribers" element={<SubscriberPage />}>
+          <Route path="welcome" element={<SubscriberWelcomePage />} />
+          <Route path="recipients" element={<SubscriberHasRecipients />} />
+          <Route path="actionsSolidaires" element={<ActusPage />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
