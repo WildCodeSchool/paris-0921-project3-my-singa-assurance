@@ -23,6 +23,10 @@ function Header() {
     navigate('/actus');
   }
 
+  function GoWelcome() {
+    navigate('/');
+  }
+
   return (
     <header className={style.header}>
       <nav className={style.container}>
@@ -31,7 +35,7 @@ function Header() {
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
-          <li>Accueil</li>
+          <li onClick={GoWelcome}>Accueil</li>
           <li>Mode d&apos;emploi</li>
           <li onClick={GoActus}>Actus</li>
           <li>Qui sommes-nous ?</li>
