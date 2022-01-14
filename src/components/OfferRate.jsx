@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { getOptionsInfo } from '../services/axios.service';
 import OfferRateCard from './OfferRateCard';
@@ -8,6 +9,7 @@ import style from './style/OfferRate.module.scss';
 
 function OfferRate() {
   const [formule, setFormule] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(async () => {
     const getData = async () => {
@@ -17,6 +19,10 @@ function OfferRate() {
     const result = await getData();
     setFormule(result);
   }, []);
+
+  const handleGoToSubscribtion = () => {
+    navigate('/createaccount/step1');
+  };
 
   return (
     <div className={style.mapContainer}>
@@ -33,6 +39,9 @@ function OfferRate() {
           formule.map((element) => {
             return <OfferRateCard key={element.formule_id} formule={element.formule_name} price={element.formule_details} />;
           })}
+      </div>
+      <div className={style.btnNext}>
+        <button onClick={handleGoToSubscribtion}>J&apos;assure mes proches</button>
       </div>
     </div>
   );
