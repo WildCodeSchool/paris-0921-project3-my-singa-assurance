@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Homepage from './components/Homepage';
 import LoginPage from './components/LoginPage';
+import ActusMainPage from './components/ActusMainPage';
 import OfferPage from './components/OfferPage';
 import Offer from './components/Offer';
 import OfferRate from './components/OfferRate';
@@ -21,7 +22,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/actus" element={<ActusPage />} />
+        <Route path="/actus" element={<ActusMainPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormSignUp />} />
         <Route path="/offer" element={<OfferPage />}>

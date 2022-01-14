@@ -12,8 +12,10 @@ function SubscriberPage() {
   return (
     <div className={style.subscriberMainContainer}>
       <SubscriberHeader />
-      <SubscriberLeftNavBar />
-      <Outlet />
+      <div className={style.downMainContainer}>
+        <SubscriberLeftNavBar />
+        <Outlet />
+      </div>
     </div>
   );
 }
