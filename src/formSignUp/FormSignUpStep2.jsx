@@ -3,10 +3,11 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { createSubscriberAccount, logIn } from '../services/axios.service';
 
+import { createSubscriberAccount, logIn } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
+
 import style from './FormSignUpStep2.module.scss';
 
 const validationSchema = Yup.object().shape({

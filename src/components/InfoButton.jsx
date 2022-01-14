@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import style from './style/Button.module.scss';
-
 const Button = styled.button`
   height: 3vh;
   width: 200px;

@@ -4,8 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-import style from './FormSignUpStep1.module.scss';
 import AuthenticationContext from '../context/AuthenticationContext';
+
+import style from './FormSignUpStep1.module.scss';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),
