@@ -2,6 +2,7 @@ import React from 'react';
 import ConceptCard from './ConceptCard';
 import ConceptButtons from './ConceptButtons';
 
+import style from './style/HomepageConcept.module.scss';
 import MyImgConcept from '../assets/MyImgConcept.png';
 import MyImgConcept2 from '../assets/MyImgConcept2.png';
 import MyImgConcept3 from '../assets/MyImgConcept3.png';
@@ -11,8 +12,6 @@ import Optique from '../assets/optique.png';
 import FraisMedicaux from '../assets/fraisMedicaux.png';
 import Dentaire from '../assets/dentaire.png';
 import Teleconsultation from '../assets/teleconsultation.png';
-
-import style from './style/HomepageConcept.module.scss';
 
 function HomepageConcept() {
   const Concepts = [
@@ -79,13 +78,13 @@ function HomepageConcept() {
       <div className={style.conceptTitle2}>Comment ça fonctionne ?</div>
       <div className={style.cardContainer}>
         {Concepts.map((card) => {
-          return <ConceptCard key="0" title={card.title} src={card.src} desc={card.description} />;
+          return <ConceptCard key={card.title} title={card.title} src={card.src} desc={card.description} />;
         })}
       </div>
       <h3>Qu&apos;est-ce que Singa Couvre ?</h3>
       <div className={style.BtnContainer}>
         {BtnConcepts.map((button) => {
-          return <ConceptButtons key="0" icone={button.icone} title={button.title} arg={button.arg} />;
+          return <ConceptButtons key={button.icone} icone={button.icone} title={button.title} arg={button.arg} />;
         })}
       </div>
     </div>

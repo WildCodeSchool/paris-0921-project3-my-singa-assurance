@@ -11,9 +11,21 @@ function Header() {
     navigate('/login');
   };
 
-  function GoHome() {
+  const GoHome = () => {
     navigate('/');
-  }
+  };
+
+  const GoOffer = () => {
+    navigate('/offer/offer');
+  };
+
+  const GoActus = () => {
+    navigate('/actus');
+  };
+
+  const GoWelcome = () => {
+    navigate('/');
+  };
 
   return (
     <header className={style.header}>
@@ -23,13 +35,15 @@ function Header() {
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
-          <li>Accueil</li>
+          <li onClick={GoWelcome}>Accueil</li>
           <li>Mode d&apos;emploi</li>
-          <li>Actus</li>
+          <li onClick={GoActus}>Actus</li>
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
-          <button className={style.offers}>Consulter les offres</button>
+          <button className={style.offers} onClick={GoOffer}>
+            Consulter les offres
+          </button>
           <button onClick={handleLogIn} className={style.account}>
             Se connecter
           </button>

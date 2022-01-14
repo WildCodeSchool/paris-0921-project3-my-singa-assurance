@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style/TarifCard.module.scss';
 
-const TarifCard = ({ title, couverture, prix, desc, color }) => {
+function TarifCard({ title, couverture, prix, desc, color }) {
   return (
     <div className={style.tarifCardContainer}>
       <div className={style.titleContainer} style={{ backgroundColor: color }}>
@@ -14,6 +14,6 @@ const TarifCard = ({ title, couverture, prix, desc, color }) => {
       <button className={style.buttons}>Souscrire</button>
     </div>
   );
-};
+}
 
 export default TarifCard;

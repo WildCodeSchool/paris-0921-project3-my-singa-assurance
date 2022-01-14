@@ -10,8 +10,9 @@
   display: flex;
   gap: 5%;
   background-color: #f3f2eb;
-  padding: 0 5%;
+  padding: 0 10%;
   font-family: 'Work Sans', sans-serif;
+  justify-content: space-between;
 }
 
 .brand {
@@ -22,7 +23,7 @@
   cursor: pointer;
 
   .ImgLogo {
-    height: 40%;
+    height: 60%;
   }
 
   .logo {
@@ -38,7 +39,6 @@
   align-items: center;
   list-style: none;
   width: 40vw;
-  font-size: 0.9rem;
 }
 
 .buttons {
@@ -55,9 +55,7 @@
     border: none;
     background-color: #ffbc00;
     font-size: 0.8rem;
-    font-weight: bold;
     margin-right: 10%;
-    cursor: pointer;
   }
 
   .account {
@@ -65,4 +63,14 @@
     font-size: 0.8rem;
     cursor: pointer;
   }
+}
+
+.headerMenuMySpace {
+  color: #2ad63e;
+  border-bottom: solid 1px #37c948;
+}
+
+li:hover {
+  border-bottom: solid 1px black;
+  padding-top: 1px;
 }
