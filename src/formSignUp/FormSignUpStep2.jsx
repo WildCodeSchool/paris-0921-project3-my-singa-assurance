@@ -67,6 +67,9 @@ function FormSignUpStep2() {
 
   return (
     <div className={style.mainContainer}>
+      <div className={style.formTitle}>
+        <p className={style.title}>Créez votre mot de passe</p>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
           <p>Créez votre mot de passe</p>

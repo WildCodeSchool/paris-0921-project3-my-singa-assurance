@@ -6,7 +6,6 @@ import style from './style/FormPage.module.scss';
 function FormPage() {
   return (
     <div className={style.container}>
-      <p className={style.title}>Faisons plus ample connaissance</p>
       <Outlet />
     </div>
   );

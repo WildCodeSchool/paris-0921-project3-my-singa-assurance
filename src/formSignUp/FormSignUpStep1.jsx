@@ -38,6 +38,9 @@ function FormSignUpStep1() {
 
   return (
     <div className={style.mainContainer}>
+      <div className={style.formTitle}>
+        <p className={style.title}>Faisons plus ample connaissance</p>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
           <p>Je suis</p>
