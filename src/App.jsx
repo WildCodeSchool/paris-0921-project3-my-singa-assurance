@@ -9,8 +9,10 @@ import Offer from './components/Offer';
 import OfferRate from './components/OfferRate';
 import ActusPage from './components/ActusPage';
 import SubscriberPage from './components/SubscriberPage';
-import FormSignUp from './components/FormSignUp';
 import SubscriberWelcomePage from './components/SubscriberWelcomePage';
+import FormPage from './pages/FormPage';
+import FormSignUpStep1 from './formSignUp/FormSignUpStep1';
+import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
 import SubscriberHasRecipients from './components/SubscriberHasRecipients';
 import RecipientLocation from './components/RecipientLocation';
 import Contact from './components/ContactPage';
@@ -24,7 +26,10 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusMainPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/createaccount" element={<FormSignUp />} />
+        <Route path="/createaccount" element={<FormPage />}>
+          <Route path="step1" element={<FormSignUpStep1 />} />
+          <Route path="step2" element={<FormSignUpStep2 />} />
+        </Route>
         <Route path="/offer" element={<OfferPage />}>
           <Route path="offer" element={<Offer />} />
           <Route path="recipientLocation" element={<RecipientLocation />} />
