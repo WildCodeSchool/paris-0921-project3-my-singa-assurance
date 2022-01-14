@@ -7,9 +7,9 @@ import HomepagePresentationImg from '../assets/HomepagePresentationImg.png';
 function HomepagePresentation() {
   const navigate = useNavigate();
 
-  function GoOffer() {
+  const GoOffer = () => {
     navigate('/offer/offer');
-  }
+  };
 
   return (
     <div className={style.mainContainer}>
