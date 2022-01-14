@@ -11,9 +11,9 @@ function SubscriberHeader() {
     navigate('/login');
   };
 
-  function GoHome() {
+  const GoHome = () => {
     navigate('/');
-  }
+  };
 
   return (
     <header className={style.header}>

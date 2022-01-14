@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style/ConceptButtons.module.scss';
 
-const ConceptButtons = ({ icone, title, arg }) => {
+function ConceptButtons({ icone, title, arg }) {
   return (
     <div className={style.allConceptButton}>
       <div className={style.apparentButton}>
@@ -13,6 +13,6 @@ const ConceptButtons = ({ icone, title, arg }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ConceptButtons;

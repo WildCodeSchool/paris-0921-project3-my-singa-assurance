@@ -13,9 +13,9 @@ import style from './style/Offer.module.scss';
 function Offer() {
   const navigate = useNavigate();
 
-  function GoRecipientLocation() {
+  const GoRecipientLocation = () => {
     navigate('/offer/recipientLocation');
-  }
+  };
 
   const Emoji = (props) => (
     <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>

@@ -9,13 +9,13 @@ import lightbulb from '../assets/lightBulb.png';
 function RecipientLocation() {
   const navigate = useNavigate();
 
-  function GoRates() {
+  const GoRates = () => {
     navigate('/offer/rates');
-  }
+  };
 
-  function GoOfferPage() {
+  const GoOfferPage = () => {
     navigate('/offer/offer');
-  }
+  };
 
   const Emoji = (props) => (
     <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
