@@ -137,18 +137,14 @@ function Offer() {
       </div>
       <div className={style.CounterOfferBtn}>
         <button className={style.AgeCounterDirectionButton}>
-          <div className={style.AgeCounterDirectionIconArrow}>
-            <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
-          </div>
+          <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
           <p className={style.AgeCounterDirectionButtonText}>Retour</p>
         </button>
         <button className={style.AgeCounterDirectionButton}>
           <p className={style.AgeCounterDirectionButtonText} onClick={GoRecipientLocation}>
             C&apos;est parti
           </p>
-          <div className={style.AgeCounterDirectionIconArrow}>
-            <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
-          </div>
+          <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
         </button>
       </div>
     </div>
