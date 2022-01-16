@@ -83,10 +83,12 @@ function LoginPage() {
               />
             </div>
             <div className={style.loginOptionButton}>
-              <input type="checkbox" id="rememberMe" />
-              <label htmlFor="checkbox" className={style.loginRememberMe}>
-                Se rappeler de moi
-              </label>
+              <div>
+                <input type="checkbox" id="rememberMe" />
+                <label htmlFor="checkbox" className={style.loginRememberMe}>
+                  Se rappeler de moi
+                </label>
+              </div>
               <button className={style.loginPasswordForgetButton}>Mot de passe oublié ?</button>
             </div>
             <div className={style.loginAccountButton}>
