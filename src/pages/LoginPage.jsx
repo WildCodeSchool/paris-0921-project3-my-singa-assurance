@@ -47,10 +47,14 @@ function LoginPage() {
       <Header />
       <div className={style.mainLoginPageContainer}>
         <div className={style.mainText}>
-          <h2 className={style.logintitle}>La distance n&apos;est plus un obstacle</h2>
-          <h2 className={style.logintitle}> à la santé de vos proches</h2>
-          <p className={style.loginText1}>Bon retour parmi nous ! Connectez vous pour accèder </p>
-          <p className={style.loginText2}>à votre espace personnel</p>
+          <div className={style.logintitle}>
+            <p>La distance n&apos;est plus un obstacle</p>
+            <p>à la santé de vos proches</p>
+          </div>
+          <div className={style.loginText1}>
+            <p>Bon retour parmi nous ! Connectez vous pour accèder </p>
+            <p>à votre espace personnel</p>
+          </div>
           <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
             <div className={style.loginEmail}>
               <label htmlFor="email" className={style.loginEmailLabel}>
