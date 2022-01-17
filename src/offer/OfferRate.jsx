@@ -5,6 +5,9 @@ import { getOptionsInfo } from '../services/axios.service';
 import OfferRateCard from './OfferRateCard';
 import portrait from '../assets/portraitRecipient.png';
 
+import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
+import ArrowEastIcon from '@mui/icons-material/East';
+
 import style from './style/OfferRate.module.scss';
 
 function OfferRate() {
@@ -24,10 +27,17 @@ function OfferRate() {
     navigate('/createaccount/step1');
   };
 
+  const returnToRecipientLocation = () => {
+    navigate('/offer/recipientLocation');
+  };
+
   return (
     <div className={style.mapContainer}>
       <div className={style.RecipientLocationTitle}>
-        <button className={style.RecipientLocationButton}>
+        <button className={style.RecipientLocationButton} onClick={returnToRecipientLocation}>
+          <div className={style.RecipientLocationIcon}>
+            <ArrowBackOutlinedIcon className={style.RecipientLocationIconArrow} />
+          </div>
           <div className={style.returnButtonOfferRate}>Retour</div>
         </button>
         <div className={style.mainTitleOfferRate}>
@@ -45,9 +55,13 @@ function OfferRate() {
             return <OfferRateCard key={element.formule_id} formule={element.formule_name} price={element.formule_details} />;
           })}
       </div>
-      <div className={style.btnNext}>
-        <button onClick={handleGoToSubscribtion}>J&apos;assure mes proches</button>
-      </div>
+
+      <button className={style.btnNext} onClick={handleGoToSubscribtion}>
+        <div className={style.RecipientLocationIcon}>
+          <ArrowEastIcon className={style.RecipientLocationIconArrow} />
+        </div>
+        <div className={style.returnButtonOfferRate}>J&apos;assure mes proches</div>
+      </button>
     </div>
   );
 }
