@@ -20,6 +20,12 @@ export const logIn = async (data) => {
   return decoded.data;
 };
 
+export const checkEmail = async (email) => {
+  const existingEmail = await axios.get(`${URL}/auth/verify/${email}`);
+  if (existingEmail.status === 200) return true;
+  else return false;
+};
+
 export const getSubscriberInfo = async (id) => {
   const [subscriber] = await axios.get(`${URL}/subscriber/${id}`, options);
   return subscriber;
@@ -37,6 +43,5 @@ export const getRecipients = async (id) => {
 
 export const getOptionsInfo = async () => {
   const optionsInfo = await axios.get(`${URL}/options`);
-
   return optionsInfo;
 };
