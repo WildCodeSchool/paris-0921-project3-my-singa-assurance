@@ -85,14 +85,13 @@
   .RecipientLocationButton {
     align-items: center;
     background-color: #e0e0e0;
-
     display: flex;
-
     border: none;
     border-radius: 84px;
     margin: 2vh;
     padding-right: 4vw;
     padding-left: 4vw;
+    cursor:pointer;
   }
   .RecipientLocationIcon {
     margin-right: 2vw;
