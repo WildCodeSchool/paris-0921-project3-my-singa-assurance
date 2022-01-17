@@ -1,7 +1,7 @@
 .ratesMainWrapContainer {
   display: flex;
   flex-direction: column;
-  border: solid 3px black;
+  // border: solid 3px #2ad63e;
   width: 25%;
   align-items: center;
   justify-content: space-evenly;
@@ -37,5 +37,6 @@
 }
 
 .checkBox {
-  border-radius: 50%;
+  color: #2ad63e;
+  visibility: hidden;
 }
