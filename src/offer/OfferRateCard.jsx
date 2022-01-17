@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import style from './style/OfferRateCard.module.scss';
 
 function OfferRateCard({ formule, price }) {
@@ -16,11 +16,21 @@ function OfferRateCard({ formule, price }) {
 
   return (
     <div className={style.ratesMainWrapContainer}>
-      <div> Singa {formule}</div>
-      <div> {resultCount} proches couverts</div>
-      <div>{pricePerMonth} € / mois</div>
-      <div>Couverture des frais à 80%</div>
-      <div>Buttons</div>
+      <div className={style.formuleType}>
+        Singa {formule} <CheckCircleOutlineIcon />
+      </div>
+      <div className={style.formuleCount}>
+        <div className={style.count}>{resultCount} proches couverts</div>
+        <div>Modifier</div>
+      </div>
+      <div className={style.formulePrice}>
+        <div className={style.price}>
+          <div className={style.pricePerMonth}>{pricePerMonth} € </div>
+          <div>/ mois</div>
+        </div>
+        <div className={style.commitment}>sur un an d&apos;engagement</div>
+      </div>
+      <div className={style.formuleConditions}>Couverture des frais à 80%</div>
     </div>
   );
 }
