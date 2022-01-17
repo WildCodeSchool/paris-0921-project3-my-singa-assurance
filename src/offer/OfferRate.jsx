@@ -27,11 +27,16 @@ function OfferRate() {
   return (
     <div className={style.mapContainer}>
       <div className={style.RecipientLocationTitle}>
-        <div className={style.RecipientLocationMainPortrait}>
-          <img src={portrait} alt="user" className={style.RecipientLocationPortrait} />
-        </div>
-        <div className={style.RecipientLocationTextTitle}>
-          <h3 className={style.RecipientLocationPresentation}>Voici les formules que nous proposons pour vos proches</h3>
+        <button className={style.RecipientLocationButton}>
+          <div className={style.returnButtonOfferRate}>Retour</div>
+        </button>
+        <div className={style.mainTitleOfferRate}>
+          <div className={style.RecipientLocationMainPortrait}>
+            <img src={portrait} alt="user" className={style.RecipientLocationPortrait} />
+          </div>
+          <div className={style.RecipientLocationTextTitle}>
+            <h3 className={style.RecipientLocationPresentation}>Voici les formules que nous proposons pour vos proches</h3>
+          </div>
         </div>
       </div>
       <div className={style.ratesMainContainer}>

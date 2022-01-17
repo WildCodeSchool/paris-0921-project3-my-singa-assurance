@@ -7,24 +7,49 @@
   height: 100vh;
   .RecipientLocationTitle {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .RecipientLocationMainPortrait {
-      .RecipientLocationPortrait {
-        border-radius: 50%;
-        margin-right: 2vw;
-        width: 56px;
+    width: 100vw;
+    margin-right: 7%;
+    .RecipientLocationButton {
+      align-items: center;
+      background-color: #e0e0e0;
+      border: none;
+      border-radius: 84px;
+      margin: 2vh;
+      padding-right: 4vw;
+      padding-left: 4vw;
+      margin-right: 5%;
+      height: 5vh;
+      .returnButtonOfferRate {
+        color: #525252;
+        background: none;
+        font-family: 'work sans', sans-serif;
+        font-weight: 600;
+        font-size: 1.3em;
       }
     }
-    .RecipientLocationTextTitle {
-      .RecipientLocationPresentation {
-        display: flex;
-        font-family: 'work sans', sans-serif;
-        font-size: 1.7em;
-        font-weight: 500;
-        flex-direction: row;
-        .emojiHandright {
-          margin-left: 1vw;
+    .mainTitleOfferRate {
+      display: flex;
+      align-items: center;
+
+      .RecipientLocationMainPortrait {
+        .RecipientLocationPortrait {
+          border-radius: 50%;
+          margin-right: 2vw;
+          width: 56px;
+        }
+      }
+      .RecipientLocationTextTitle {
+        .RecipientLocationPresentation {
+          display: flex;
+          font-family: 'work sans', sans-serif;
+          font-size: 1.7em;
+          font-weight: 500;
+          flex-direction: row;
+          .emojiHandright {
+            margin-left: 1vw;
+          }
         }
       }
     }
