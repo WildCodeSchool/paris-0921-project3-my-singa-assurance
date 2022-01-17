@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 import { logIn } from '../services/axios.service';
+import Header from '../components/Header';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/LoginPage.module.scss';
@@ -42,48 +43,64 @@ function LoginPage() {
   };
 
   return (
-    <div className={style.mainLoginPageContainer}>
-      <div className={style.mainText}>
-        <h2 className={style.logintitle}>La distance n&apos;est plus un obstacle</h2>
-        <h2 className={style.logintitle}> à la santé de vos proches</h2>
-        <p className={style.loginText1}>Bon retour parmi nous ! Connectez vous pour accèder </p>
-        <p className={style.loginText2}>à votre espace personnel</p>
-        <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
-          <div className={style.loginEmail}>
-            <label htmlFor="email" className={style.loginEmailLabel}>
-              Adresse mail
-            </label>
-            <input type="text" id="email" name="email" className={style.loginEmailInput} {...register('email')} placeholder={errors.email?.message} />
+    <div className={style.loginPageHeader}>
+      <Header />
+      <div className={style.mainLoginPageContainer}>
+        <div className={style.mainText}>
+          <div className={style.logintitle}>
+            <p>La distance n&apos;est plus un obstacle</p>
+            <p>à la santé de vos proches</p>
           </div>
-          <div className={style.loginPassword}>
-            <label htmlFor="password" className={style.loginPasswordLabel}>
-              Mot de passe
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className={style.loginPasswordInput}
-              {...register('password')}
-              placeholder={errors.password?.message}
-            />
+          <div className={style.loginText1}>
+            <p>Bon retour parmi nous ! Connectez vous pour accèder </p>
+            <p>à votre espace personnel</p>
           </div>
-          <div className={style.loginOptionButton}>
-            <input type="checkbox" id="rememberMe" />
-            <label htmlFor="checkbox" className={style.loginRememberMe}>
-              Se rappeler de moi
-            </label>
-            <button className={style.loginPasswordForgetButton}>Mot de passe oublié ?</button>
-          </div>
-          <div className={style.loginAccountButton}>
-            <input className={style.loginConnexionButton} type="submit" />
-            <button className={style.loginRegisterButton} onClick={handleCreateAccount}>
-              S&apos;inscrire
-            </button>
-          </div>
-        </form>
+          <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
+            <div className={style.loginEmail}>
+              <label htmlFor="email" className={style.loginEmailLabel}>
+                Adresse mail
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                className={style.loginEmailInput}
+                {...register('email')}
+                placeholder={errors.email?.message}
+              />
+            </div>
+            <div className={style.loginPassword}>
+              <label htmlFor="password" className={style.loginPasswordLabel}>
+                Mot de passe
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                className={style.loginPasswordInput}
+                {...register('password')}
+                placeholder={errors.password?.message}
+              />
+            </div>
+            <div className={style.loginOptionButton}>
+              <div>
+                <input type="checkbox" id="rememberMe" />
+                <label htmlFor="checkbox" className={style.loginRememberMe}>
+                  Se rappeler de moi
+                </label>
+              </div>
+              <button className={style.loginPasswordForgetButton}>Mot de passe oublié ?</button>
+            </div>
+            <div className={style.loginAccountButton}>
+              <input className={style.loginConnexionButton} type="submit" />
+              <button className={style.loginRegisterButton} onClick={handleCreateAccount}>
+                S&apos;inscrire
+              </button>
+            </div>
+          </form>
+        </div>
+        <img src={Background} className={style.backgroundImageLogin} alt="person entering the service" />
       </div>
-      <img src={Background} className={style.backgroundImageLogin} alt="person entering the service" />
     </div>
   );
 }
