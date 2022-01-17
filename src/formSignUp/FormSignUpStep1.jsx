@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
+import { checkEmail } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/FormSignUpStep1.module.scss';
@@ -16,6 +17,7 @@ const validationSchema = Yup.object().shape({
 
 function FormSignUpStep1() {
   const { setRegisterationData } = useContext(AuthenticationContext);
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   const navigate = useNavigate();
 
@@ -28,9 +30,15 @@ function FormSignUpStep1() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data) => {
-    setRegisterationData(data);
-    navigate('/createaccount/step2');
+  const onSubmit = async (data) => {
+    const isMailExists = await checkEmail(data.email);
+    if (isMailExists) {
+      setIsEmailValid(false);
+    } else {
+      setIsEmailValid(true);
+      setRegisterationData(data);
+      navigate('/createaccount/step2');
+    }
   };
 
   const handleGoBack = () => {
@@ -67,7 +75,9 @@ function FormSignUpStep1() {
             <div>
               <label htmlFor="email">Email</label>
               <input className={errors.email ? style.isInvalid : null} type="email" name="email" id="email" {...register('email')} />
-              <p className={errors.email ? style.isInvalid : null}>{errors.email?.message}</p>
+              <p className={errors.email || !isEmailValid ? style.isInvalid : null}>
+                {!isEmailValid ? `L'email existe déjà` : errors.email?.message}
+              </p>
             </div>
           </div>
         </div>

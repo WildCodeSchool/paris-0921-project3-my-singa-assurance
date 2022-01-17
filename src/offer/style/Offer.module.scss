@@ -121,6 +121,7 @@
   border-radius: 84px;
   padding-right: 4vw;
   padding-left: 4vw;
+  cursor: pointer;
 }
 .AgeCounterDirectionIconArrow {
   margin-right: 1vw;
@@ -138,4 +139,23 @@
 }
 .AgeCounterDirectionIconArrow {
   background: none;
+}
+
+.AgeCounterDirectionButton2 {
+  align-items: center;
+  background-color: #2ad63e;
+  display: flex;
+  border: none;
+  border-radius: 84px;
+  padding-right: 4vw;
+  padding-left: 4vw;
+  color: white;
+  cursor: pointer;
+  .AgeCounterDirectionButtonText2 {
+    color: white;
+    background: none;
+    font-family: 'work sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+  }
 }
