@@ -4,7 +4,8 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
+  margin-top: 8vh;
   .RecipientLocationTitle {
     display: flex;
     justify-content: center;
@@ -56,7 +57,8 @@
   }
   .ratesMainContainer {
     display: flex;
-    flex-direction: column;
-    border-style: solid 3px black;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 50vh;
   }
 }
