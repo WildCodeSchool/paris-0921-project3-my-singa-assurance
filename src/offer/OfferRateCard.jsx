@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import style from './style/OfferRateCard.module.scss';
 
-function OfferRateCard({ formule, price }) {
+function OfferRateCard({ formule, price, isChecked, setIsChecked }) {
   const juniorCount = localStorage.getItem('JuniorCount');
   const adultCount = localStorage.getItem('AdultCount');
   const seniorCount = localStorage.getItem('SeniorCount');
@@ -14,32 +14,41 @@ function OfferRateCard({ formule, price }) {
 
   const pricePerMonth = resultCount * price;
 
-  const [borderStyle, setBorderStyle] = useState();
-  const [display, setDisplay] = useState();
-
   const HandleStyleModif = () => {
-    borderStyle ? setBorderStyle() : setBorderStyle({ border: 'solid 3px #2ad63e' });
-    display ? setDisplay() : setDisplay({ visibility: 'visible' });
+    setIsChecked({
+      Bronze: false,
+      Argent: false,
+      Gold: false,
+      [formule]: true,
+    });
   };
 
   return (
-    <div className={style.ratesMainWrapContainer} onClick={HandleStyleModif} style={borderStyle}>
-      <div className={style.formuleType}>
-        Singa {formule} <CheckCircleIcon className={style.checkBox} style={display} />
-      </div>
-      <div className={style.formuleCount}>
-        <div className={style.count}>{resultCount} proches couverts</div>
-        <div>Modifier</div>
-      </div>
-      <div className={style.formulePrice}>
-        <div className={style.price}>
-          <div className={style.pricePerMonth}>{pricePerMonth} € </div>
-          <div>/ mois</div>
+    <>
+      {isChecked && (
+        <div
+          className={style.ratesMainWrapContainer}
+          style={isChecked[formule] ? { border: 'solid 3px #2ad63e' } : { border: 'none' }}
+          onClick={HandleStyleModif}
+        >
+          <div className={style.formuleType}>
+            Singa {formule} <CheckCircleIcon className={isChecked[formule] ? style.checkBoxOn : style.checkBoxOff} />
+          </div>
+          <div className={style.formuleCount}>
+            <div className={style.count}>{resultCount} proches couverts</div>
+            <div>Modifier</div>
+          </div>
+          <div className={style.formulePrice}>
+            <div className={style.price}>
+              <div className={style.pricePerMonth}>{pricePerMonth} € </div>
+              <div>/ mois</div>
+            </div>
+            <div className={style.commitment}>sur un an d&apos;engagement</div>
+          </div>
+          <div className={style.formuleConditions}>Couverture des frais à 80%</div>
         </div>
-        <div className={style.commitment}>sur un an d&apos;engagement</div>
-      </div>
-      <div className={style.formuleConditions}>Couverture des frais à 80%</div>
-    </div>
+      )}
+    </>
   );
 }
 

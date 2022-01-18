@@ -1,10 +1,10 @@
 .ratesMainWrapContainer {
   display: flex;
   flex-direction: column;
-  // border: solid 3px #2ad63e;
   width: 25%;
   align-items: center;
   justify-content: space-evenly;
+  border: hidden;
   border-radius: 4%;
   box-shadow: 15px 20px 25px #a9a9a9;
   .formuleType {
@@ -36,7 +36,15 @@
   }
 }
 
-.checkBox {
+.borderStyleMainContainer {
+  border: 'solid 3px #2ad63e';
+}
+
+.checkBoxOff {
   color: #2ad63e;
   visibility: hidden;
+}
+.checkBoxOn {
+  color: #2ad63e;
+  visibility: visible;
 }
