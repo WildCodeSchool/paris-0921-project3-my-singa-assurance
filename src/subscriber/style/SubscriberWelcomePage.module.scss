@@ -8,11 +8,56 @@ $secondary-color: #ffbc00;
 
 .mainContainerSubscriberWelcomePage {
   width: 100%;
-  margin-top: 6vh;
-}
-
-.titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.subscriberWelcomePagetitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .subscriberWelcomePagetitleContainerText {
+    font-family: 'work sans', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    justify-content: center;
+    .SuscriberdecodedToken {
+      color: $primary-color;
+    }
+  }
+}
+
+.subscriberWelcomePagePaymentInformation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.subscriberWelcomePagePaymentInformationText {
+  display: flex;
+  justify-content: center;
+  font-family: 'open sans', sans-serif;
+  color: white;
+  background-color: $primary-color;
+  border-radius: 19px;
+  justify-content: center;
+  padding: 3vh 7vw;
+}
+
+.subscriberWelcomePagesubtextbeneficiaries {
+  display: flex;
+  justify-content: center;
+  .style.subscriberWelcomePagesubtextbeneficiariesText {
+  }
+}
+.subscriberWelcomePageBeneficiariesImageMain {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  .subscriberWelcomePageBeneficiariesImagePortrait {
+    .subscriberWelcomePageBeneficiariesImagePortraitdetail {
+      width: 150px;
+    }
+  }
 }
