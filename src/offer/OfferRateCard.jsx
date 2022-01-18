@@ -1,5 +1,5 @@
-import React from 'react';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import React, { useState } from 'react';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import style from './style/OfferRateCard.module.scss';
 
 function OfferRateCard({ formule, price }) {
@@ -14,10 +14,18 @@ function OfferRateCard({ formule, price }) {
 
   const pricePerMonth = resultCount * price;
 
+  const [borderStyle, setBorderStyle] = useState();
+  const [display, setDisplay] = useState();
+
+  const HandleStyleModif = () => {
+    borderStyle ? setBorderStyle() : setBorderStyle({ border: 'solid 3px #2ad63e' });
+    display ? setDisplay() : setDisplay({ visibility: 'visible' });
+  };
+
   return (
-    <div className={style.ratesMainWrapContainer}>
+    <div className={style.ratesMainWrapContainer} onClick={HandleStyleModif} style={borderStyle}>
       <div className={style.formuleType}>
-        Singa {formule} <CheckCircleOutlineIcon />
+        Singa {formule} <CheckCircleIcon className={style.checkBox} style={display} />
       </div>
       <div className={style.formuleCount}>
         <div className={style.count}>{resultCount} proches couverts</div>
