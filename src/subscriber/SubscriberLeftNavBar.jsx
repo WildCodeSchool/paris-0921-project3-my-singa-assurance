@@ -28,7 +28,7 @@ function SubscriberLeftNavBar() {
           <p className={style.subscriberText}>Mes bénéficiaires</p>
         </Link>
 
-        <Link to="/" className={style.subscribernavBarButton}>
+        <Link to="/subscribers/factures" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <CreditCardIcon className={style.subscriberNavaBarIcon} />
           </div>
