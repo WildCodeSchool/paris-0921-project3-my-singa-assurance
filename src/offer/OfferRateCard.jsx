@@ -21,6 +21,7 @@ function OfferRateCard({ formule, price, isChecked, setIsChecked }) {
       Gold: false,
       [formule]: true,
     });
+    localStorage.setItem('PricePerMonth', pricePerMonth);
   };
 
   return (
