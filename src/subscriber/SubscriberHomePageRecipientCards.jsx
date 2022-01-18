@@ -4,13 +4,13 @@ import style from './style/SubscriberHomePageRecipientCards.module.scss';
 
 import Sophie from '../assets/MpandaSophie.png';
 
-function SubscriberHomePageRecipientCards(firstname, lastname) {
+function SubscriberHomePageRecipientCards(recipient) {
   return (
     <div className={style.subscriberWelcomePageBeneficiariesImageMain}>
       <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
         <img src={Sophie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
-        <p>{firstname}</p>
-        <p>{lastname}</p>
+        <p>{recipient.recipient.first_name}</p>
+        <p>{recipient.recipient.last_name}</p>
       </div>
     </div>
   );

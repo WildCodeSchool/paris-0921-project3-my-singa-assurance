@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { getRecipients } from '../services/axios.service';
 import SubscriberHomePageRecipientCards from './SubscriberHomePageRecipientCards';
@@ -7,9 +7,7 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import style from './style/SubscriberWelcomePage.module.scss';
 
 function SubscriberWelcomePage() {
-  const { decodedToken } = useContext(SubscriberInfoContext);
-
-  const [recipientName, setRecipientName] = useState([]);
+  const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);
 
   useEffect(async () => {
     const id = decodedToken.id;
@@ -18,7 +16,7 @@ function SubscriberWelcomePage() {
       return res.data;
     };
     const result = await getData();
-    setRecipientName([result]);
+    setRecipientsInfo(result);
   }, []);
 
   return (
@@ -35,10 +33,8 @@ function SubscriberWelcomePage() {
         <p className={style.subscriberWelcomePagesubtextbeneficiariesText}>Comment vont vos bénéficiaires ? Jetez-y un oeil ici</p>
       </div>
       <div className={style.recipientInfo}>
-        {recipientName.length &&
-          recipientName.map((element) => {
-            return <SubscriberHomePageRecipientCards key={element} firstName={element.first_name} lastname={element.last_name} />;
-          })}
+        {recipientsInfo.length > 0 &&
+          recipientsInfo.map((element) => <SubscriberHomePageRecipientCards key={element.recipient_id} recipient={element} />)}
       </div>
     </div>
   );
