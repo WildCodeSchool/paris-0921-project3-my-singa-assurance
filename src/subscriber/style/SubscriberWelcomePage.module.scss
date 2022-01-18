@@ -48,7 +48,12 @@ $secondary-color: #ffbc00;
 .subscriberWelcomePagesubtextbeneficiaries {
   display: flex;
   justify-content: center;
-  .style.subscriberWelcomePagesubtextbeneficiariesText {
+  .subscriberWelcomePagesubtextbeneficiariesText {
+    font-family: $primary-font;
+    .subscriberWelcomePagesubtextbeneficiariesTextSpan {
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 }
 .subscriberWelcomePageBeneficiariesImageMain {

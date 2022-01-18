@@ -10,6 +10,12 @@ import Julie from '../assets/MpandaJulie.png';
 function SubscriberWelcomePage() {
   const { decodedToken } = useContext(SubscriberInfoContext);
 
+  const Emoji = (props) => (
+    <span className={style.emojiHandleft} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+      {props.symbol}
+    </span>
+  );
+
   return (
     <div className={style.mainContainerSubscriberWelcomePage}>
       <div className={style.subscriberWelcomePagePaymentInformation}>
@@ -21,7 +27,10 @@ function SubscriberWelcomePage() {
         </h1>
       </div>
       <div className={style.subscriberWelcomePagesubtextbeneficiaries}>
-        <p className={style.subscriberWelcomePagesubtextbeneficiariesText}>Comment vont vos bénéficiaires ? Jetez-y un oeil ici</p>
+        <p className={style.subscriberWelcomePagesubtextbeneficiariesText}>
+          Comment vont vos bénéficiaires ? <span className={style.subscriberWelcomePagesubtextbeneficiariesTextSpan}>Jetez-y un oeil ici </span>
+          <Emoji label="backhand index pointing left" symbol="👈" />
+        </p>
       </div>
       <div className={style.subscriberWelcomePageBeneficiariesImageMain}>
         <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
