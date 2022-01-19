@@ -37,10 +37,15 @@ function FormSignUpAddRecipients() {
     mode: 'onTouched',
     resolver: yupResolver(validationSchema),
   });
-  const { fields, append } = useFieldArray({ name: 'recipients', control });
+  const { fields, append, remove } = useFieldArray({ name: 'recipients', control });
 
   useEffect(() => {
-    for (let i = 0; i < 2; i++) {
+    const totalRecipients =
+      Number(localStorage.getItem('JuniorCount')) + Number(localStorage.getItem('AdultCount')) + Number(localStorage.getItem('SeniorCount'));
+    for (let i = 0; i < totalRecipients; i++) {
+      remove(i);
+    }
+    for (let i = 0; i < totalRecipients; i++) {
       append({ first_name: '', last_name: '', birth_date: '', living_country: '', subscriber_family_relation: '', address: '' });
     }
   }, []);
@@ -50,11 +55,13 @@ function FormSignUpAddRecipients() {
       async (recipient) =>
         await createRecipient({
           ...recipient,
+          birth_date: new Date(recipient.birth_date).toISOString().split('.')[0] + 'Z',
           subscriber_subscriber_id: decodedToken.id,
-          city: 'Paris',
+          city: localStorage.getItem('place'),
           create_date: new Date().toISOString().split('.')[0] + 'Z',
         }),
     );
+    navigate('/subscribers/welcome');
   };
 
   const handleGoBack = () => {
