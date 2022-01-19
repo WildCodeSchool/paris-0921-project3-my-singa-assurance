@@ -140,8 +140,8 @@ function Offer() {
           <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
           <p className={style.AgeCounterDirectionButtonText}>Retour</p>
         </button>
-        <button className={style.AgeCounterDirectionButton}>
-          <p className={style.AgeCounterDirectionButtonText} onClick={GoRecipientLocation}>
+        <button className={style.AgeCounterDirectionButton2}>
+          <p className={style.AgeCounterDirectionButtonText2} onClick={GoRecipientLocation}>
             C&apos;est parti
           </p>
           <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
