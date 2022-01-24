@@ -11,21 +11,21 @@ function Header() {
     navigate('/login');
   };
 
-  function GoHome() {
+  const GoHome = () => {
     navigate('/');
-  }
+  };
 
-  function GoOffer() {
+  const GoOffer = () => {
     navigate('/offer/offer');
-  }
+  };
 
-  function GoActus() {
+  const GoActus = () => {
     navigate('/actus');
-  }
+  };
 
-  function GoWelcome() {
+  const GoWelcome = () => {
     navigate('/');
-  }
+  };
 
   return (
     <header className={style.header}>

@@ -20,23 +20,36 @@ export const logIn = async (data) => {
   return decoded.data;
 };
 
+export const checkEmail = async (email) => {
+  const existingEmail = await axios.get(`${URL}/auth/verify/${email}`);
+  if (existingEmail.status === 200) return true;
+  else return false;
+};
+
 export const getSubscriberInfo = async (id) => {
   const [subscriber] = await axios.get(`${URL}/subscriber/${id}`, options);
   return subscriber;
 };
 
 export const createRecipient = async (data) => {
-  const recipient = await axios.post(`${URL}/recipients`, data, options);
+  const recipient = await axios.post(`${URL}/recipients`, data, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('x-access-token')}`,
+    },
+  });
   return recipient;
 };
 
 export const getRecipients = async (id) => {
-  const [recipients] = await axios.get(`${URL}/recipients/${id}`, options);
+  const recipients = await axios.get(`${URL}/recipients/${id}`, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('x-access-token')}`,
+    },
+  });
   return recipients;
 };
 
 export const getOptionsInfo = async () => {
   const optionsInfo = await axios.get(`${URL}/options`);
-
   return optionsInfo;
 };
