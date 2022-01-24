@@ -56,13 +56,49 @@ $secondary-color: #ffbc00;
     }
   }
 }
-.subscriberWelcomePageBeneficiariesImageMain {
+.recipientInfo {
   display: flex;
-  width: 70%;
-  justify-content: space-around;
-  .subscriberWelcomePageBeneficiariesImagePortrait {
-    .subscriberWelcomePageBeneficiariesImagePortraitdetail {
-      width: 150px;
-    }
+  width: 60%;
+}
+
+.subscriberWelcomePagesubtextbeneficiariesTextBold {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.WelcomePageSingaActu {
+  display: flex;
+  flex-direction: column;
+  font-family: 'work sans', sans-serif;
+  width: 65%;
+  margin-top: 9vh;
+  .WelcomePageSingaActuH2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .WelcomePageSingaActuH3 {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+  }
+  .WelcomePageSingaActuText {
+    font-size: 0.8em;
+    font-family: 'Open Sans';
+  }
+  .WelcomePageSingaActuKnowMore {
+    color: #2ad63e;
+    font-size: 0.7em;
+    font-family: 'Open Sans';
+  }
+
+  .WelcomePageSingaActuButton {
+    height: 4vh;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffbc00;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 6vh auto;
   }
 }

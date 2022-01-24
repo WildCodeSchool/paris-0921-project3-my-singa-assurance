@@ -1,18 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
+import { getRecipients } from '../services/axios.service';
+import SubscriberHomePageRecipientCards from './SubscriberHomePageRecipientCards';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/SubscriberWelcomePage.module.scss';
 
-import Sophie from '../assets/MpandaSophie.png';
-import Julie from '../assets/MpandaJulie.png';
-
 function SubscriberWelcomePage() {
-  const { decodedToken } = useContext(SubscriberInfoContext);
-  const { recipientsInfo } = useContext();
+  const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);
+
+  useEffect(async () => {
+    const id = decodedToken.id;
+    const getData = async () => {
+      const res = await getRecipients(id);
+      return res.data;
+    };
+    const result = await getData();
+    setRecipientsInfo(result);
+  }, []);
 
   const Emoji = (props) => (
-    <span className={style.emojiHandleft} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
       {props.symbol}
     </span>
   );
@@ -29,22 +37,29 @@ function SubscriberWelcomePage() {
       </div>
       <div className={style.subscriberWelcomePagesubtextbeneficiaries}>
         <p className={style.subscriberWelcomePagesubtextbeneficiariesText}>
-          Comment vont vos bénéficiaires ? <span className={style.subscriberWelcomePagesubtextbeneficiariesTextSpan}>Jetez-y un oeil ici </span>
-          <Emoji label="backhand index pointing left" symbol="👈" />
+          Comment vont vos bénéficiaires ? <span className={style.subscriberWelcomePagesubtextbeneficiariesTextBold}>Jetez-y un oeil ici</span>{' '}
+          <Emoji label="backHand Index pointing left" symbol="👈" />
         </p>
       </div>
-      <div className={style.subscriberWelcomePageBeneficiariesImageMain}>
-        <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
-          <img src={Sophie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
-          <p></p>
-        </div>
-        <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
-          <img src={Julie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
-          <p>
-            {recipientsInfo.firstName}
-            {recipientsInfo.lastName}
-          </p>
-        </div>
+      <div className={style.recipientInfo}>
+        {recipientsInfo.length > 0 &&
+          recipientsInfo.map((element) => <SubscriberHomePageRecipientCards key={element.recipient_id} recipient={element} />)}
+      </div>
+      <div className={style.WelcomePageSingaActu}>
+        <h2 className={style.WelcomePageSingaActuH2}>L’actualité Singa</h2>
+        <h3 className={style.WelcomePageSingaActuH3}>RDC : début de la campagne de mobilisation des fonds pour la lutte anti-Covid-19</h3>
+        <p className={style.WelcomePageSingaActuText}>
+          Pour arrêter la pandémie et la propagation des multiples variants circulant à travers le monde, il existe une solution : rendre le vaccin
+          contre la Covid-19 accessible à tous et de manière équitable dans chaque pays.
+        </p>
+        <p className={style.WelcomePageSingaActuKnowMore}>En savoir plus</p>
+        <button className={style.WelcomePageSingaActuButton}>Faire un don</button>
+        <h3 className={style.WelcomePageSingaActuH3}>C’est grâce à vous : une nouvelle école pour les codeurs à Kinshasa</h3>
+        <p className={style.WelcomePageSingaActuText}>
+          École privée des codeurs et développeurs informatique, Kinshasa Digital Academy a ouvert ses portes dans la capitale de la RDC. Plusieurs
+          organisations et institutions dont, la présidence de la République, l&rsquo;Union européenne et Facebook sont partenaires de ce projet
+        </p>
+        <p className={style.WelcomePageSingaActuKnowMore}>En savoir plus</p>
       </div>
     </div>
   );

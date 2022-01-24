@@ -58,7 +58,7 @@ function FormSignUpStep2() {
     }
 
     setTimeout(() => {
-      navigate('/subscribers/welcome');
+      navigate('/createaccount/step3');
     }, 2000);
   };
 

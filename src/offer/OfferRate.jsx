@@ -12,6 +12,11 @@ import style from './style/OfferRate.module.scss';
 
 function OfferRate() {
   const [formule, setFormule] = useState([]);
+  const [isChecked, setIsChecked] = useState({
+    Bronze: false,
+    Argent: false,
+    Gold: false,
+  });
   const navigate = useNavigate();
 
   useEffect(async () => {
@@ -52,7 +57,15 @@ function OfferRate() {
       <div className={style.ratesMainContainer}>
         {formule.length &&
           formule.map((element) => {
-            return <OfferRateCard key={element.formule_id} formule={element.formule_name} price={element.formule_details} />;
+            return (
+              <OfferRateCard
+                key={element.formule_id}
+                formule={element.formule_name}
+                price={element.formule_details}
+                isChecked={isChecked}
+                setIsChecked={setIsChecked}
+              />
+            );
           })}
       </div>
 

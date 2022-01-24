@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
+
+.subscriberWelcomePageBeneficiariesImageMain {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  .subscriberWelcomePageBeneficiariesImagePortrait {
+    .subscriberWelcomePageBeneficiariesImagePortraitdetail {
+      width: 150px;
+    }
+    .subscriberWelcomePageBeneficiariesImagePortraitdetailText {
+      font-family: 'work sans', sans-serif;
+      text-align: center;
+      font-weight: 400;
+      font-size: 1em;
+    }
+  }
+}
+
+.subscriberWelcomePageBeneficiariesImagePortraitdetailBreak {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
