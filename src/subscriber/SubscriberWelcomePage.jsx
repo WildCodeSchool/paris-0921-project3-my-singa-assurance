@@ -9,6 +9,7 @@ import Julie from '../assets/MpandaJulie.png';
 
 function SubscriberWelcomePage() {
   const { decodedToken } = useContext(SubscriberInfoContext);
+  const { recipientsInfo } = useContext();
 
   const Emoji = (props) => (
     <span className={style.emojiHandleft} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
@@ -39,7 +40,10 @@ function SubscriberWelcomePage() {
         </div>
         <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
           <img src={Julie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
-          <p></p>
+          <p>
+            {recipientsInfo.firstName}
+            {recipientsInfo.lastName}
+          </p>
         </div>
       </div>
     </div>
