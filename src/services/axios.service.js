@@ -32,7 +32,11 @@ export const getSubscriberInfo = async (id) => {
 };
 
 export const createRecipient = async (data) => {
-  const recipient = await axios.post(`${URL}/recipients`, data, options);
+  const recipient = await axios.post(`${URL}/recipients`, data, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('x-access-token')}`,
+    },
+  });
   return recipient;
 };
 

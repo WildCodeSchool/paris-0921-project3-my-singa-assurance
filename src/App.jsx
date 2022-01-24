@@ -19,6 +19,7 @@ import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
 import SubscriberFactures from './subscriber/SubscriberFactures';
 
 import './App.css';
+import FormSignUpAddRecipients from './formSignUp/FormSignUpAddRecipients';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/createaccount" element={<FormPage />}>
           <Route path="step1" element={<FormSignUpStep1 />} />
           <Route path="step2" element={<FormSignUpStep2 />} />
+          <Route path="step3" element={<FormSignUpAddRecipients />} />
         </Route>
         <Route path="/offer" element={<OfferPage />}>
           <Route path="offer" element={<Offer />} />
