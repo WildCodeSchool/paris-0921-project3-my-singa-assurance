@@ -42,7 +42,7 @@ $secondary-color: #ffbc00;
   background-color: $primary-color;
   border-radius: 19px;
   justify-content: center;
-  padding: 3vh 7vw;
+  padding: 2vh 7vw;
 }
 
 .subscriberWelcomePagesubtextbeneficiaries {
@@ -50,6 +50,7 @@ $secondary-color: #ffbc00;
   justify-content: center;
   .subscriberWelcomePagesubtextbeneficiariesText {
     font-family: $primary-font;
+    margin-bottom: 5vh;
     .subscriberWelcomePagesubtextbeneficiariesTextSpan {
       font-weight: bold;
       text-decoration: underline;
@@ -73,21 +74,21 @@ $secondary-color: #ffbc00;
   width: 65%;
   margin-top: 9vh;
   .WelcomePageSingaActuH2 {
-    font-size: 2em;
+    font-size: 2.3em;
     text-align: center;
   }
   .WelcomePageSingaActuH3 {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 600;
     text-align: center;
   }
   .WelcomePageSingaActuText {
-    font-size: 0.8em;
+    font-size: 1em;
     font-family: 'Open Sans';
   }
   .WelcomePageSingaActuKnowMore {
     color: #2ad63e;
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-family: 'Open Sans';
   }
 
@@ -97,8 +98,8 @@ $secondary-color: #ffbc00;
     border-radius: 30px;
     border: none;
     background-color: #ffbc00;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    margin: 6vh auto;
+    margin: 5vh auto;
   }
 }
