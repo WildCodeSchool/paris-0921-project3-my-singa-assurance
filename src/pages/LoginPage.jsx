@@ -8,12 +8,14 @@ import * as Yup from 'yup';
 import { logIn } from '../services/axios.service';
 import Header from '../components/Header';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
+import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/LoginPage.module.scss';
 import Background from '../assets/LoginBackground.png';
 
 function LoginPage() {
   const { setDecodedToken } = useContext(SubscriberInfoContext);
+  const { setIsLogIn } = useContext(AuthenticationContext);
   const navigate = useNavigate();
 
   const handleCreateAccount = () => {
@@ -39,6 +41,7 @@ function LoginPage() {
   const onSubmit = async (data) => {
     const decoded = await logIn(data);
     setDecodedToken(decoded);
+    setIsLogIn(true);
     navigate('/subscribers/welcome');
   };
 
