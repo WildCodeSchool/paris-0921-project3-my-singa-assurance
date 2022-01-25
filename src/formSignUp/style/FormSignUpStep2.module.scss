@@ -3,11 +3,12 @@
 .formTitle {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
 
-  .title {
-    margin-bottom: 5vh;
-    font-size: 1.5rem;
-  }
+.title {
+  margin-bottom: 5vh;
+  font-size: 1.5rem;
 }
 
 .formContainer {
@@ -97,4 +98,14 @@
 
 .hideCreated {
   visibility: hidden;
+}
+
+.FormSignUpStep2MainPortrait {
+  justify-content: space-around;
+  align-items: center;
+  .FormSignUpStep2MainPortraitDetail {
+    border-radius: 50%;
+    margin-right: 2vw;
+    width: 56px;
+  }
 }
