@@ -9,6 +9,7 @@ import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/FormSignUpStep2.module.scss';
+import portrait from '../assets/portraitRecipient.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -66,18 +67,37 @@ function FormSignUpStep2() {
     navigate(-1);
   };
 
+  const Emoji = (props) => (
+    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+      {props.symbol}
+    </span>
+  );
+
   return (
     <div className={style.mainContainer}>
       <div className={style.formTitle}>
-        <p className={style.title}>Créez votre mot de passe</p>
+        <div className={style.FormSignUpStep2MainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpStep2MainPortraitDetail} />
+        </div>
+        <p className={style.title}>Finalisons la création de votre compte</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
-          <p>Créez votre mot de passe</p>
+          <p>
+            <Emoji label="lock" symbol="🔒" /> Créez votre mot de passe
+          </p>
           <div className={style.formGroup}>
             <div>
               <label htmlFor="password">Mot de passe</label>
-              <input className={errors.password ? style.isInvalid : null} type="password" name="password" id="password" {...register('password')} />
+              <input
+                className={errors.password ? style.isInvalid : null}
+                type="password"
+                name="password"
+                id="password"
+                {...register('password')}
+                placeHolder="********"
+                style={{ opacity: '40%' }}
+              />
               <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
             </div>
             <div>
@@ -88,6 +108,8 @@ function FormSignUpStep2() {
                 name="confirmPassword"
                 id="confirmPassword"
                 {...register('confirmPassword')}
+                placeHolder="********"
+                style={{ opacity: '40%' }}
               />
               <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
             </div>
@@ -103,7 +125,7 @@ function FormSignUpStep2() {
         </div>
       </form>
       <div className={style.created}>
-        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérant a bien été créé</p>
+        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
     </div>
   );

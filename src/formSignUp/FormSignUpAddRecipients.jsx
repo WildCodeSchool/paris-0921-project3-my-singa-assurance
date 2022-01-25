@@ -9,6 +9,7 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import { createRecipient } from '../services/axios.service';
 
 import style from './style/FormSignUpAddRecipients.module.scss';
+import portrait from '../assets/portraitRecipient.png';
 
 const validationSchema = Yup.object().shape({
   recipients: Yup.array().of(
@@ -71,12 +72,15 @@ function FormSignUpAddRecipients() {
   return (
     <div className={style.mainContainer}>
       <div className={style.formTitle}>
+        <div className={style.FormSignUpAddRecipientMainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpAddRecipientPortraitDetail} />
+        </div>
         <p className={style.title}>Qui sont les proches à assurer ?</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         {fields.map((item, index) => (
           <div key={index} className={style.formContainer}>
-            <p>Vos Bénéficiaire</p>
+            <p>Vos Bénéficiaires</p>
             <div className={style.formGroup}>
               <div>
                 <label htmlFor={`recipients[${index}]first_name`}>Prénom</label>
