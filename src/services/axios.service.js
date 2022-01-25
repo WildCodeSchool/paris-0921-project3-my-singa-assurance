@@ -14,10 +14,14 @@ export const createSubscriberAccount = async (data) => {
 };
 
 export const logIn = async (data) => {
-  const token = await axios.post(`${URL}/auth/login`, data);
-  localStorage.setItem('x-access-token', token.data);
-  const decoded = jwt(localStorage.getItem('x-access-token'));
-  return decoded.data;
+  try {
+    const result = await axios.post(`${URL}/auth/login`, data);
+    localStorage.setItem('x-access-token', result.data);
+    const decoded = jwt(localStorage.getItem('x-access-token'));
+    return { error: false, data: decoded.data };
+  } catch (err) {
+    if (err.response.status === 401) return { error: true, message: `Email ou mot de passe incorrect` };
+  }
 };
 
 export const checkEmail = async (email) => {
