@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import style from './style/RecipientsCards.module.scss';
 
@@ -7,6 +8,12 @@ import stethoscope from '../assets/stethoscope.png';
 import carte from '../assets/carte.png';
 
 function RecipientsCards(recipient) {
+  const navigate = useNavigate();
+
+  const GoRecipientDetails = () => {
+    navigate('/subscribers/recipient/recipientdetails', { state: recipient });
+  };
+
   return (
     <div className={style.cardContainer}>
       <div className={style.recipientsRecap}>
@@ -23,7 +30,9 @@ function RecipientsCards(recipient) {
       </div>
       <div className={style.bandeau}>
         <img alt="icone stethoscope" className={style.stetho} src={stethoscope} />
-        <div className={style.recipientsDetails}> Suivre les prises en charge de vos proches</div>
+        <div className={style.recipientsDetails} onClick={GoRecipientDetails}>
+          Suivre les prises en charge de vos proches
+        </div>
       </div>
       <div className={style.bandeau}>
         <img alt="icone carte" className={style.carte} src={carte} />

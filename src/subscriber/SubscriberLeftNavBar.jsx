@@ -21,7 +21,7 @@ function SubscriberLeftNavBar() {
           <p className={style.subscriberText}>Bienvenue</p>
         </Link>
 
-        <Link to="/subscribers/recipients" className={style.subscribernavBarButton}>
+        <Link to="/subscribers/recipient/" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <PeopleAltIcon className={style.subscriberNavaBarIcon} />
           </div>
