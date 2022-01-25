@@ -6,8 +6,9 @@
   width: 20vw;
 
   h1 {
-    height: 60px;
-    width: 60px;
+    height: 2em;
+    width: 2em;
+    font-size: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +24,7 @@
     border-radius: 8px;
     padding: 5vh;
     margin-top: -5vh;
+    height: 39vh;
   }
   img {
     height: 20vh;
