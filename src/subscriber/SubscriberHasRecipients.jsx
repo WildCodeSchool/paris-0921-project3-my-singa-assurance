@@ -22,9 +22,11 @@ function SubscriberHasRecipients() {
     <div className={style.recipientsMainContainer}>
       <div className={style.recipientTitle}>Mes bénéficiaires</div>
       <div className={style.recipientInfo}>
-        {recipientsInfo.length > 0 && recipientsInfo.map((element) => <RecipientsCards key={element.recipient_id} recipient={element} />)}
+        {recipientsInfo && recipientsInfo.map((element) => <RecipientsCards key={element.recipient_id} recipient={element} />)}
       </div>
-      <button>ajouter un bénéficiaire</button>
+      <div className={style.buttonContainer}>
+        <button className={style.recipientsButton}>Ajouter un bénéficiaire</button>
+      </div>
     </div>
   );
 }
