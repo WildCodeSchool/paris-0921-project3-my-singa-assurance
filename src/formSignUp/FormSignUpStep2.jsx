@@ -125,7 +125,7 @@ function FormSignUpStep2() {
         </div>
       </form>
       <div className={style.created}>
-        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérant a bien été créé</p>
+        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
     </div>
   );

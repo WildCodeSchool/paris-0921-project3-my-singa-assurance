@@ -5,6 +5,7 @@ import SubscriberHomePageRecipientCards from './SubscriberHomePageRecipientCards
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/SubscriberWelcomePage.module.scss';
+import Class from '../assets/class.png';
 
 function SubscriberWelcomePage() {
   const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);
@@ -60,6 +61,7 @@ function SubscriberWelcomePage() {
           organisations et institutions dont, la présidence de la République, l&rsquo;Union européenne et Facebook sont partenaires de ce projet
         </p>
         <p className={style.WelcomePageSingaActuKnowMore}>En savoir plus</p>
+        <img src={Class} alt="people in a class" />
       </div>
     </div>
   );
