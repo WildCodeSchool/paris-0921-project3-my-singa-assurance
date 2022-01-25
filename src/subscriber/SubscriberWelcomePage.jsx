@@ -33,8 +33,7 @@ function SubscriberWelcomePage() {
         <p className={style.subscriberWelcomePagesubtextbeneficiariesText}>Comment vont vos bénéficiaires ? Jetez-y un oeil ici</p>
       </div>
       <div className={style.recipientInfo}>
-        {recipientsInfo.length > 0 &&
-          recipientsInfo.map((element) => <SubscriberHomePageRecipientCards key={element.recipient_id} recipient={element} />)}
+        {recipientsInfo && recipientsInfo.map((element) => <SubscriberHomePageRecipientCards key={element.recipient_id} recipient={element} />)}
       </div>
     </div>
   );
