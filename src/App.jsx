@@ -17,6 +17,7 @@ import FormPage from './pages/FormPage';
 import FormSignUpStep1 from './formSignUp/FormSignUpStep1';
 import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
 import SubscriberFactures from './subscriber/SubscriberFactures';
+import SubscriberContrats from './subscriber/SubscriberContrats';
 
 import './App.css';
 import FormSignUpAddRecipients from './formSignUp/FormSignUpAddRecipients';
@@ -42,6 +43,7 @@ function App() {
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipients" element={<SubscriberHasRecipients />} />
           <Route path="factures" element={<SubscriberFactures />} />
+          <Route path="contrats" element={<SubscriberContrats />} />
           <Route path="actionsSolidaires" element={<Actus />} />
           <Route path="contact" element={<Contact />} />
         </Route>
