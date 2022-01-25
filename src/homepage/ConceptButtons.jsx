@@ -6,7 +6,9 @@ function ConceptButtons({ icone, title, arg }) {
     <div className={style.allConceptButton}>
       <div className={style.apparentButton}>
         <img src={icone} alt="icone" />
-        <div>{title}</div>
+        <div>
+          {title} <span style={{ color: '#2AD63E' }}> + </span>
+        </div>
       </div>
       <div className={style.arg}>
         <ul className={style.ulConceptBtn}>{arg && arg.map((element) => <li key={element}>{element}</li>)}</ul>
