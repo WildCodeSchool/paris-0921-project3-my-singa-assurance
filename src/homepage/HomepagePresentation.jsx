@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import style from './style/HomepagePresentation.module.scss';
-import HomepagePresentationImg from '../assets/HomepagePresentationImg.png';
+import HomepageImg from '../assets/photoHome.png';
 
 function HomepagePresentation() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ function HomepagePresentation() {
           </button>
         </div>
       </div>
-      <img alt="HomepagePresentationImg" src={HomepagePresentationImg} className={style.mainImg}></img>
+      <img alt="HomepagePresentationImg" src={HomepageImg} className={style.mainImg}></img>
     </div>
   );
 }
