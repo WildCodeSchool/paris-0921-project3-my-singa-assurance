@@ -47,7 +47,8 @@
 }
 
 .BtnContainer {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
+  display: grid;
+grid-template: "a b c" 14vh "d e f" 14vh;
+width: 80%;
+justify-content: space-around;
 }
