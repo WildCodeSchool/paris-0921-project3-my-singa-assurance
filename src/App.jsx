@@ -17,17 +17,20 @@ import FormPage from './pages/FormPage';
 import FormSignUpStep1 from './formSignUp/FormSignUpStep1';
 import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
 import SubscriberFactures from './subscriber/SubscriberFactures';
+import SubscriberContrats from './subscriber/SubscriberContrats';
 import FormSignUpAddRecipients from './formSignUp/FormSignUpAddRecipients';
 
 import AuthenticationContext from './context/AuthenticationContext';
 
 import './App.css';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   const { isLogIn } = useContext(AuthenticationContext);
   return (
     <>
       <Routes>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusPage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -45,6 +48,7 @@ function App() {
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipients" element={<SubscriberHasRecipients />} />
           <Route path="factures" element={<SubscriberFactures />} />
+          <Route path="contrats" element={<SubscriberContrats />} />
           <Route path="actionsSolidaires" element={<Actus />} />
           <Route path="contact" element={<Contact />} />
         </Route>

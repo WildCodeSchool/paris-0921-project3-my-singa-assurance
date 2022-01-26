@@ -35,7 +35,7 @@ function SubscriberLeftNavBar() {
           <p className={style.subscriberText}>Factures & Paiements</p>
         </Link>
 
-        <Link to="/" className={style.subscribernavBarButton}>
+        <Link to="/subscribers/contrats" className={style.subscribernavBarButton}>
           <div className={style.subscriberIcon}>
             <DescriptionIcon className={style.subscriberNavaBarIcon} />
           </div>

@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -14,6 +13,10 @@ import style from './style/LoginPage.module.scss';
 import Background from '../assets/LoginBackground.png';
 
 function LoginPage() {
+  const [logInError, setLogInError] = useState({
+    error: false,
+    message: '',
+  });
   const { setDecodedToken } = useContext(SubscriberInfoContext);
   const { setIsLogIn } = useContext(AuthenticationContext);
   const navigate = useNavigate();
@@ -39,8 +42,14 @@ function LoginPage() {
   });
 
   const onSubmit = async (data) => {
-    const decoded = await logIn(data);
-    setDecodedToken(decoded);
+    const result = await logIn(data);
+
+    if (result.error) {
+      setLogInError(result);
+      return undefined;
+    }
+
+    setDecodedToken(result.data);
     setIsLogIn(true);
     navigate('/subscribers/welcome');
   };
@@ -58,6 +67,7 @@ function LoginPage() {
             <p>Bon retour parmi nous ! Connectez vous pour accèder </p>
             <p>à votre espace personnel</p>
           </div>
+          <p className={logInError.error ? style.logInError : style.logInOk}>{logInError?.message}</p>
           <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
             <div className={style.loginEmail}>
               <label htmlFor="email" className={style.loginEmailLabel}>
