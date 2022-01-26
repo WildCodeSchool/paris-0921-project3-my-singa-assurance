@@ -22,12 +22,14 @@ import FormSignUpAddRecipients from './formSignUp/FormSignUpAddRecipients';
 import AuthenticationContext from './context/AuthenticationContext';
 
 import './App.css';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   const { isLogIn } = useContext(AuthenticationContext);
   return (
     <>
       <Routes>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusPage />} />
         <Route path="/login" element={<LoginPage />} />
