@@ -11,7 +11,14 @@ function ConceptButtons({ icone, title, arg }) {
         </div>
       </div>
       <div className={style.arg}>
-        <ul className={style.ulConceptBtn}> {arg && arg.map((element) => <li key={element}> {element}</li>)}</ul>
+        <ul className={style.ulConceptBtn}>
+          {arg &&
+            arg.map((element) => (
+              <li key={element} className={style.liConceptBtn}>
+                {element}
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   );
