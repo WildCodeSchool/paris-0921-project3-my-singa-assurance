@@ -50,10 +50,12 @@ function HomepageConcept() {
     {
       icone: FraisMedicaux,
       title: ' Frais médicaux',
+      arg: ['Consultation généraliste', 'Frais pharmaceutiques', 'Radiologie & Imagerie', 'Analyses biologiques'],
     },
     {
       icone: Dentaire,
       title: ' Dentaire',
+      arg: ['Soins et prothèses dentaires'],
     },
     {
       icone: Teleconsultation,
