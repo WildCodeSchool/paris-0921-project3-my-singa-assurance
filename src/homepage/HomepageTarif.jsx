@@ -44,8 +44,8 @@ function HomepageTarif() {
           );
         })}
       </div>
-      <div className={style.buttons}>
-        <button className={style.offers}>Comparer les offres</button>
+      <div className={style.buttonsPageTarifOffers}>
+        <button className={style.pageTarifOffers}>Comparer les offres</button>
       </div>
     </div>
   );

@@ -35,14 +35,15 @@
   height: 200%;
 }
 
-.buttons {
-  .offers {
-    height: 4vh;
-    width: 200px;
+.buttonsPageTarifOffers {
+  .pageTarifOffers {
+    height: 6vh;
+    width: 270px;
     border-radius: 30px;
     border: none;
     background-color: #ffbc00;
-    font-size: 0.8rem;
+    font-size: 1.2em;
     font-weight: bold;
+    margin-top: 3em;
   }
 }
