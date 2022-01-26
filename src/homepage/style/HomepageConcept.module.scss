@@ -3,8 +3,7 @@
 .mainConceptCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 130vh;
+  align-items: center;;
   justify-content: space-evenly;
   font-family: 'Work Sans', sans-serif;
   margin: 10%;
@@ -47,7 +46,8 @@
 }
 
 .BtnContainer {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
+  display: grid;
+grid-template: "a b c" 14vh "d e f" 14vh;
+width: 80%;
+justify-content: space-around;
 }

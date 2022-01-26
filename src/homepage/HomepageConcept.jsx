@@ -35,29 +35,31 @@ function HomepageConcept() {
   const BtnConcepts = [
     {
       icone: Hospitalisation,
-      title: 'Hospitalisation',
+      title: ' Hospitalisation',
       arg: ['chambre', 'frais traitements médicaux', 'visite généraliste', 'visite spécialiste petite chirurgie'],
     },
     {
       icone: Maternité,
-      title: 'Maternité',
+      title: ' Maternité',
       arg: ['frais pré et post-natal', 'accouchement simple', 'accouchement multiple', 'accouchement chirurgical'],
     },
     {
       icone: Optique,
-      title: 'Optique',
+      title: ' Optique',
     },
     {
       icone: FraisMedicaux,
-      title: 'Frais médicaux',
+      title: ' Frais médicaux',
+      arg: ['Consultation généraliste', 'Frais pharmaceutiques', 'Radiologie & Imagerie', 'Analyses biologiques'],
     },
     {
       icone: Dentaire,
-      title: 'Dentaire',
+      title: ' Dentaire',
+      arg: ['Soins et prothèses dentaires'],
     },
     {
       icone: Teleconsultation,
-      title: 'Téléconsultation',
+      title: ' Téléconsultation',
     },
   ];
 
