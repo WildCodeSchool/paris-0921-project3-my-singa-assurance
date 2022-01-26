@@ -12,7 +12,9 @@ function SubscriberPage() {
       <SubscriberHeader />
       <div className={style.downMainContainer}>
         <SubscriberLeftNavBar />
-        <Outlet />
+        <div className={style.rightContainer}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import Actus from './components/Actus';
 import SubscriberPage from './pages/SubscriberPage';
 import SubscriberWelcomePage from './subscriber/SubscriberWelcomePage';
 import SubscriberHasRecipients from './subscriber/SubscriberHasRecipients';
+import SubscriberOneRecipient from './subscriber/SubscriberOneRecipient';
 import Contact from './components/ContactPage';
 import FormPage from './pages/FormPage';
 import FormSignUpStep1 from './formSignUp/FormSignUpStep1';
@@ -19,6 +20,7 @@ import FormSignUpStep2 from './formSignUp/FormSignUpStep2';
 import SubscriberFactures from './subscriber/SubscriberFactures';
 import SubscriberContrats from './subscriber/SubscriberContrats';
 import FormSignUpAddRecipients from './formSignUp/FormSignUpAddRecipients';
+import SubscriberRecipientHome from './subscriber/SubscriberRecipientHome';
 
 import AuthenticationContext from './context/AuthenticationContext';
 
@@ -46,7 +48,10 @@ function App() {
         </Route>
         <Route path="/subscribers" element={isLogIn ? <SubscriberPage /> : <Navigate to="/login" />}>
           <Route path="welcome" element={<SubscriberWelcomePage />} />
-          <Route path="recipients" element={<SubscriberHasRecipients />} />
+          <Route path="recipient" element={<SubscriberRecipientHome />}>
+            <Route path="" element={<SubscriberHasRecipients />} />
+            <Route path="recipientdetails" element={<SubscriberOneRecipient />} />
+          </Route>
           <Route path="factures" element={<SubscriberFactures />} />
           <Route path="contrats" element={<SubscriberContrats />} />
           <Route path="actionsSolidaires" element={<Actus />} />

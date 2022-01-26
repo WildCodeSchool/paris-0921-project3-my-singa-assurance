@@ -49,6 +49,7 @@
     background-color: white;
     margin-top: 3%;
     border-radius: 20px;
+    cursor: pointer;
     img {
       width: 3%;
       margin-left: 4%;
@@ -61,5 +62,8 @@
         margin-top: 2%;
       }
     }
+  }
+  .bandeau:hover {
+    opacity: 50%;
   }
 }
