@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
+import SubscriberInfoContext from '../context/SubscriberInfoContext';
+import { getRecipients } from '../services/axios.service';
 import feuille from '../assets/feuille.png';
 import Feuilleetcrayon from '../assets/Feuilleetcrayon.png';
 import Maçon from '../assets/Maçon.png';
@@ -8,6 +10,18 @@ import Tèlèchargement from '../assets/Tèlèchargement.png';
 import style from './style/SubscriberContrat.module.scss';
 
 function SubscriberContrats() {
+  const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);
+
+  useEffect(async () => {
+    const id = decodedToken.id;
+    const getData = async () => {
+      const res = await getRecipients(id);
+      return res.data;
+    };
+    const result = await getData();
+    setRecipientsInfo(result);
+  }, []);
+
   return (
     <div className={style.mainContratsContainer}>
       <h3 className={style.titleContrat}>Contrats</h3>
@@ -15,14 +29,17 @@ function SubscriberContrats() {
         <div className={style.titlesContrat}>
           <p className={style.plafondContrat}>Plafond de 1550€/mois/personnes</p>
           <div className={style.prixContrat}>
-            <h4 className={style.ptitleContrats}>2 personnes couvertes</h4>
+            <h4 className={style.ptitleContrats}>{recipientsInfo.length} personnes couvertes</h4>
             <b>20,50€/mois</b>
           </div>
         </div>
       </div>
       <h3 className={style.documentTitle}> Documents </h3>
       <div className={style.documentPersonas}>
-        <h3 className={style.personas}>Alex Bukasa</h3>
+        <h3 className={style.personas}>
+          <div>{decodedToken.firstName} </div>
+          <div className={style.lastName}>{decodedToken.lastName}</div>
+        </h3>
       </div>
       <div className={style.documentContainer}>
         <div className={style.containerDocuments}>
