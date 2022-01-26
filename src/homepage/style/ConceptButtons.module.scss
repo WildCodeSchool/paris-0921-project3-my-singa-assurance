@@ -22,21 +22,26 @@
 
 .allConceptButton:hover {
   transform: scale(1.4);
-  transition: 200ms;
+  transform-origin: bottom;
   font-size: 0.6em;
+  font-weight: lighter;
   cursor: default;
   border: solid 1px #2ad63e;
   background-color: white;
   border-radius: 8px;
+  padding-top: 1vh;
+  padding-right: 1vh;
+  text-decoration: none;
+  list-style: none;
   .apparentButton {
     border: none;
   }
   .arg {
     display: flex;
     background-color: white;
-
-    .ulConceptBtn {
-      list-style: none;
-    }
+  }
+  .ulConceptBtn {
+    list-style: none;
+    text-decoration: none;
   }
 }
