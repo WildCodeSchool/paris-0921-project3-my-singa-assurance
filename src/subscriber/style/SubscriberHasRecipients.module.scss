@@ -1,8 +1,29 @@
 .recipientsMainContainer {
-  background-color: hotpink;
-  height: 100vh;
+  width: 100%;
+  margin-top: 13vh;
   .recipientTitle {
-    background-color: inherit;
     font-size: large;
+    font-weight: bold;
+  }
+  .recipientInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttonContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    .recipientsButton {
+      margin-top: 5%;
+      height: 5vh;
+      border: top;
+      border-radius: 20px;
+      width: 20vw;
+      background-color: #ffbc00;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
   }
 }

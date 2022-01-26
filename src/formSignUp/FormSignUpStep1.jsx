@@ -8,6 +8,7 @@ import { checkEmail } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/FormSignUpStep1.module.scss';
+import portrait from '../assets/portraitRecipient.png';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),
@@ -45,14 +46,27 @@ function FormSignUpStep1() {
     navigate(-1);
   };
 
+  const Emoji = (props) => (
+    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+      {props.symbol}
+    </span>
+  );
+
   return (
     <div className={style.mainContainer}>
       <div className={style.formTitle}>
-        <p className={style.title}>Faisons plus ample connaissance</p>
+        <div className={style.FormSignUpStep1MainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpStep1MainPortraitDetail} />
+        </div>
+        <p className={style.title}>
+          Faisons plus ample connaissance <Emoji label="smiling wearing sunglasses" symbol="😎" />
+        </p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
-          <p>Je suis</p>
+          <p>
+            <Emoji label="smiling wearing sunglasses" symbol="👋" /> Je suis
+          </p>
           <div className={style.formGroup}>
             <div>
               <label htmlFor="first_name">Prénom</label>
@@ -62,19 +76,37 @@ function FormSignUpStep1() {
                 name="first_name"
                 id="first_name"
                 {...register('first_name')}
+                placeHolder="Ex: Jean"
+                style={{ opacity: '40%' }}
               />
               <p className={errors.first_name ? style.isInvalid : null}>{errors.first_name?.message}</p>
             </div>
             <div>
               <label htmlFor="last_name">Nom</label>
-              <input className={errors.last_name ? style.isInvalid : null} type="text" name="last_name" id="last_name" {...register('last_name')} />
+              <input
+                className={errors.last_name ? style.isInvalid : null}
+                type="text"
+                name="last_name"
+                id="last_name"
+                {...register('last_name')}
+                placeHolder="Ex: Dupont"
+                style={{ opacity: '40%' }}
+              />
               <p className={errors.last_name ? style.isInvalid : null}>{errors.last_name?.message}</p>
             </div>
           </div>
           <div className={style.formGroup}>
             <div>
               <label htmlFor="email">Email</label>
-              <input className={errors.email ? style.isInvalid : null} type="email" name="email" id="email" {...register('email')} />
+              <input
+                className={errors.email ? style.isInvalid : null}
+                type="email"
+                name="email"
+                id="email"
+                {...register('email')}
+                placeHolder="Ex: jean.dupont@mail.fr"
+                style={{ opacity: '40%' }}
+              />
               <p className={errors.email || !isEmailValid ? style.isInvalid : null}>
                 {!isEmailValid ? `L'email existe déjà` : errors.email?.message}
               </p>

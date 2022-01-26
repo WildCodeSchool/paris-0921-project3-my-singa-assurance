@@ -23,7 +23,6 @@ function SubscriberContrats() {
       <h3 className={style.documentTitle}> Documents </h3>
       <div className={style.documentPersonas}>
         <h3 className={style.personas}>Alex Bukasa</h3>
-        <button className={style.chevron}> Up </button>
       </div>
       <div className={style.documentContainer}>
         <div className={style.containerDocuments}>
