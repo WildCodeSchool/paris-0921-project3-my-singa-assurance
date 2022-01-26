@@ -1,5 +1,4 @@
 .mainContratsContainer {
-  align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 7%;
@@ -81,7 +80,7 @@
 .telechargeDoc {
   font-family: 'Open Sans', sans-serif;
   h4 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   p {
     color: grey;
@@ -94,6 +93,9 @@
   display: flex;
   font-family: 'Open Sans', sans-serif;
   justify-content: space-between;
+  img {
+    width: 2vw;
+  }
 }
 
 .btn {
