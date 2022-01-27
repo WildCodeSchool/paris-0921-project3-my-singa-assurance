@@ -6,25 +6,22 @@ import style from './style/HomepageTarif.module.scss';
 function HomepageTarif() {
   const Formules = [
     {
-      title: 'Bronze',
+      title: ' 🥉 Bronze',
       couverture: '60',
       description: 'Ipsum Lorem',
       prix: '50',
-      color: '#C49C48',
     },
     {
-      title: 'Argent',
+      title: ' 🥈 Silver',
       couverture: '70',
       description: 'Ipsum Lorem',
       prix: '100',
-      color: '#868992',
     },
     {
-      title: 'Platine',
+      title: '🥇 Gold',
       couverture: '80',
       description: 'Ipsum Lorem',
       prix: '150',
-      color: '#ffd700',
     },
   ];
   return (
