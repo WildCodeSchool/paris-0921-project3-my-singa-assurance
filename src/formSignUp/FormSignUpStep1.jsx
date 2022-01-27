@@ -10,6 +10,7 @@ import AuthenticationContext from '../context/AuthenticationContext';
 import style from './style/FormSignUpStep1.module.scss';
 import portrait from '../assets/portraitRecipient.png';
 import Logo from '../assets/logo.png';
+import FormHeader1 from '../assets/FormHeader1.png';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),
@@ -18,7 +19,7 @@ const validationSchema = Yup.object().shape({
 });
 
 function FormSignUpStep1() {
-  const { setRegisterationData, setIsLogIn } = useContext(AuthenticationContext);
+  const { setRegisterationData } = useContext(AuthenticationContext);
   const [isEmailValid, setIsEmailValid] = useState(true);
 
   const navigate = useNavigate();
@@ -53,11 +54,6 @@ function FormSignUpStep1() {
     </span>
   );
 
-  const handleLogIn = () => {
-    setIsLogIn(false);
-    navigate('/login');
-  };
-
   const GoHome = () => {
     navigate('/');
   };
@@ -70,12 +66,7 @@ function FormSignUpStep1() {
             <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
             <p className={style.logo}>singa</p>
           </div>
-          <ul className={style.menu}>
-            <li className={style.headerMenuMySpace}>Mon espace</li>
-            <li>Aide</li>
-            <li>Mon profil</li>
-            <li onClick={handleLogIn}>Se déconnecter</li>
-          </ul>
+          <img src={FormHeader1} className={style.greenBtn} alt="Form Header Steps" />
         </nav>
       </header>
       <div className={style.formTitle}>

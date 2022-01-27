@@ -10,6 +10,11 @@
     width: 100vw;
   }
 
+  .greenBtn {
+    height: 65%;
+    margin-top: 1%;
+    margin-left: 25%;
+  }
   .container {
     height: 8vh;
     display: flex;
@@ -17,7 +22,6 @@
     background-color: #f3f2eb;
     padding: 0 5%;
     font-family: 'Work Sans', sans-serif;
-    justify-content: space-between;
   }
 
   .brand {
@@ -36,18 +40,6 @@
       letter-spacing: -0.5px;
       font-weight: bold;
     }
-  }
-
-  .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    width: 40vw;
-  }
-  .headerMenuMySpace {
-    color: #2ad63e;
-    border-bottom: solid 1px #37c948;
   }
 }
 
