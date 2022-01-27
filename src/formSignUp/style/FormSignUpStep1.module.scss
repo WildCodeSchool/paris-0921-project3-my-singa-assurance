@@ -1,8 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
+.mainFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  .header {
+    position: fixed;
+    width: 100vw;
+  }
+
+  .container {
+    height: 8vh;
+    display: flex;
+    gap: 5%;
+    background-color: #f3f2eb;
+    padding: 0 5%;
+    font-family: 'Work Sans', sans-serif;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10vw;
+    cursor: pointer;
+
+    .ImgLogo {
+      height: 40%;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+      font-weight: bold;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 40vw;
+  }
+  .headerMenuMySpace {
+    color: #2ad63e;
+    border-bottom: solid 1px #37c948;
+  }
+}
+
 .formTitle {
   display: flex;
   justify-content: center;
+  margin-top: 22vh;
 
   .title {
     margin-bottom: 5vh;
