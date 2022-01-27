@@ -53,14 +53,13 @@ function FormSignUpStep2() {
       password: data.password,
     });
 
-    if (loggedin) {
+    if (loggedin.error === false) {
       setIsLogIn(true);
-      setDecodedToken(loggedin);
+      setDecodedToken(loggedin.data);
+      setTimeout(() => {
+        navigate('/createaccount/step3');
+      }, 2000);
     }
-
-    setTimeout(() => {
-      navigate('/createaccount/step3');
-    }, 2000);
   };
 
   const handleGoBack = () => {

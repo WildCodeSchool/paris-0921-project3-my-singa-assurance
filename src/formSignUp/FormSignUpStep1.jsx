@@ -76,7 +76,7 @@ function FormSignUpStep1() {
                 name="first_name"
                 id="first_name"
                 {...register('first_name')}
-                placeHolder="Ex: Jean"
+                placeholder="Ex: Jean"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.first_name ? style.isInvalid : null}>{errors.first_name?.message}</p>
@@ -89,7 +89,7 @@ function FormSignUpStep1() {
                 name="last_name"
                 id="last_name"
                 {...register('last_name')}
-                placeHolder="Ex: Dupont"
+                placeholder="Ex: Dupont"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.last_name ? style.isInvalid : null}>{errors.last_name?.message}</p>
@@ -104,7 +104,7 @@ function FormSignUpStep1() {
                 name="email"
                 id="email"
                 {...register('email')}
-                placeHolder="Ex: jean.dupont@mail.fr"
+                placeholder="Ex: jean.dupont@mail.fr"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.email || !isEmailValid ? style.isInvalid : null}>
