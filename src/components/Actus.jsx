@@ -5,8 +5,6 @@ import Camembert from '../assets/Camembert.png';
 
 import style from './style/Actus.module.scss';
 
-import Footer from './Footer';
-
 function Actus() {
   return (
     <div className={style.mainActusPageContainer}>
@@ -58,9 +56,6 @@ function Actus() {
             </div>
           </div>
         </div>
-      </div>
-      <div className={style.actusFooter}>
-        <Footer />
       </div>
     </div>
   );
