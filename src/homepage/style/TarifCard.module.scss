@@ -1,5 +1,5 @@
 .tarifCardContainer {
-  border: groove 3px #a9a9a9;
+  border: solid 3px #2ad63e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,10 +7,10 @@
   width: 20vw;
   height: 200%;
   justify-content: space-evenly;
-  border-radius: 10%;
-  background-color: inherit;
+  border-radius: 25px;
+  background-color: white;
   font-weight: bold;
-  box-shadow: 15px 20px 25px #a9a9a9;
+  box-shadow: 10px 15px 15px #a9a9a9;
   .divTarif {
     background-color: inherit;
     border-radius: 20%;
@@ -19,8 +19,8 @@
 }
 
 .tarifCardContainer:hover {
-  transform: scale(1.2);
-  transition: 750ms;
+  transform: scale(1.1);
+  transition: 500ms;
   cursor: default;
   box-shadow: none;
 }

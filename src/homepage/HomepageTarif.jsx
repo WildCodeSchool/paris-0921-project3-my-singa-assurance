@@ -6,25 +6,22 @@ import style from './style/HomepageTarif.module.scss';
 function HomepageTarif() {
   const Formules = [
     {
-      title: 'Bronze',
+      title: ' 🥉 Bronze',
       couverture: '60',
       description: 'Ipsum Lorem',
       prix: '50',
-      color: '#C49C48',
     },
     {
-      title: 'Argent',
+      title: ' 🥈 Silver',
       couverture: '70',
       description: 'Ipsum Lorem',
       prix: '100',
-      color: '#868992',
     },
     {
-      title: 'Platine',
+      title: '🥇 Gold',
       couverture: '80',
       description: 'Ipsum Lorem',
       prix: '150',
-      color: '#ffd700',
     },
   ];
   return (
@@ -36,14 +33,7 @@ function HomepageTarif() {
       <div className={style.tarifContainer}>
         {Formules.map((card) => {
           return (
-            <TarifCard
-              key={card.indexOf}
-              title={card.title}
-              couverture={card.couverture}
-              desc={card.description}
-              prix={card.prix}
-              color={card.color}
-            />
+            <TarifCard key={card.title} title={card.title} couverture={card.couverture} desc={card.description} prix={card.prix} color={card.color} />
           );
         })}
       </div>

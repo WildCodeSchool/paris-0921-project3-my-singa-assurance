@@ -7,7 +7,6 @@ $primary-color: #2ad63e;
 $secondary-color: #ffbc00;
 
 .mainContainerSubscriberWelcomePage {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,22 +41,64 @@ $secondary-color: #ffbc00;
   background-color: $primary-color;
   border-radius: 19px;
   justify-content: center;
-  padding: 3vh 7vw;
+  padding: 2vh 7vw;
 }
 
 .subscriberWelcomePagesubtextbeneficiaries {
   display: flex;
   justify-content: center;
-  .style.subscriberWelcomePagesubtextbeneficiariesText {
+  .subscriberWelcomePagesubtextbeneficiariesText {
+    font-family: $primary-font;
+    margin-bottom: 5vh;
+    .subscriberWelcomePagesubtextbeneficiariesTextSpan {
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 }
-.subscriberWelcomePageBeneficiariesImageMain {
+.recipientInfo {
   display: flex;
-  width: 70%;
-  justify-content: space-around;
-  .subscriberWelcomePageBeneficiariesImagePortrait {
-    .subscriberWelcomePageBeneficiariesImagePortraitdetail {
-      width: 150px;
-    }
+  width: 60%;
+}
+
+.subscriberWelcomePagesubtextbeneficiariesTextBold {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.WelcomePageSingaActu {
+  display: flex;
+  flex-direction: column;
+  font-family: 'work sans', sans-serif;
+  width: 65%;
+  margin-top: 9vh;
+  .WelcomePageSingaActuH2 {
+    font-size: 2.3em;
+    text-align: center;
+  }
+  .WelcomePageSingaActuH3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+  }
+  .WelcomePageSingaActuText {
+    font-size: 1em;
+    font-family: 'Open Sans';
+  }
+  .WelcomePageSingaActuKnowMore {
+    color: #2ad63e;
+    font-size: 0.9em;
+    font-family: 'Open Sans';
+  }
+
+  .WelcomePageSingaActuButton {
+    height: 4vh;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffbc00;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5vh auto;
   }
 }

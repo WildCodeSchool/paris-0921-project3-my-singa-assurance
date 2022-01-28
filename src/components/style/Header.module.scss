@@ -3,6 +3,7 @@
 .header {
   position: fixed;
   width: 100vw;
+  z-index: 5;
 }
 
 .container {
@@ -20,6 +21,8 @@
   align-items: center;
   width: 10vw;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 
   .ImgLogo {
     height: 40%;
@@ -39,6 +42,13 @@
   list-style: none;
   width: 40vw;
   font-size: 0.9rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
   li {
     cursor: pointer;
   }

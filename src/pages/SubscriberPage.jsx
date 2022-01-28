@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import SubscriberHeader from '../subscriber/SubscriberHeader';
 import SubscriberLeftNavBar from '../subscriber/SubscriberLeftNavBar';
+import Footer from '../components/Footer';
 
 import style from './style/SubscriberPage.module.scss';
 
@@ -12,7 +13,12 @@ function SubscriberPage() {
       <SubscriberHeader />
       <div className={style.downMainContainer}>
         <SubscriberLeftNavBar />
-        <Outlet />
+        <div className={style.rightContainer}>
+          <Outlet />
+          <div className={style.subscriberFooter}>
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,9 @@ import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/FormSignUpStep2.module.scss';
+import portrait from '../assets/portraitRecipient.png';
+import Logo from '../assets/logo.png';
+import FormHeader2 from '../assets/FormHeader2.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -52,32 +55,63 @@ function FormSignUpStep2() {
       password: data.password,
     });
 
-    if (loggedin) {
+    if (loggedin.error === false) {
       setIsLogIn(true);
-      setDecodedToken(loggedin);
+      setDecodedToken(loggedin.data);
+      setTimeout(() => {
+        navigate('/createaccount/step3');
+      }, 2000);
     }
-
-    setTimeout(() => {
-      navigate('/createaccount/step3');
-    }, 2000);
   };
 
   const handleGoBack = () => {
     navigate(-1);
   };
 
+  const Emoji = (props) => (
+    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
+      {props.symbol}
+    </span>
+  );
+
+  const GoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainForm2Container}>
+      <header className={style.header}>
+        <nav className={style.container}>
+          <div className={style.brand} onClick={GoHome}>
+            <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
+            <p className={style.logo}>singa</p>
+          </div>
+          <img src={FormHeader2} className={style.greenBtn} alt="Form Header Steps" />
+        </nav>
+      </header>
       <div className={style.formTitle}>
-        <p className={style.title}>Créez votre mot de passe</p>
+        <div className={style.FormSignUpStep2MainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpStep2MainPortraitDetail} />
+        </div>
+        <p className={style.title}>Finalisons la création de votre compte</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
-          <p>Créez votre mot de passe</p>
+          <p>
+            <Emoji label="lock" symbol="🔒" /> Créez votre mot de passe
+          </p>
           <div className={style.formGroup}>
             <div>
               <label htmlFor="password">Mot de passe</label>
-              <input className={errors.password ? style.isInvalid : null} type="password" name="password" id="password" {...register('password')} />
+              <input
+                className={errors.password ? style.isInvalid : null}
+                type="password"
+                name="password"
+                id="password"
+                {...register('password')}
+                placeHolder="********"
+                style={{ opacity: '40%' }}
+              />
               <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
             </div>
             <div>
@@ -88,6 +122,8 @@ function FormSignUpStep2() {
                 name="confirmPassword"
                 id="confirmPassword"
                 {...register('confirmPassword')}
+                placeHolder="********"
+                style={{ opacity: '40%' }}
               />
               <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
             </div>
@@ -103,7 +139,7 @@ function FormSignUpStep2() {
         </div>
       </form>
       <div className={style.created}>
-        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérant a bien été créé</p>
+        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
     </div>
   );

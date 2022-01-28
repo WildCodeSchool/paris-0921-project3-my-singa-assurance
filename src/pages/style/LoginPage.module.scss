@@ -143,3 +143,13 @@
     cursor: pointer;
   }
 }
+
+.logInError {
+  visibility: visible;
+  color: red;
+  font-weight: bold;
+}
+
+.logInOk {
+  visibility: hidden;
+}

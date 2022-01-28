@@ -9,6 +9,9 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import { createRecipient } from '../services/axios.service';
 
 import style from './style/FormSignUpAddRecipients.module.scss';
+import portrait from '../assets/portraitRecipient.png';
+import Logo from '../assets/logo.png';
+import FormHeader3 from '../assets/FormHeader3.png';
 
 const validationSchema = Yup.object().shape({
   recipients: Yup.array().of(
@@ -68,15 +71,31 @@ function FormSignUpAddRecipients() {
     navigate(-1);
   };
 
+  const GoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainForm3Container}>
+      <header className={style.header}>
+        <nav className={style.container}>
+          <div className={style.brand} onClick={GoHome}>
+            <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
+            <p className={style.logo}>singa</p>
+          </div>
+          <img src={FormHeader3} className={style.greenBtn} alt="Form Header Steps" />
+        </nav>
+      </header>
       <div className={style.formTitle}>
+        <div className={style.FormSignUpAddRecipientMainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpAddRecipientPortraitDetail} />
+        </div>
         <p className={style.title}>Qui sont les proches à assurer ?</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         {fields.map((item, index) => (
           <div key={index} className={style.formContainer}>
-            <p>Vos Bénéficiaire</p>
+            <p>Vos Bénéficiaires</p>
             <div className={style.formGroup}>
               <div>
                 <label htmlFor={`recipients[${index}]first_name`}>Prénom</label>
