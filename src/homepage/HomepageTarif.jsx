@@ -33,14 +33,7 @@ function HomepageTarif() {
       <div className={style.tarifContainer}>
         {Formules.map((card) => {
           return (
-            <TarifCard
-              key={card.indexOf}
-              title={card.title}
-              couverture={card.couverture}
-              desc={card.description}
-              prix={card.prix}
-              color={card.color}
-            />
+            <TarifCard key={card.title} title={card.title} couverture={card.couverture} desc={card.description} prix={card.prix} color={card.color} />
           );
         })}
       </div>
