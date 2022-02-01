@@ -32,7 +32,7 @@ function RecipientLocation() {
     setBackgroundColor({ backgroundColor: '#2ad63e' });
     setPlace(e.target.value);
     setColor({ color: 'white' });
-    setText(`C'est parti mon Kiki !`);
+    setText(`C'est parti !`);
   };
 
   useEffect(() => {
