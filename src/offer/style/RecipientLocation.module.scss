@@ -56,14 +56,6 @@
   width: 40vw;
 }
 
-.RecipientLocationText {
-  font-family: 'work sans', sans-serif;
-  font-size: 1.2em;
-  font-weight: 500;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-}
-
 .RecipientLocationTextMain {
   display: flex;
   justify-content: space-around;
@@ -91,7 +83,15 @@
     margin: 2vh;
     padding-right: 4vw;
     padding-left: 4vw;
-    cursor:pointer;
+    cursor: pointer;
+    font-family: 'work sans', sans-serif;
+    .RecipientLocationButtonText {
+      color: #525252;
+      background: none;
+      font-family: 'work sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.3em;
+    }
   }
   .RecipientLocationIcon {
     margin-right: 2vw;
@@ -99,13 +99,6 @@
     background: none;
   }
 
-  .RecipientLocationButtonText {
-    color: #525252;
-    background: none;
-    font-family: 'work sans', sans-serif;
-    font-weight: 600;
-    font-size: 1.3em;
-  }
   .RecipientLocationIconArrow {
     background: none;
   }

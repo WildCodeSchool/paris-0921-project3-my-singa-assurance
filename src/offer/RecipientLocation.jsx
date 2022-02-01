@@ -24,6 +24,16 @@ function RecipientLocation() {
   );
 
   const [place, setPlace] = useState('');
+  const [backgroundColor, setBackgroundColor] = useState();
+  const [color, setColor] = useState();
+  const [text, setText] = useState(false);
+
+  const HandleChange = (e) => {
+    setBackgroundColor({ backgroundColor: '#2ad63e' });
+    setPlace(e.target.value);
+    setColor({ color: 'white' });
+    setText(`C'est parti mon Kiki !`);
+  };
 
   useEffect(() => {
     localStorage.setItem('place', JSON.stringify(place));
@@ -52,7 +62,7 @@ function RecipientLocation() {
             id="text"
             name="place"
             value={place}
-            onChange={(e) => setPlace(e.target.value)}
+            onChange={HandleChange}
             aria-label="place"
             placeholder="Ville ou région"
             className={style.RecipientLocationChooseRegionInput}
@@ -74,9 +84,9 @@ function RecipientLocation() {
             Retour
           </p>
         </button>
-        <button className={style.RecipientLocationButton}>
-          <p className={style.RecipientLocationButtonText} onClick={GoRates}>
-            Passer
+        <button className={style.RecipientLocationButton} onClick={GoRates} style={backgroundColor}>
+          <p className={style.RecipientLocationButtonText} style={color}>
+            {!text ? 'Passer' : text}
           </p>
         </button>
       </div>
