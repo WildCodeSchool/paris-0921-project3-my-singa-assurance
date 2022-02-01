@@ -9,6 +9,8 @@ import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/FormSignUpStep1.module.scss';
 import portrait from '../assets/portraitRecipient.png';
+import Logo from '../assets/logo.png';
+import FormHeader1 from '../assets/FormHeader1.png';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),
@@ -52,8 +54,21 @@ function FormSignUpStep1() {
     </span>
   );
 
+  const GoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainFormContainer}>
+      <header className={style.header}>
+        <nav className={style.container}>
+          <div className={style.brand} onClick={GoHome}>
+            <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
+            <p className={style.logo}>singa</p>
+          </div>
+          <img src={FormHeader1} className={style.greenBtn} alt="Form Header Steps" />
+        </nav>
+      </header>
       <div className={style.formTitle}>
         <div className={style.FormSignUpStep1MainPortrait}>
           <img src={portrait} alt="user" className={style.FormSignUpStep1MainPortraitDetail} />
@@ -76,7 +91,7 @@ function FormSignUpStep1() {
                 name="first_name"
                 id="first_name"
                 {...register('first_name')}
-                placeHolder="Ex: Jean"
+                placeholder="Ex: Jean"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.first_name ? style.isInvalid : null}>{errors.first_name?.message}</p>
@@ -89,7 +104,7 @@ function FormSignUpStep1() {
                 name="last_name"
                 id="last_name"
                 {...register('last_name')}
-                placeHolder="Ex: Dupont"
+                placeholder="Ex: Dupont"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.last_name ? style.isInvalid : null}>{errors.last_name?.message}</p>
@@ -104,7 +119,7 @@ function FormSignUpStep1() {
                 name="email"
                 id="email"
                 {...register('email')}
-                placeHolder="Ex: jean.dupont@mail.fr"
+                placeholder="Ex: jean.dupont@mail.fr"
                 style={{ opacity: '40%' }}
               />
               <p className={errors.email || !isEmailValid ? style.isInvalid : null}>

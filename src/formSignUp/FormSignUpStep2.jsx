@@ -10,6 +10,8 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/FormSignUpStep2.module.scss';
 import portrait from '../assets/portraitRecipient.png';
+import Logo from '../assets/logo.png';
+import FormHeader2 from '../assets/FormHeader2.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -53,14 +55,13 @@ function FormSignUpStep2() {
       password: data.password,
     });
 
-    if (loggedin) {
+    if (loggedin.error === false) {
       setIsLogIn(true);
-      setDecodedToken(loggedin);
+      setDecodedToken(loggedin.data);
+      setTimeout(() => {
+        navigate('/createaccount/step3');
+      }, 2000);
     }
-
-    setTimeout(() => {
-      navigate('/createaccount/step3');
-    }, 2000);
   };
 
   const handleGoBack = () => {
@@ -73,8 +74,21 @@ function FormSignUpStep2() {
     </span>
   );
 
+  const GoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainForm2Container}>
+      <header className={style.header}>
+        <nav className={style.container}>
+          <div className={style.brand} onClick={GoHome}>
+            <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
+            <p className={style.logo}>singa</p>
+          </div>
+          <img src={FormHeader2} className={style.greenBtn} alt="Form Header Steps" />
+        </nav>
+      </header>
       <div className={style.formTitle}>
         <div className={style.FormSignUpStep2MainPortrait}>
           <img src={portrait} alt="user" className={style.FormSignUpStep2MainPortraitDetail} />

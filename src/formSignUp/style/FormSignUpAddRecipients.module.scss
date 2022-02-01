@@ -1,9 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+.mainForm3Container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  .header {
+    position: fixed;
+    width: 100vw;
+  }
+
+  .greenBtn {
+    height: 65%;
+    margin-top: 1%;
+    margin-left: 25%;
+  }
+  .container {
+    height: 8vh;
+    display: flex;
+    gap: 5%;
+    background-color: #f3f2eb;
+    padding: 0 5%;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .brand {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10vw;
+    cursor: pointer;
+
+    .ImgLogo {
+      height: 40%;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+      font-weight: bold;
+    }
+  }
+}
 
 .formTitle {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
 
   .title {
     margin-bottom: 5vh;
