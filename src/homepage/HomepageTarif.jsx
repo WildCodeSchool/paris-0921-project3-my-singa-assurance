@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import TarifCard from './TarifCard';
 
 import style from './style/HomepageTarif.module.scss';
@@ -24,6 +25,13 @@ function HomepageTarif() {
       prix: '150',
     },
   ];
+
+  const navigate = useNavigate();
+
+  const GoOffer = () => {
+    navigate('/offer/offer');
+  };
+
   return (
     <div className={style.mainTarifCard}>
       <h2>Nos Formules</h2>
@@ -38,7 +46,9 @@ function HomepageTarif() {
         })}
       </div>
       <div className={style.buttons}>
-        <button className={style.offers}>Comparer les offres</button>
+        <button className={style.offers} onClick={GoOffer}>
+          Comparer les offres
+        </button>
       </div>
     </div>
   );
