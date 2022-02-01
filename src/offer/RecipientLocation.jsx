@@ -84,7 +84,7 @@ function RecipientLocation() {
             Retour
           </p>
         </button>
-        <button className={style.RecipientLocationButton2} onClick={GoRates} style={backgroundColor}>
+        <button className={style.RecipientLocationButton} onClick={GoRates} style={backgroundColor}>
           <p className={style.RecipientLocationButtonText} style={color}>
             {!text ? 'Passer' : text}
           </p>
