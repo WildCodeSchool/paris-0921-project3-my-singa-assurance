@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
 .cardContainer {
   display: flex;
   flex-direction: column;
   margin-top: 4%;
   justify-content: space-evenly;
   height: 30vh;
+  font-family: 'work sans', sans-serif;
   .recipientsRecap {
     display: flex;
     flex-direction: row;
@@ -60,6 +63,7 @@
         opacity: 50%;
         font-size: x-small;
         margin-top: 2%;
+        font-family: 'open sans', sans-serif;
       }
     }
   }
