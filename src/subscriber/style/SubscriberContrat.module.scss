@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
 .mainContratsContainer {
   display: flex;
   flex-direction: column;
   margin-top: 8%;
   margin-bottom: 14%;
   margin-left: 15%;
+  font-family: 'work sans', sans-serif;
   .personas {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
