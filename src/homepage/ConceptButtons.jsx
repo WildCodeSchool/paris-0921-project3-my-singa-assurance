@@ -3,8 +3,8 @@ import style from './style/ConceptButtons.module.scss';
 
 function ConceptButtons({ icone, title, arg }) {
   return (
-    <div className={style.allConceptButton}>
-      <div className={style.apparentButton}>
+    <div className={style.allConceptButtonTarifCard}>
+      <div className={style.apparentButtonTarifCard}>
         <img src={icone} alt="icone" />
         <div>
           {title} <span style={{ color: '#2AD63E' }}> + </span>
