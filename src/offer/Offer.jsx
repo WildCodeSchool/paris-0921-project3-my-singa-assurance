@@ -26,6 +26,8 @@ function Offer() {
   const [juniorCount, setJuniorCount] = useState(0);
   const [adultCount, setAdultCount] = useState(0);
   const [seniorCount, setSeniorCount] = useState(0);
+  const color = { color: '#2ad63e' };
+  const noColor = {};
 
   localStorage.setItem('JuniorCount', juniorCount);
   localStorage.setItem('AdultCount', adultCount);
@@ -96,7 +98,7 @@ function Offer() {
         <div className={style.countersContainer}>
           <div className={style.ageCounterMainContainer}>
             <div className={style.ageCounter}>
-              <div>{juniorCount}</div>
+              <div style={juniorCount > 0 ? color : noColor}>{juniorCount}</div>
               <div className={style.arrowBtn}>
                 <ArrowDropUpIcon onClick={handleIncrementJuniorCount} />
                 <ArrowDropDownIcon onClick={handleDecrementJuniorCount} />
@@ -107,7 +109,7 @@ function Offer() {
           </div>
           <div className={style.ageCounterMainContainer}>
             <div className={style.ageCounter}>
-              <div>{adultCount}</div>
+              <div style={adultCount > 0 ? color : noColor}>{adultCount}</div>
               <div className={style.arrowBtn}>
                 <ArrowDropUpIcon onClick={handleIncrementAdultCount} />
                 <ArrowDropDownIcon onClick={handleDecrementAdultCount} />
@@ -118,7 +120,7 @@ function Offer() {
           </div>
           <div className={style.ageCounterMainContainer}>
             <div className={style.ageCounter}>
-              <div>{seniorCount}</div>
+              <div style={seniorCount > 0 ? color : noColor}>{seniorCount}</div>
               <div className={style.arrowBtn}>
                 <ArrowDropUpIcon onClick={handleIncrementSeniorCount} />
                 <ArrowDropDownIcon onClick={handleDecrementSeniorCount} />
