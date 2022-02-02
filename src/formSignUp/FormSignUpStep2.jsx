@@ -8,6 +8,7 @@ import { createSubscriberAccount, logIn } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
+import LockIcon from '@material-ui/icons/Lock';
 import style from './style/FormSignUpStep2.module.scss';
 import portrait from '../assets/portraitRecipient.png';
 import Logo from '../assets/logo.png';
@@ -68,12 +69,6 @@ function FormSignUpStep2() {
     navigate(-1);
   };
 
-  const Emoji = (props) => (
-    <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
-      {props.symbol}
-    </span>
-  );
-
   const GoHome = () => {
     navigate('/');
   };
@@ -97,47 +92,49 @@ function FormSignUpStep2() {
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
-          <p>
-            <Emoji label="lock" symbol="🔒" /> Créez votre mot de passe
+          <p className={style.iconContainer}>
+            <LockIcon label="lock" className={style.icon} /> Créez votre mot de passe
           </p>
-          <div className={style.formGroup}>
-            <div>
-              <label htmlFor="password">Mot de passe</label>
-              <input
-                className={errors.password ? style.isInvalid : null}
-                type="password"
-                name="password"
-                id="password"
-                {...register('password')}
-                placeHolder="********"
-                style={{ opacity: '40%' }}
-              />
-              <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
-            </div>
-            <div>
-              <label htmlFor="confirmPassword">Confirmation du mot de passe</label>
-              <input
-                className={errors.confirmPassword ? style.isInvalid : null}
-                type="password"
-                name="confirmPassword"
-                id="confirmPassword"
-                {...register('confirmPassword')}
-                placeHolder="********"
-                style={{ opacity: '40%' }}
-              />
-              <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
-            </div>
+          <div className={style.subFormContainer}>
+            <label htmlFor="password" style={{ fontWeight: 'bold' }}>
+              Mot de passe
+            </label>
+            <input
+              className={style.input}
+              type="password"
+              name="password"
+              id="password"
+              {...register('password')}
+              placeholder="********"
+              style={errors.password ? { borderColor: 'red' } : null}
+            />
+            <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
+          </div>
+          <div className={style.subFormContainer}>
+            <label htmlFor="confirmPassword" style={{ fontWeight: 'bold' }}>
+              Confirmation du mot de passe
+            </label>
+            <input
+              className={style.input}
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              {...register('confirmPassword')}
+              placeholder="********"
+              style={errors.password ? { borderColor: 'red' } : null}
+            />
+            <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
           </div>
         </div>
-        <div className={style.formBtn}>
-          <button className={style.btnBack} onClick={handleGoBack}>
-            Retour
-          </button>
-          <button disabled={!isValid} className={style.btnNext} type="submit">
-            Créer
-          </button>
-        </div>
       </form>
+      <div className={style.formBtn}>
+        <button className={style.btnBack} onClick={handleGoBack}>
+          Retour
+        </button>
+        <button disabled={!isValid} className={style.btnNext} type="submit">
+          Créer
+        </button>
+      </div>
       <div className={style.created}>
         <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
