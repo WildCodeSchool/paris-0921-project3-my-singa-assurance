@@ -37,7 +37,7 @@ function OfferRateCard({ formule, price, isChecked, setIsChecked }) {
           </div>
           <div className={style.formuleCount}>
             <div className={style.count}>{resultCount} proches couverts</div>
-            <div>Modifier</div>
+            <div className={style.formuleCountModify}>Modifier</div>
           </div>
           <div className={style.formulePrice}>
             <div className={style.price}>
