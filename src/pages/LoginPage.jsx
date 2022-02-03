@@ -102,7 +102,7 @@ function LoginPage() {
                   Se rappeler de moi
                 </label>
               </div>
-              <button className={style.loginPasswordForgetButton}>Mot de passe oublié ?</button>
+              <div className={style.loginPasswordForgetButton}>Mot de passe oublié ?</div>
             </div>
             <div className={style.loginAccountButton}>
               <input className={style.loginConnexionButton} type="submit" />

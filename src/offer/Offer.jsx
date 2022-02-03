@@ -13,8 +13,12 @@ import style from './style/Offer.module.scss';
 function Offer() {
   const navigate = useNavigate();
 
-  const GoRecipientLocation = () => {
+  const goRecipientLocation = () => {
     navigate('/offer/recipientLocation');
+  };
+
+  const goHome = () => {
+    navigate('/');
   };
 
   const Emoji = (props) => (
@@ -140,10 +144,12 @@ function Offer() {
       <div className={style.CounterOfferBtn}>
         <button className={style.AgeCounterDirectionButton}>
           <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
-          <p className={style.AgeCounterDirectionButtonText}>Retour</p>
+          <p className={style.AgeCounterDirectionButtonText} onClick={goHome}>
+            Retour
+          </p>
         </button>
         <button className={style.AgeCounterDirectionButton2}>
-          <p className={style.AgeCounterDirectionButtonText2} onClick={GoRecipientLocation}>
+          <p className={style.AgeCounterDirectionButtonText2} onClick={goRecipientLocation}>
             C&apos;est parti
           </p>
           <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
