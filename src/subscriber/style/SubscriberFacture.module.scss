@@ -1,0 +1,130 @@
+.mainFacturesContainer {
+  display: flex;
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
+
+.textFactures {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+    margin-left: 18%;
+  }
+}
+
+.titlesFactures {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  justify-content: space-around;
+}
+
+.telechargeFactures {
+  background: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.detailsFactures {
+  align-items: center;
+  background: #2ad63e;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  height: 7vh;
+  justify-content: center;
+  margin-left: 17%;
+  text-align: center;
+  width: 50vw;
+}
+
+.listeFactures {
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  height: 25vh;
+  justify-content: space-around;
+  list-style: none;
+  margin: 5%;
+  b {
+    color: #2ad63e;
+  }
+}
+
+.btnFactures {
+  align-self: center;
+  background-color: #ffbc00;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5%;
+  height: 6vh;
+  width: 20vw;
+}
+
+.modeDePaiementFactures {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  hr {
+    color: aliceblue;
+    width: 95%;
+  }
+}
+
+.containerFactures {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: black;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  overflow: grey;
+  width: 70%;
+}
+
+.modeDePaiementTitle {
+  margin-left: 2%;
+}
+
+.containerFactures1 {
+  display: flex;
+  margin: 2%;
+  justify-content: space-between;
+}
+
+.changePaiement {
+  p {
+    color: #2ad63e;
+  }
+}
+
+.btnChange {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: space-between;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+}

@@ -8,7 +8,11 @@ import { createSubscriberAccount, logIn } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
-import style from './FormSignUpStep2.module.scss';
+import LockIcon from '@material-ui/icons/Lock';
+import style from './style/FormSignUpStep2.module.scss';
+import portrait from '../assets/portraitRecipient.png';
+import Logo from '../assets/logo.png';
+import FormHeader2 from '../assets/FormHeader2.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -52,58 +56,87 @@ function FormSignUpStep2() {
       password: data.password,
     });
 
-    if (loggedin) {
+    if (loggedin.error === false) {
       setIsLogIn(true);
-      setDecodedToken(loggedin);
+      setDecodedToken(loggedin.data);
+      setTimeout(() => {
+        navigate('/createaccount/step3');
+      }, 2000);
     }
-
-    setTimeout(() => {
-      navigate('/subscribers/welcome');
-    }, 2000);
   };
 
   const handleGoBack = () => {
     navigate(-1);
   };
 
+  const GoHome = () => {
+    navigate('/');
+  };
+
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainForm2Container}>
+      <header className={style.header}>
+        <nav className={style.container}>
+          <div className={style.brand} onClick={GoHome}>
+            <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
+            <p className={style.logo}>singa</p>
+          </div>
+          <img src={FormHeader2} className={style.greenBtn} alt="Form Header Steps" />
+        </nav>
+      </header>
       <div className={style.formTitle}>
-        <p className={style.title}>Créez votre mot de passe</p>
+        <div className={style.FormSignUpStep2MainPortrait}>
+          <img src={portrait} alt="user" className={style.FormSignUpStep2MainPortraitDetail} />
+        </div>
+        <p className={style.title}>Finalisons la création de votre compte</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.formContainer}>
-          <p>Créez votre mot de passe</p>
-          <div className={style.formGroup}>
-            <div>
-              <label htmlFor="password">Mot de passe</label>
-              <input className={errors.password ? style.isInvalid : null} type="password" name="password" id="password" {...register('password')} />
-              <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
-            </div>
-            <div>
-              <label htmlFor="confirmPassword">Confirmation du mot de passe</label>
-              <input
-                className={errors.confirmPassword ? style.isInvalid : null}
-                type="password"
-                name="confirmPassword"
-                id="confirmPassword"
-                {...register('confirmPassword')}
-              />
-              <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
-            </div>
+          <p className={style.iconContainer}>
+            <LockIcon label="lock" className={style.icon} /> Créez votre mot de passe
+          </p>
+          <div className={style.subFormContainer}>
+            <label htmlFor="password" style={{ fontWeight: 'bold' }}>
+              Mot de passe
+            </label>
+            <input
+              className={style.input}
+              type="password"
+              name="password"
+              id="password"
+              {...register('password')}
+              placeholder="********"
+              style={errors.password ? { borderColor: 'red' } : null}
+            />
+            <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
+          </div>
+          <div className={style.subFormContainer}>
+            <label htmlFor="confirmPassword" style={{ fontWeight: 'bold' }}>
+              Confirmation du mot de passe
+            </label>
+            <input
+              className={style.input}
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              {...register('confirmPassword')}
+              placeholder="********"
+              style={errors.password ? { borderColor: 'red' } : null}
+            />
+            <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
           </div>
         </div>
-        <div className={style.formBtn}>
-          <button className={style.btnBack} onClick={handleGoBack}>
-            Retour
-          </button>
-          <button disabled={!isValid} className={style.btnNext} type="submit">
-            Créer
-          </button>
-        </div>
       </form>
+      <div className={style.formBtn}>
+        <button className={style.btnBack} onClick={handleGoBack}>
+          Retour
+        </button>
+        <button disabled={!isValid} className={style.btnNext} type="submit">
+          Créer
+        </button>
+      </div>
       <div className={style.created}>
-        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérant a bien été créé</p>
+        <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
     </div>
   );

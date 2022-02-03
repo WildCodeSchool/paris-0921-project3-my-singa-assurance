@@ -1,0 +1,48 @@
+.allConceptButton {
+  .apparentButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: white;
+    padding-right: 1vw;
+    img {
+      width: 2.7vw;
+      background-color: white;
+      border-radius: 50px;
+    }
+    div {
+      background-color: white;
+    }
+  }
+  .arg {
+    display: none;
+  }
+}
+
+.allConceptButton:hover {
+  transform: scale(1.4);
+  transform-origin: bottom;
+  font-size: 0.6em;
+  font-weight: lighter;
+  cursor: default;
+  border: solid 1px #2ad63e;
+  background-color: white;
+  border-radius: 8px;
+  padding-top: 1vh;
+  padding-right: 1vh;
+  .liConceptBtn {
+    border: none;
+  }
+  .apparentButton {
+    border: none;
+  }
+  .arg {
+    display: flex;
+    background-color: white;
+  }
+  .ulConceptBtn {
+    list-style: none;
+    text-decoration: none;
+  }
+}

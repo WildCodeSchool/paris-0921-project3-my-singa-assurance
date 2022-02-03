@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import style from './style/Header.module.scss';
 import Logo from '../assets/logo.png';
@@ -11,33 +11,21 @@ function Header() {
     navigate('/login');
   };
 
-  function GoHome() {
-    navigate('/');
-  }
-
-  function GoOffer() {
+  const GoOffer = () => {
     navigate('/offer/offer');
-  }
-
-  function GoActus() {
-    navigate('/actus');
-  }
-
-  function GoWelcome() {
-    navigate('/');
-  }
+  };
 
   return (
     <header className={style.header}>
       <nav className={style.container}>
-        <div className={style.brand} onClick={GoHome}>
+        <Link to="/" className={style.brand}>
           <img src={Logo} className={style.ImgLogo} alt="Singa Logo" />
           <p className={style.logo}>singa</p>
-        </div>
+        </Link>
         <ul className={style.menu}>
-          <li onClick={GoWelcome}>Accueil</li>
+          <Link to="/">Accueil</Link>
           <li>Mode d&apos;emploi</li>
-          <li onClick={GoActus}>Actus</li>
+          <Link to="/actus">Actus</Link>
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
