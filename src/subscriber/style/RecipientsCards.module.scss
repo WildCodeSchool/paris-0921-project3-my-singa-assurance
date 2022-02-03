@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
+
 .cardContainer {
   display: flex;
   flex-direction: column;
   margin-top: 4%;
   justify-content: space-evenly;
   height: 30vh;
+  font-family: 'work sans', sans-serif;
   .recipientsRecap {
     display: flex;
     flex-direction: row;
