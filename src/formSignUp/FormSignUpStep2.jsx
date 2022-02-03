@@ -126,15 +126,15 @@ function FormSignUpStep2() {
             <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
           </div>
         </div>
+        <div className={style.formBtn}>
+          <button className={style.btnBack} onClick={handleGoBack}>
+            Retour
+          </button>
+          <button disabled={!isValid} className={style.btnNext} type="submit">
+            Créer
+          </button>
+        </div>
       </form>
-      <div className={style.formBtn}>
-        <button className={style.btnBack} onClick={handleGoBack}>
-          Retour
-        </button>
-        <button disabled={!isValid} className={style.btnNext} type="submit">
-          Créer
-        </button>
-      </div>
       <div className={style.created}>
         <p className={isCreated ? style.showCreated : style.hideCreated}>Votre espace adhérent a bien été créé</p>
       </div>
