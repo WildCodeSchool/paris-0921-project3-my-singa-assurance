@@ -9,9 +9,9 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import { createRecipient } from '../services/axios.service';
 
 import style from './style/FormSignUpAddRecipients.module.scss';
-import portrait from '../assets/portraitRecipient.png';
-import Logo from '../assets/logo.png';
-import FormHeader3 from '../assets/FormHeader3.png';
+import portrait from '/assets/portraitRecipient.png';
+import Logo from '/assets/logo.png';
+import FormHeader3 from '/assets/FormHeader3.png';
 
 const validationSchema = Yup.object().shape({
   recipients: Yup.array().of(

@@ -5,8 +5,8 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowBackOutlinedIconLeft from '@material-ui/icons/ArrowBackOutlined';
 import ArrowEastIcon from '@mui/icons-material/East';
 
-import portrait from '../assets/portraitRecipient.png';
-import lightbulb from '../assets/lightBulb.png';
+import portrait from '/assets/portraitRecipient.png';
+import lightbulb from '/assets/lightBulb.png';
 
 import style from './style/Offer.module.scss';
 

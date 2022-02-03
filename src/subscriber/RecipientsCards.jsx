@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 import style from './style/RecipientsCards.module.scss';
 
-import Sophie from '../assets/MpandaSophie.png';
-import stethoscope from '../assets/stethoscope.png';
-import carte from '../assets/carte.png';
+import Sophie from '/assets/MpandaSophie.png';
+import stethoscope from '/assets/stethoscope.png';
+import carte from '/assets/carte.png';
 
 function RecipientsCards(recipient) {
   const navigate = useNavigate();

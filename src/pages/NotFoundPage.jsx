@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import style from './style/NotFoundPage.module.scss';
-import logo from '../assets/logo.png';
+import logo from '/assets/logo.png';
 
 function NotFoundPage() {
   const navigate = useNavigate();

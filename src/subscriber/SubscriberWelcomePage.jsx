@@ -5,7 +5,7 @@ import SubscriberHomePageRecipientCards from './SubscriberHomePageRecipientCards
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import style from './style/SubscriberWelcomePage.module.scss';
-import Class from '../assets/class.png';
+import Class from '/assets/class.png';
 
 function SubscriberWelcomePage() {
   const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);

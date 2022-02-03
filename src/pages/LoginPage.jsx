@@ -10,7 +10,7 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/LoginPage.module.scss';
-import Background from '../assets/LoginBackground.png';
+import Background from '/assets/LoginBackground.png';
 
 function LoginPage() {
   const [logInError, setLogInError] = useState({

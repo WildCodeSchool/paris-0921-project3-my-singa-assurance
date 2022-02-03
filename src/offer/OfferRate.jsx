@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { getOptionsInfo } from '../services/axios.service';
 import OfferRateCard from './OfferRateCard';
-import portrait from '../assets/portraitRecipient.png';
+import portrait from '/assets/portraitRecipient.png';
 
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import ArrowEastIcon from '@mui/icons-material/East';
