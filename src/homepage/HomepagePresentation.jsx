@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import style from './style/HomepagePresentation.module.scss';
-import HomepageImg from '../assets/photoHome.png';
+import HomepageImg from '/assets/photoHome.png';
 
 function HomepagePresentation() {
   const navigate = useNavigate();

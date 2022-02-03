@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 
 import style from './style/RecipientLocation.module.scss';
-import portrait from '../assets/portraitRecipient.png';
-import lightbulb from '../assets/lightBulb.png';
+import portrait from '/assets/portraitRecipient.png';
+import lightbulb from '/assets/lightBulb.png';
 
 function RecipientLocation() {
   const navigate = useNavigate();

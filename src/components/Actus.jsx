@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ActionSolide from '../assets/ActionSolide.png';
-import Camembert from '../assets/Camembert.png';
+import ActionSolide from '/assets/ActionSolide.png';
+import Camembert from '/assets/Camembert.png';
 
 import style from './style/Actus.module.scss';
 

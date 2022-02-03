@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import style from './style/SubscriberOneRecipient.module.scss';
-import Sophie from '../assets/MpandaSophie.png';
+import Sophie from '/assets/MpandaSophie.png';
 
 function SubscriberOneRecipient() {
   const location = useLocation();

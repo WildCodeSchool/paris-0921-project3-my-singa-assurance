@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from './style/SubscriberHomePageRecipientCards.module.scss';
 
-import Sophie from '../assets/MpandaSophie.png';
+import Sophie from '/assets/MpandaSophie.png';
 
 function SubscriberHomePageRecipientCards(recipient) {
   return (

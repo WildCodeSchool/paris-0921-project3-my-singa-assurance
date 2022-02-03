@@ -3,15 +3,15 @@ import ConceptCard from './ConceptCard';
 import ConceptButtons from './ConceptButtons';
 
 import style from './style/HomepageConcept.module.scss';
-import MyImgConcept from '../assets/MyImgConcept.png';
-import MyImgConcept2 from '../assets/MyImgConcept2.png';
-import MyImgConcept3 from '../assets/MyImgConcept3.png';
-import Hospitalisation from '../assets/hospitalisation.png';
-import Maternité from '../assets/maternité.png';
-import Optique from '../assets/optique.png';
-import FraisMedicaux from '../assets/fraisMedicaux.png';
-import Dentaire from '../assets/dentaire.png';
-import Teleconsultation from '../assets/teleconsultation.png';
+import MyImgConcept from '/assets/MyImgConcept.png';
+import MyImgConcept2 from '/assets/MyImgConcept2.png';
+import MyImgConcept3 from '/assets/MyImgConcept3.png';
+import Hospitalisation from '/assets/hospitalisation.png';
+import Maternité from '/assets/maternité.png';
+import Optique from '/assets/optique.png';
+import FraisMedicaux from '/assets/fraisMedicaux.png';
+import Dentaire from '/assets/dentaire.png';
+import Teleconsultation from '/assets/teleconsultation.png';
 
 function HomepageConcept() {
   const Concepts = [

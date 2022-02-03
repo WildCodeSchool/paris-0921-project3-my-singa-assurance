@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/SubscriberHeader.module.scss';
-import Logo from '../assets/logo.png';
+import Logo from '/assets/logo.png';
 
 function SubscriberHeader() {
   const navigate = useNavigate();

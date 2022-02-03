@@ -8,9 +8,9 @@ import { checkEmail } from '../services/axios.service';
 import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/FormSignUpStep1.module.scss';
-import portrait from '../assets/portraitRecipient.png';
-import Logo from '../assets/logo.png';
-import FormHeader1 from '../assets/FormHeader1.png';
+import portrait from '/assets/portraitRecipient.png';
+import Logo from '/assets/logo.png';
+import FormHeader1 from '/assets/FormHeader1.png';
 
 const validationSchema = Yup.object().shape({
   first_name: Yup.string().required('Prénom requis'),

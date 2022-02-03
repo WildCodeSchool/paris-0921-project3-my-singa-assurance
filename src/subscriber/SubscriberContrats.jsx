@@ -2,10 +2,11 @@ import React, { useContext, useEffect } from 'react';
 
 import SubscriberInfoContext from '../context/SubscriberInfoContext';
 import { getRecipients } from '../services/axios.service';
-import feuille from '../assets/feuille.png';
-import Feuilleetcrayon from '../assets/Feuilleetcrayon.png';
-import Maçon from '../assets/Maçon.png';
-import Tèlèchargement from '../assets/Tèlèchargement.png';
+
+import feuille from '/assets/feuille.png';
+import Feuilleetcrayon from '/assets/Feuilleetcrayon.png';
+import Maçon from '/assets/Maçon.png';
+import Tèlèchargement from '/assets/Tèlèchargement.png';
 
 import style from './style/SubscriberContrat.module.scss';
 

@@ -3,7 +3,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import Logo from '../assets/logo.png';
+import Logo from '/assets/logo.png';
 import style from './style/Footer.module.scss';
 
 function Footer() {

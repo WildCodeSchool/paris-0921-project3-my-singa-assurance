@@ -10,9 +10,9 @@ import SubscriberInfoContext from '../context/SubscriberInfoContext';
 
 import LockIcon from '@material-ui/icons/Lock';
 import style from './style/FormSignUpStep2.module.scss';
-import portrait from '../assets/portraitRecipient.png';
-import Logo from '../assets/logo.png';
-import FormHeader2 from '../assets/FormHeader2.png';
+import portrait from '/assets/portraitRecipient.png';
+import Logo from '/assets/logo.png';
+import FormHeader2 from '/assets/FormHeader2.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
