@@ -143,3 +143,13 @@
 .hideCreated {
   visibility: hidden;
 }
+
+.FormSignUpStep2MainPortrait {
+  justify-content: space-around;
+  align-items: center;
+  .FormSignUpStep2MainPortraitDetail {
+    border-radius: 50%;
+    margin-right: 2vw;
+    width: 56px;
+  }
+}

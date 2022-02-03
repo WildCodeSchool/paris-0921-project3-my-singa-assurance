@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
 .ratesMainWrapContainer {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,7 @@
   border: hidden;
   border-radius: 4%;
   box-shadow: 15px 20px 25px #a9a9a9;
+  font-family: 'work sans', sans-serif;
   .formuleType {
     font-size: xx-large;
     font-weight: bold;
@@ -18,10 +21,15 @@
     .count {
       font-size: larger;
     }
+    .formuleCountModify {
+      display: flex;
+      align-items: center;
+    }
   }
   .formulePrice {
     display: flex;
     flex-direction: column;
+
     .price {
       display: flex;
       justify-content: center;
