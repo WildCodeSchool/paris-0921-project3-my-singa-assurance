@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import LoginPage from './pages/LoginPage';
 import ActusPage from './pages/ActusPage';
+import ConceptPage from './pages/ConceptPage';
 import OfferPage from './pages/OfferPage';
 import Offer from './offer/Offer';
 import OfferRate from './offer/OfferRate';
@@ -35,6 +36,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/actus" element={<ActusPage />} />
+        <Route path="/concept" element={<ConceptPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/createaccount" element={<FormPage />}>
           <Route path="step1" element={<FormSignUpStep1 />} />
