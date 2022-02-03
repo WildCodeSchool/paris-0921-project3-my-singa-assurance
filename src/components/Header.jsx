@@ -11,7 +11,7 @@ function Header() {
     navigate('/login');
   };
 
-  const GoOffer = () => {
+  const goOffer = () => {
     navigate('/offer/offer');
   };
 
@@ -24,12 +24,12 @@ function Header() {
         </Link>
         <ul className={style.menu}>
           <Link to="/">Accueil</Link>
-          <li>Mode d&apos;emploi</li>
+          <Link to="/concept">Mode d&apos;emploi</Link>
           <Link to="/actus">Actus</Link>
           <li>Qui sommes-nous ?</li>
         </ul>
         <div className={style.buttons}>
-          <button className={style.offers} onClick={GoOffer}>
+          <button className={style.offers} onClick={goOffer}>
             Consulter les offres
           </button>
           <button onClick={handleLogIn} className={style.account}>
