@@ -14,7 +14,7 @@ function OfferRate() {
   const [formule, setFormule] = useState([]);
   const [isChecked, setIsChecked] = useState({
     Bronze: false,
-    Argent: false,
+    Silver: false,
     Gold: false,
   });
   const navigate = useNavigate();

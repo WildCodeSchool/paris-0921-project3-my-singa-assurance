@@ -17,7 +17,7 @@ function OfferRateCard({ formule, price, isChecked, setIsChecked }) {
   const HandleStyleModif = () => {
     setIsChecked({
       Bronze: false,
-      Argent: false,
+      Silver: false,
       Gold: false,
       [formule]: true,
     });
