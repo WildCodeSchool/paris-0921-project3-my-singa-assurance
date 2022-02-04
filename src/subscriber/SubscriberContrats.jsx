@@ -13,6 +13,8 @@ import style from './style/SubscriberContrat.module.scss';
 function SubscriberContrats() {
   const { decodedToken, recipientsInfo, setRecipientsInfo } = useContext(SubscriberInfoContext);
 
+  const pricePerMonth = localStorage.getItem('PricePerMonth');
+
   useEffect(async () => {
     const id = decodedToken.id;
     const getData = async () => {
@@ -31,7 +33,7 @@ function SubscriberContrats() {
           <p className={style.plafondContrat}>Plafond de 1550€/mois/personnes</p>
           <div className={style.prixContrat}>
             <h4 className={style.ptitleContrats}>{recipientsInfo.length} personnes couvertes</h4>
-            <b>20,50€/mois</b>
+            <b>{pricePerMonth} €/mois</b>
           </div>
         </div>
       </div>
