@@ -105,7 +105,7 @@ function LoginPage() {
               <div className={style.loginPasswordForgetButton}>Mot de passe oublié ?</div>
             </div>
             <div className={style.loginAccountButton}>
-              <input className={style.loginConnexionButton} type="submit" />
+              <input className={style.loginConnexionButton} type="submit" value="Me connecter" />
               <button className={style.loginRegisterButton} onClick={handleCreateAccount}>
                 S&apos;inscrire
               </button>

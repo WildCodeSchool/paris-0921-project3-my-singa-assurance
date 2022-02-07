@@ -4,7 +4,7 @@ import style from './style/ConceptCard.module.scss';
 function ConceptCard({ title, src, desc }) {
   return (
     <div className={style.conceptCardContainer}>
-      <h1 className="CardTitle">{title}</h1>
+      <div className={style.conceptCardContainerTitle}>{title}</div>
       <div className={style.cardDesc}>
         <div>
           <img className="CardImage" src={src} alt={title} />

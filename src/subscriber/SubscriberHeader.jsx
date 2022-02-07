@@ -19,6 +19,10 @@ function SubscriberHeader() {
     navigate('/');
   };
 
+  const NeedHelp = () => {
+    navigate('/subscribers/contact');
+  };
+
   return (
     <header className={style.header}>
       <nav className={style.container}>
@@ -28,7 +32,7 @@ function SubscriberHeader() {
         </div>
         <ul className={style.menu}>
           <li className={style.headerMenuMySpace}>Mon espace</li>
-          <li>Aide</li>
+          <li onClick={NeedHelp}>Aide</li>
           <li>Mon profil</li>
           <li onClick={handleLogIn}>Se déconnecter</li>
         </ul>

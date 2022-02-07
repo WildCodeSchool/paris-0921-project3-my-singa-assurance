@@ -25,7 +25,7 @@ function HomepagePresentation() {
         </h2>
 
         <p className={style.description}> Nous croyons que l&apos;Afrique mérite d&apos;avoir accès à des soins de qualité.</p>
-        <p className={style.description}> Singa permet à la diaspora d&apos;offrir à leurs proches une mutuelle santé simple, solidaire et utile</p>
+        <p className={style.description}> Singa permet à la diaspora d&apos;offrir à leurs proches une mutuelle santé simple, solidaire et utile.</p>
         <p className={style.description}> Et tout ça en soutenant des causes qui ont un impact positif sur l&apos;économie locale</p>
         <div className={style.buttons}>
           <button className={style.offers} onClick={GoOffer}>
