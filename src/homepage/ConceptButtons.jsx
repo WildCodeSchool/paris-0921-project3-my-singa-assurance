@@ -6,8 +6,11 @@ function ConceptButtons({ icone, title, arg }) {
     <div className={style.allConceptButton}>
       <div className={style.apparentButton}>
         <img src={icone} alt="icone" />
-        <div>
-          {title} <span style={{ color: '#2AD63E' }}> + </span>
+        <div className={style.title}>
+          {title}{' '}
+          <span className={style.plus} style={{ color: '#2AD63E' }}>
+            +
+          </span>
         </div>
       </div>
       <div className={style.arg}>
