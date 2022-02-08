@@ -152,3 +152,14 @@
 .logInOk {
   visibility: hidden;
 }
+
+.loginPasswordSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .loginPageVisibilityOffImage {
+    width: 20px;
+    height: 20px;
+    opacity: 60%;
+  }
+}

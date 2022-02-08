@@ -11,15 +11,22 @@ import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/LoginPage.module.scss';
 import Background from '/assets/LoginBackground.png';
+import visibilityOff from '/assets/visibility_off.png';
+import visibilityOn from '/assets/visibility.png';
 
 function LoginPage() {
   const [logInError, setLogInError] = useState({
     error: false,
     message: '',
   });
+  const [visibility, setVisibility] = useState(false);
   const { setDecodedToken } = useContext(SubscriberInfoContext);
   const { setIsLogIn } = useContext(AuthenticationContext);
   const navigate = useNavigate();
+
+  const handleShowPassword = () => {
+    setVisibility(!visibility);
+  };
 
   const handleCreateAccount = () => {
     navigate('/createaccount');
@@ -86,14 +93,23 @@ function LoginPage() {
               <label htmlFor="password" className={style.loginPasswordLabel}>
                 Mot de passe
               </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                className={style.loginPasswordInput}
-                {...register('password')}
-                placeholder={errors.password?.message}
-              />
+              <div className={style.loginPasswordSpace}>
+                <input
+                  type={visibility ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  className={style.loginPasswordInput}
+                  {...register('password')}
+                  placeholder={errors.password?.message}
+                />
+                <img
+                  src={visibility ? visibilityOff : visibilityOn}
+                  id="togglePassword"
+                  alt="hidePassword"
+                  className={style.loginPageVisibilityOffImage}
+                  onClick={handleShowPassword}
+                />
+              </div>
             </div>
             <div className={style.loginOptionButton}>
               <div>
