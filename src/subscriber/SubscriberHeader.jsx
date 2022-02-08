@@ -31,7 +31,9 @@ function SubscriberHeader() {
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
-          <li className={style.headerMenuMySpace}>Mon espace</li>
+          <Link to="/subscribers/welcome" className={style.brand}>
+            Mon espace
+          </Link>
           <li onClick={NeedHelp}>Aide</li>
           <Link to="/subscribers/subscriberDetails" className={style.brand}>
             Mon profil

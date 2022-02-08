@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
+
 .mainContainerSubscriberDetails {
   margin-top: 14vh;
   display: flex;
   flex-direction: column;
+  font-family: 'work sans', sans-serif;
   .title {
     margin-left: 6%;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'work sans', sans-serif;
   }
   .subscriberWelcomePageBeneficiariesImagePortrait {
     display: flex;
@@ -17,10 +23,10 @@
     }
     .subscriberWelcomePageBeneficiariesImagePortraitdetailBreak {
       display: flex;
-      margin-left: 4%;
-      width: 30%;
-      .subscriberWelcomePageBeneficiariesImagePortraitdetailText2 {
-        margin-left: 10px;
+      width: 100%;
+      font-size: x-large;
+      p {
+        margin-left: 2%;
       }
     }
   }
