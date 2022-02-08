@@ -142,17 +142,17 @@ function Offer() {
         </div>
       </div>
       <div className={style.CounterOfferBtn}>
-        <button className={style.AgeCounterDirectionButton}>
-          <ArrowBackOutlinedIconLeft className={style.AgeCounterDirectionIconArrowleft} />
-          <p className={style.AgeCounterDirectionButtonText} onClick={goHome}>
+        <button className={style.AgeCounterDirectionButtonBack}>
+          <ArrowBackOutlinedIconLeft style={{ color: '#525252' }} />
+          <p className={style.AgeCounterDirectionButtonBackText} onClick={goHome}>
             Retour
           </p>
         </button>
-        <button className={style.AgeCounterDirectionButton2}>
-          <p className={style.AgeCounterDirectionButtonText2} onClick={goRecipientLocation}>
+        <button className={style.AgeCounterDirectionButtonNext}>
+          <p className={style.AgeCounterDirectionButtonNextText} onClick={goRecipientLocation}>
             C&apos;est parti
           </p>
-          <ArrowEastIcon className={style.AgeCounterDirectionIconArrowright} />
+          <ArrowEastIcon style={{ color: 'white' }} />
         </button>
       </div>
     </div>

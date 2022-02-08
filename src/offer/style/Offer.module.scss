@@ -112,7 +112,7 @@
   width: 100%;
 }
 
-.AgeCounterDirectionButton {
+.AgeCounterDirectionButtonBack {
   align-items: center;
   background-color: #e0e0e0;
   display: flex;
@@ -120,17 +120,20 @@
   border-radius: 84px;
   padding-right: 4vw;
   padding-left: 4vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
   cursor: pointer;
-  .AgeCounterDirectionButtonText {
+  .AgeCounterDirectionButtonBackText {
     color: #525252;
     background: none;
     font-family: 'work sans', sans-serif;
     font-weight: 600;
     font-size: 1.3em;
+    margin-left: 2vw;
   }
 }
 
-.AgeCounterDirectionButton2 {
+.AgeCounterDirectionButtonNext {
   align-items: center;
   background-color: #2ad63e;
   display: flex;
@@ -139,12 +142,13 @@
   padding-right: 4vw;
   padding-left: 4vw;
   cursor: pointer;
-  .AgeCounterDirectionButtonText2 {
+  .AgeCounterDirectionButtonNextText {
     color: white;
     background: none;
     font-family: 'work sans', sans-serif;
     font-weight: 600;
     font-size: 1.3em;
+    margin-right: 2vw;
   }
 }
 .AgeCounterDirectionIconArrow {

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 
 import style from './style/RecipientLocation.module.scss';
 import portrait from '/assets/portraitRecipient.png';
 import lightbulb from '/assets/lightBulb.png';
+import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
+import ArrowEastIcon from '@mui/icons-material/East';
 
 function RecipientLocation() {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ function RecipientLocation() {
             name="place"
             value={place}
             onChange={HandleChange}
+            onBlur="alert('Le choix de la ville sera bientôt disponible')"
             aria-label="place"
             placeholder="Ville ou région"
             className={style.RecipientLocationChooseRegionInput}
@@ -86,7 +88,7 @@ function RecipientLocation() {
         </button>
         <button className={style.RecipientLocationButton} onClick={GoRates} style={backgroundColor}>
           <p className={style.RecipientLocationButtonText} style={color}>
-            {!text ? 'Passer' : text}
+            {!text ? 'Suivant' : text} <ArrowEastIcon className={style.RecipientLocationIconArrowEast} />
           </p>
         </button>
       </div>
