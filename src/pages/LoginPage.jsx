@@ -11,15 +11,22 @@ import AuthenticationContext from '../context/AuthenticationContext';
 
 import style from './style/LoginPage.module.scss';
 import Background from '/assets/LoginBackground.png';
+import visibilityOff from '/assets/visibility_off.png';
+import visibilityOn from '/assets/visibility.png';
 
 function LoginPage() {
   const [logInError, setLogInError] = useState({
     error: false,
     message: '',
   });
+  const [visibility, setVisibility] = useState(false);
   const { setDecodedToken } = useContext(SubscriberInfoContext);
   const { setIsLogIn } = useContext(AuthenticationContext);
   const navigate = useNavigate();
+
+  const handleShowPassword = () => {
+    setVisibility(!visibility);
+  };
 
   const handleCreateAccount = () => {
     navigate('/createaccount');
@@ -60,12 +67,12 @@ function LoginPage() {
       <div className={style.mainLoginPageContainer}>
         <div className={style.mainText}>
           <div className={style.logintitle}>
-            <p>La distance n&apos;est plus un obstacle</p>
-            <p>à la santé de vos proches</p>
+            <p className={style.logintitleText}>La distance n&apos;est plus un obstacle</p>
+            <p className={style.logintitleText}>à la santé de vos proches</p>
           </div>
           <div className={style.loginText1}>
-            <p>Bon retour parmi nous ! Connectez vous pour accèder </p>
-            <p>à votre espace personnel</p>
+            <p className={style.loginText1Detail}>Bon retour parmi nous ! Connectez vous pour accéder </p>
+            <p className={style.loginText1Detail}>à votre espace personnel</p>
           </div>
           <p className={logInError.error ? style.logInError : style.logInOk}>{logInError?.message}</p>
           <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
@@ -86,14 +93,23 @@ function LoginPage() {
               <label htmlFor="password" className={style.loginPasswordLabel}>
                 Mot de passe
               </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                className={style.loginPasswordInput}
-                {...register('password')}
-                placeholder={errors.password?.message}
-              />
+              <div className={style.loginPasswordSpace}>
+                <input
+                  type={visibility ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  className={style.loginPasswordInput}
+                  {...register('password')}
+                  placeholder={errors.password?.message}
+                />
+                <img
+                  src={visibility ? visibilityOff : visibilityOn}
+                  id="togglePassword"
+                  alt="hidePassword"
+                  className={style.loginPageVisibilityOffImage}
+                  onClick={handleShowPassword}
+                />
+              </div>
             </div>
             <div className={style.loginOptionButton}>
               <div>

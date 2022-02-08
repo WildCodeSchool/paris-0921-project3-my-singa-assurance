@@ -24,6 +24,14 @@ function FormSignUpStep1() {
 
   const navigate = useNavigate();
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
+  const GoHome = () => {
+    navigate('/');
+  };
+
   const {
     register,
     handleSubmit,
@@ -44,19 +52,11 @@ function FormSignUpStep1() {
     }
   };
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
-
   const Emoji = (props) => (
     <span className={style.emojiHandright} role="img" aria-label={props.label ? props.label : ''} aria-hidden={props.label ? 'false' : 'true'}>
       {props.symbol}
     </span>
   );
-
-  const GoHome = () => {
-    navigate('/');
-  };
 
   return (
     <div className={style.mainFormContainer}>

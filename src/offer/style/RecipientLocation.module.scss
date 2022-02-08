@@ -103,15 +103,20 @@
       font-family: 'work sans', sans-serif;
       font-weight: 600;
       font-size: 1.3em;
+      display: flex;
     }
   }
   .RecipientLocationIcon {
     margin-right: 2vw;
     color: #525252;
     background: none;
+    display: flex;
   }
 
   .RecipientLocationIconArrow {
     background: none;
+  }
+  .RecipientLocationIconArrowEast {
+    margin-left: 2vw;
   }
 }

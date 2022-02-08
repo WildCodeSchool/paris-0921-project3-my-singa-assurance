@@ -13,6 +13,8 @@ import style from './style/FormSignUpStep2.module.scss';
 import portrait from '/assets/portraitRecipient.png';
 import Logo from '/assets/logo.png';
 import FormHeader2 from '/assets/FormHeader2.png';
+import visibilityOff from '/assets/visibility_off.png';
+import visibilityOn from '/assets/visibility.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -30,7 +32,20 @@ function FormSignUpStep2() {
 
   const [isCreated, setIsCreated] = useState(false);
 
+  const [visibility, setVisibility] = useState(false);
+  const handleShowPassword = () => {
+    setVisibility(!visibility);
+  };
+
   const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
+  const GoHome = () => {
+    navigate('/');
+  };
 
   const {
     register,
@@ -65,14 +80,6 @@ function FormSignUpStep2() {
     }
   };
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
-
-  const GoHome = () => {
-    navigate('/');
-  };
-
   return (
     <div className={style.mainForm2Container}>
       <header className={style.header}>
@@ -99,30 +106,49 @@ function FormSignUpStep2() {
             <label htmlFor="password" style={{ fontWeight: 'bold' }}>
               Mot de passe
             </label>
-            <input
-              className={style.input}
-              type="password"
-              name="password"
-              id="password"
-              {...register('password')}
-              placeholder="********"
-              style={errors.password ? { borderColor: 'red' } : null}
-            />
+            <div className={style.formSignUpSpace}>
+              <input
+                className={style.input}
+                type={visibility ? 'text' : 'password'}
+                name="password"
+                id="password1"
+                {...register('password')}
+                placeholder="********"
+                style={errors.password ? { borderColor: 'red' } : null}
+              />
+              <img
+                src={visibility ? visibilityOff : visibilityOn}
+                id="togglePassword"
+                alt="hidePassword"
+                className={style.formSignUpVisibilityOffImage}
+                onClick={handleShowPassword}
+              />
+            </div>
             <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
           </div>
           <div className={style.subFormContainer}>
             <label htmlFor="confirmPassword" style={{ fontWeight: 'bold' }}>
               Confirmation du mot de passe
             </label>
-            <input
-              className={style.input}
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              {...register('confirmPassword')}
-              placeholder="********"
-              style={errors.password ? { borderColor: 'red' } : null}
-            />
+            <div className={style.formSignUpSpace}>
+              <input
+                className={style.input}
+                type={visibility ? 'text' : 'password'}
+                name="confirmPassword"
+                id="confirmPassword"
+                {...register('confirmPassword')}
+                placeholder="********"
+                style={errors.password ? { borderColor: 'red' } : null}
+              />
+              <img
+                src={visibility ? visibilityOff : visibilityOn}
+                id="togglePassword"
+                alt="hidePassword"
+                className={style.formSignUpVisibilityOffImage}
+                onClick={handleShowPassword}
+              />
+            </div>
+
             <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
           </div>
         </div>
