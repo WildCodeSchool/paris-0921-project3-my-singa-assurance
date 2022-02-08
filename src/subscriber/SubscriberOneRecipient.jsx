@@ -28,7 +28,7 @@ function SubscriberOneRecipient() {
         <div className={style.mainCoordinatesContainer}>
           <div className={style.coordinates}>
             <p className={style.coordinatesWord}>Coordonnées</p>
-            <p className={style.clientId}>N° client : {location.state.recipient.recipient_id}</p>
+            <p className={style.clientId}>Référence bénéficiaire : {location.state.recipient.recipient_id}</p>
           </div>
           <div className={style.recipientContainer}>
             <div className={style.recipient}>
