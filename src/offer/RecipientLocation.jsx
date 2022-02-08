@@ -34,6 +34,7 @@ function RecipientLocation() {
     setPlace(e.target.value);
     setColor({ color: 'white' });
     setText(`C'est parti !`);
+    alert('Le choix de la ville sera bientôt disponible');
   };
 
   useEffect(() => {
@@ -64,7 +65,6 @@ function RecipientLocation() {
             name="place"
             value={place}
             onChange={HandleChange}
-            onBlur="alert('Le choix de la ville sera bientôt disponible')"
             aria-label="place"
             placeholder="Ville ou région"
             className={style.RecipientLocationChooseRegionInput}
