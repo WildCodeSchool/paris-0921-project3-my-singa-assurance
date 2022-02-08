@@ -71,7 +71,7 @@ function LoginPage() {
             <p className={style.logintitleText}>à la santé de vos proches</p>
           </div>
           <div className={style.loginText1}>
-            <p className={style.loginText1Detail}>Bon retour parmi nous ! Connectez vous pour accèder </p>
+            <p className={style.loginText1Detail}>Bon retour parmi nous ! Connectez vous pour accéder </p>
             <p className={style.loginText1Detail}>à votre espace personnel</p>
           </div>
           <p className={logInError.error ? style.logInError : style.logInOk}>{logInError?.message}</p>
