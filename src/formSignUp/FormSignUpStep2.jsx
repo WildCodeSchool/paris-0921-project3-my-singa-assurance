@@ -13,6 +13,8 @@ import style from './style/FormSignUpStep2.module.scss';
 import portrait from '/assets/portraitRecipient.png';
 import Logo from '/assets/logo.png';
 import FormHeader2 from '/assets/FormHeader2.png';
+import visibility from '/assets/visibility.png';
+import noVisibility from '/assets/visibility_off.png';
 
 const validationSchema = Yup.object().shape({
   password: Yup.string()
@@ -31,6 +33,14 @@ function FormSignUpStep2() {
   const [isCreated, setIsCreated] = useState(false);
 
   const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
+  const GoHome = () => {
+    navigate('/');
+  };
 
   const {
     register,
@@ -65,14 +75,6 @@ function FormSignUpStep2() {
     }
   };
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
-
-  const GoHome = () => {
-    navigate('/');
-  };
-
   return (
     <div className={style.mainForm2Container}>
       <header className={style.header}>
@@ -103,11 +105,12 @@ function FormSignUpStep2() {
               className={style.input}
               type="password"
               name="password"
-              id="password"
+              id="password1"
               {...register('password')}
               placeholder="********"
               style={errors.password ? { borderColor: 'red' } : null}
             />
+            <img src={visibility} className={style.formSignUpStep1Visibility} alt="eye" id="toggle1" />
             <p className={errors.password ? style.isInvalid : null}>{errors.password?.message}</p>
           </div>
           <div className={style.subFormContainer}>
@@ -123,6 +126,7 @@ function FormSignUpStep2() {
               placeholder="********"
               style={errors.password ? { borderColor: 'red' } : null}
             />
+            <img src={noVisibility} className={style.formSignUpStep1Visibility} alt="eyeShutDown" id="toggle2" />
             <p className={errors.confirmPassword ? style.isInvalid : null}>{errors.confirmPassword?.message}</p>
           </div>
         </div>
