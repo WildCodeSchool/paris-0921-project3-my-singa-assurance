@@ -60,12 +60,12 @@ function LoginPage() {
       <div className={style.mainLoginPageContainer}>
         <div className={style.mainText}>
           <div className={style.logintitle}>
-            <p>La distance n&apos;est plus un obstacle</p>
-            <p>à la santé de vos proches</p>
+            <p className={style.logintitleText}>La distance n&apos;est plus un obstacle</p>
+            <p className={style.logintitleText}>à la santé de vos proches</p>
           </div>
           <div className={style.loginText1}>
-            <p>Bon retour parmi nous ! Connectez vous pour accèder </p>
-            <p>à votre espace personnel</p>
+            <p className={style.loginText1Detail}>Bon retour parmi nous ! Connectez vous pour accèder </p>
+            <p className={style.loginText1Detail}>à votre espace personnel</p>
           </div>
           <p className={logInError.error ? style.logInError : style.logInOk}>{logInError?.message}</p>
           <form className={style.loginForm} onSubmit={handleSubmit(onSubmit)}>
