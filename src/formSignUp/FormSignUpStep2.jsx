@@ -20,7 +20,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .matches(
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
-      'Doit contenir au moins 8 caractères, 1 majuscule, un chiffre et un caratère spécial',
+      'Doit contenir au moins 8 caractéres, 1 majuscule, un chiffre et un caractére spécial',
     )
     .required('Mot de passe requis'),
   confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Le mot de passe doit correspondre'),
