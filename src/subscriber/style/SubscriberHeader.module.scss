@@ -21,6 +21,7 @@
   align-items: center;
   width: 10vw;
   cursor: pointer;
+  text-decoration: none;
 
   .ImgLogo {
     height: 40%;
@@ -39,6 +40,11 @@
   align-items: center;
   list-style: none;
   width: 40vw;
+  text-decoration: none;
+  cursor: pointer;
+  li {
+    text-decoration: none;
+  }
 }
 
 .buttons {
@@ -65,12 +71,11 @@
   }
 }
 
-.headerMenuMySpace {
-  color: #2ad63e;
-  border-bottom: solid 1px #37c948;
+li:hover {
+  padding-top: 1px;
+  text-decoration: none;
 }
 
-li:hover {
-  border-bottom: solid 1px black;
-  padding-top: 1px;
+.brand:visited {
+  color: black;
 }

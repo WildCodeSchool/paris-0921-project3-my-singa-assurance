@@ -11,6 +11,7 @@ import OfferRate from './offer/OfferRate';
 import RecipientLocation from './offer/RecipientLocation';
 import Actus from './components/Actus';
 import SubscriberPage from './pages/SubscriberPage';
+import SubscriberDetails from './subscriber/SubscriberDetails';
 import SubscriberWelcomePage from './subscriber/SubscriberWelcomePage';
 import SubscriberHasRecipients from './subscriber/SubscriberHasRecipients';
 import SubscriberOneRecipient from './subscriber/SubscriberOneRecipient';
@@ -49,6 +50,7 @@ function App() {
           <Route path="rates" element={<OfferRate />} />
         </Route>
         <Route path="/subscribers" element={isLogIn ? <SubscriberPage /> : <Navigate to="/login" />}>
+          <Route path="subscriberDetails" element={<SubscriberDetails />} />
           <Route path="welcome" element={<SubscriberWelcomePage />} />
           <Route path="recipient" element={<SubscriberRecipientHome />}>
             <Route path="" element={<SubscriberHasRecipients />} />
