@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import AuthenticationContext from '../context/AuthenticationContext';
 
@@ -31,9 +31,13 @@ function SubscriberHeader() {
           <p className={style.logo}>singa</p>
         </div>
         <ul className={style.menu}>
-          <li className={style.headerMenuMySpace}>Mon espace</li>
+          <Link to="/subscribers/welcome" className={style.brand}>
+            Mon espace
+          </Link>
           <li onClick={NeedHelp}>Aide</li>
-          <li>Mon profil</li>
+          <Link to="/subscribers/subscriberDetails" className={style.brand}>
+            Mon profil
+          </Link>
           <li onClick={handleLogIn}>Se déconnecter</li>
         </ul>
       </nav>

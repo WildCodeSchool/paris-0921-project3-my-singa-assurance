@@ -1,11 +1,6 @@
 import axios from 'axios';
 import jwt from 'jwt-decode';
 
-const options = {
-  'Content-Type': 'application/json',
-  authorization: `Bearer ${localStorage.getItem('x-access-token')}`,
-};
-
 const URL = 'http://localhost:8080';
 
 export const createSubscriberAccount = async (data) => {
@@ -31,7 +26,11 @@ export const checkEmail = async (email) => {
 };
 
 export const getSubscriberInfo = async (id) => {
-  const [subscriber] = await axios.get(`${URL}/subscriber/${id}`, options);
+  const subscriber = await axios.get(`${URL}/subscribers/${id}`, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('x-access-token')}`,
+    },
+  });
   return subscriber;
 };
 
