@@ -21,8 +21,9 @@ function SubscriberOneRecipient() {
           <ArrowBackIosIcon onClick={goBack} />
           <img src={Sophie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
           <div className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailBreak}>
-            <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>{location.state.recipient.first_name}</p>
-            <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText2}>{location.state.recipient.last_name}</p>
+            <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>
+              {`${location.state.recipient.first_name} ${location.state.recipient.last_name}`}
+            </p>
           </div>
         </div>
         <div className={style.mainCoordinatesContainer}>

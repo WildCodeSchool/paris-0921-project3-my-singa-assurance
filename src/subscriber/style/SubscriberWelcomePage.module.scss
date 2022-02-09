@@ -59,6 +59,7 @@ $secondary-color: #ffbc00;
 .recipientInfo {
   display: flex;
   width: 60%;
+  justify-content: space-around;
 }
 
 .subscriberWelcomePagesubtextbeneficiariesTextBold {
@@ -97,7 +98,7 @@ $secondary-color: #ffbc00;
     border-radius: 30px;
     border: none;
     background-color: #ffbc00;
-    font-family: "work Sans", sans-serif;
+    font-family: 'work Sans', sans-serif;
     font-weight: 600;
     font-size: large;
     margin: 5vh auto;

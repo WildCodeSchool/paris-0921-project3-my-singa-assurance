@@ -20,8 +20,7 @@ function RecipientsCards(recipient) {
         <div className={style.nameAndImg}>
           <img src={Sophie} alt="beneficiary portrait" className={style.recipientImg} />
           <div className={style.recipientIdentification}>
-            <p>{recipient.recipient.first_name}</p>
-            <p>{recipient.recipient.last_name}</p>
+            <p>{`${recipient.recipient.first_name} ${recipient.recipient.last_name}`}</p>
           </div>
         </div>
         <div className={style.recipientsCare}>

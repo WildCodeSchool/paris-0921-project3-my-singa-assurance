@@ -7,14 +7,14 @@
   .subscriberWelcomePageBeneficiariesImagePortrait {
     .subscriberWelcomePageBeneficiariesImagePortraitdetail {
       width: 150px;
-      margin-left: 2vh;
     }
     .subscriberWelcomePageBeneficiariesImagePortraitdetailText {
       font-family: 'work sans', sans-serif;
       text-align: center;
       font-weight: 400;
       font-size: 1.3em;
-      margin-left: 1vw;
+      display: flex;
+      justify-content: space-around;
     }
   }
 }
