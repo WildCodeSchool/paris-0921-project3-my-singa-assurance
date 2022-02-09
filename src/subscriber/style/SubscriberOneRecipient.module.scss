@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
 
 .subscriberWelcomePageBeneficiariesImageMain {
-  width: 100%;
+  width: 91%;
   height: 100vh;
   font-family: 'work sans', sans-serif;
+  margin-left: 8vw;
   .subscriberWelcomePageBeneficiariesImagePortrait {
     display: flex;
     margin-top: 13vh;
     align-items: center;
     margin-bottom: 5%;
     img {
-      width: 10%;
+      width: 7%;
       margin-left: 4%;
     }
     .subscriberWelcomePageBeneficiariesImagePortraitdetailBreak {

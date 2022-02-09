@@ -6,13 +6,6 @@
     background-color: white;
     padding-right: 1vw;
     width: 220px;
-    .liConceptBtn {
-      border: none;
-      font-size: 1em;
-      transition: 1ms;
-      background-color: white;
-      display: none;
-    }
     img {
       width: 2.7vw;
       background-color: white;
@@ -30,46 +23,40 @@
   }
 }
 
-.allConceptButton:hover {
-  transform: translate(1.1, 5);
-  transition: 500ms;
-  transform-origin: top;
-  font-weight: lighter;
-  cursor: default;
-  border: solid 1px #2ad63e;
-  background-color: white;
-  border-radius: 8px;
-  padding-top: 1vh;
-  padding-right: 1vh;
-  z-index: 99;
-  width: 110%;
-  .liConceptBtn {
-    border: none;
-    font-size: 1em;
-    transition: 1ms;
-    background-color: white;
-  }
-  .apparentButton {
-    border: none;
-    img {
-      margin-left: 5%;
-    }
-    .title {
-      font-weight: bold;
-      .plus {
-        display: none;
-      }
-    }
-  }
-  .arg {
-    display: flex;
-    background-color: white;
-  }
-  .ulConceptBtn {
-    list-style: none;
-    text-decoration: none;
-  }
-}
+//.allConceptButton:hover {
+//   transform: translate(1.1, 5);
+//   transition: 500ms;
+//   transform-origin: top;
+//   font-weight: lighter;
+//   cursor: default;
+//   border: solid 1px #2ad63e;
+//   background-color: white;
+//   border-radius: 8px;
+//   padding-top: 1vh;
+//   padding-right: 1vh;
+//   z-index: 99;
+//   width: 110%;
+//   .apparentButton {
+//     border: none;
+//     img {
+//       margin-left: 5%;
+//     }
+//     .title {
+//       font-weight: bold;
+//       .plus {
+//         display: none;
+//       }
+//     }
+//   }
+//   .arg {
+//     display: flex;
+//     background-color: white;
+//   }
+//   .ulConceptBtn {
+//     list-style: none;
+//     text-decoration: none;
+//   }
+// }
 
 .allConceptButton:not(:hover) {
   transform: translate(1, 5.1);

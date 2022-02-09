@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
 
 .mainContactPageContainer {
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .titleContact {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 2em;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .contactDescricption {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'open sans', sans-serif;
   font-size: 1.1em;
   color: black;
   margin-left: 15%;
@@ -55,13 +55,13 @@
 .titleImage2 {
   text-align: center;
   margin-top: 5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1.2em;
 }
 
 .descriptionImage1,
 .descriptionImage2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   margin-top: 5%;
 }
@@ -69,12 +69,13 @@
 .btnImage1,
 .btnImage2 {
   margin-top: 5%;
-  height: 6vh;
+  height: 5vh;
   border: top;
   border-radius: 20px;
   width: 20vw;
   background-color: #ffbc00;
   border: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-family: "work Sans", sans-serif;
+  font-weight: 600;
+  font-size: large;
 }

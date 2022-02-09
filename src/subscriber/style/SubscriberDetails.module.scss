@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
 
 .mainContainerSubscriberDetails {
-  margin-top: 14vh;
+  margin-top: 13vh;
   display: flex;
   flex-direction: column;
   font-family: 'work sans', sans-serif;
   .title {
-    margin-left: 6%;
+    margin-left: 15%;
     font-size: large;
     font-weight: bold;
     font-family: 'work sans', sans-serif;
@@ -16,9 +16,9 @@
     margin-top: 6vh;
     align-items: center;
     margin-bottom: 5%;
-    margin-left: 2%;
+    margin-left: 12%;
     img {
-      width: 10%;
+      width: 9%;
       margin-left: 4%;
     }
     .subscriberWelcomePageBeneficiariesImagePortraitdetailBreak {
@@ -32,8 +32,8 @@
   }
   .mainCoordinatesContainer {
     background-color: white;
-    width: 75%;
-    margin-left: 6%;
+    width: 68%;
+    margin-left: 15%;
     border-radius: 15px;
     display: flex;
     flex-direction: column;

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans');
 
 .mainActusPageContainer {
   display: flex;
@@ -14,20 +13,20 @@
 }
 
 .actustitle {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 2em;
 }
 
-.actusdescription {
+.actustitleMain {
+  align-items: center;
   display: flex;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1em;
-  color: black;
-  padding: 4%;
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: center;
-  font-weight: bold;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  .actusdescription {
+    font-family: 'work Sans', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: -2.2vh;
+  }
 }
 
 .actionImg {
@@ -40,55 +39,59 @@
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  width: 66%;
+  width: 80%;
   text-align: center;
-  margin-bottom: 8vh;
+  margin-bottom: 15vh;
   margin-top: 5vh;
 }
 
 .engagement {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 2em;
 }
 
 .engagementdescription {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 1.2em;
-  color: black;
 }
 
 .explications {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1em;
-  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 20vh;
   text-align: initial;
+  margin-bottom: 3vh;
 }
 
 .explicationstitle {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
-  text-align: center;
+  font-family: 'work Sans', sans-serif;
+  font-size: 1.6em;
+  margin-left: 2.1vw;
   color: #37c948;
+  font-weight: lighter;
 }
 
 .explicationsTable {
   justify-content: space-evenly;
-  height: 14vh;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 1.1em;
   color: black;
+  width: 87%;
+  .explicationsTableli {
+    margin-bottom: 3vh;
+  }
 }
-
 .camembertTitle {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8em;
-  margin-top: 8%;
+  text-align: center;
+  margin-bottom: 3vh;
+  .camembertTitleText {
+    font-family: 'work Sans', sans-serif;
+    font-size: 2em;
+    margin-bottom: -2.2vh;
+  }
 }
 
 .camembertDescription {
@@ -100,15 +103,18 @@
 }
 
 .leftDescription {
-  text-align: center;
+  text-align: inherit;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 0.9em;
   color: black;
+  h3 {
+    margin-right: 3vw;
+  }
 }
 
 .camembertImg {
@@ -116,13 +122,23 @@
 }
 
 .rightDescription {
-  text-align: center;
+  text-align: inherit;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 10%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'work Sans', sans-serif;
   font-size: 0.9em;
-  color: black;
+  margin-top: 5vh;
+  margin-left: 2vw;
+}
+
+.downDescription {
+  text-align: inherit;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'work Sans', sans-serif;
+  font-size: 0.9em;
 }

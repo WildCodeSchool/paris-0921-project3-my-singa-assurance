@@ -92,13 +92,14 @@ $secondary-color: #ffbc00;
   }
 
   .WelcomePageSingaActuButton {
-    height: 4vh;
+    height: 5vh;
     width: 200px;
     border-radius: 30px;
     border: none;
     background-color: #ffbc00;
-    font-size: 1rem;
-    font-weight: bold;
+    font-family: "work Sans", sans-serif;
+    font-weight: 600;
+    font-size: large;
     margin: 5vh auto;
   }
 }
