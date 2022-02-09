@@ -9,10 +9,11 @@ function SubscriberHomePageRecipientCards(recipient) {
     <div className={style.subscriberWelcomePageBeneficiariesImageMain}>
       <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
         <img src={Sophie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
-        <div className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailBreak}>
-          <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>{recipient.recipient.first_name}</p>
-          <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>{recipient.recipient.last_name}</p>
-        </div>
+
+        <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>
+          {`${recipient.recipient.first_name}
+          ${recipient.recipient.last_name}`}
+        </p>
       </div>
     </div>
   );

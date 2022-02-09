@@ -25,8 +25,9 @@ function SubscriberDetails() {
       <div className={style.subscriberWelcomePageBeneficiariesImagePortrait}>
         <img src={Sophie} alt="beneficiary portrait" className={style.subscriberWelcomePageBeneficiariesImagePortraitdetail} />
         <div className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailBreak}>
-          <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>{subscriberInfo.first_name}</p>
-          <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText2}>{subscriberInfo.last_name} </p>
+          <p className={style.subscriberWelcomePageBeneficiariesImagePortraitdetailText}>
+            {subscriberInfo.first_name} {subscriberInfo.last_name}
+          </p>
         </div>
       </div>
       <div className={style.mainCoordinatesContainer}>
