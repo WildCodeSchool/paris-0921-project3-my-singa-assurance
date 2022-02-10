@@ -12,6 +12,7 @@ function RecipientLocation() {
 
   const GoRates = () => {
     navigate('/offer/rates');
+    alert('Le choix de la ville sera bientôt disponible');
   };
 
   const GoOfferPage = () => {
@@ -34,7 +35,6 @@ function RecipientLocation() {
     setPlace(e.target.value);
     setColor({ color: 'white' });
     setText(`C'est parti !`);
-    alert('Le choix de la ville sera bientôt disponible');
   };
 
   useEffect(() => {
