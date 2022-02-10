@@ -36,7 +36,7 @@ function OfferRateCard({ formule, price, isChecked, setIsChecked }) {
             Singa {formule} <CheckCircleIcon className={isChecked[formule] ? style.checkBoxOn : style.checkBoxOff} />
           </div>
           <div className={style.formuleCount}>
-            <div className={style.count}>{resultCount} proches couverts</div>
+            <div className={style.count}>{resultCount} proche(s) couvert(s)</div>
             <div>Modifier</div>
           </div>
           <div className={style.formulePrice}>
